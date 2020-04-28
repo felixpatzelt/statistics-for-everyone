@@ -15,6 +15,9 @@ Basic statistics - practical skills
 - How to calculate them with pen & pape for small examples
 - Appendix: how to calculate the standard quantities in Excel, Tableau, Python
 
+Correlation vs causation
+- We need to adress this somewhere. Show spurious correlations
+
 Basic statistics - deeper explanations
 - Binomial & Gaussian Distributions
 - Mean of means, or how to detect if the means of two samples are significantly different
@@ -28,7 +31,7 @@ Tests & Power analysis
 - How many samples do I need?
 - Examples with Excel, Tableau Python
 
-How to perform an experiment.
+How to perform an experiment
 - Random vs systematic errors
 - Data collection and dependencies between observables
 - e.g. Trials with two Hospitals, different number of placebos in each hospital and hospital also has an effect.
