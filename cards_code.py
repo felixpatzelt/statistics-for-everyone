@@ -110,7 +110,7 @@ def plot_p_win(stack1, stack2, show_se=2):
     
 def plot_experiments(means, n_bins=21):
     fig, ax = plt.subplots(ncols=2, figsize=(10,4), sharey=True, gridspec_kw={'width_ratios': [2, 1]})
-    ax[0].plot(means)
+    ax[0].plot(means, marker='.', linestyle='none')
     ax[0].legend(['Stack 1', 'Stack 2'])
     ax[0].set_ylabel('Winning probability')
     ax[0].set_xlabel('Experiment')
@@ -139,6 +139,7 @@ def plot_experiments(means, n_bins=21):
     ax[1].plot([pd1pos, pd1pos], [m0-s0, m0+s0], label='Stack 1 Std.', color=c1)
     ax[1].plot([pd2pos, pd2pos], [m1-s1, m1+s1], label='Stack 2 Std.', color=c2)
     
+    # make fancy
     ticklocs = ax[1].get_xticks()
     ax[1].set_xticks(
         ticklocs[ticklocs < pdmax]
