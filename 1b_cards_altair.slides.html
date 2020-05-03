@@ -13239,12 +13239,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-21eefe75b3e24893bd128b62ca267411"></div>
+<div id="altair-viz-30e34c2d3c814f61a7f4b1e9927379b3"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-21eefe75b3e24893bd128b62ca267411") {
-      outputDiv = document.getElementById("altair-viz-21eefe75b3e24893bd128b62ca267411");
+    if (outputDiv.id !== "altair-viz-30e34c2d3c814f61a7f4b1e9927379b3") {
+      outputDiv = document.getElementById("altair-viz-30e34c2d3c814f61a7f4b1e9927379b3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13313,12 +13313,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-0fb2732db69e43f8bdaebc66c43832e0"></div>
+<div id="altair-viz-0f9a3d3edaa94ec0984a514abb30c743"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0fb2732db69e43f8bdaebc66c43832e0") {
-      outputDiv = document.getElementById("altair-viz-0fb2732db69e43f8bdaebc66c43832e0");
+    if (outputDiv.id !== "altair-viz-0f9a3d3edaa94ec0984a514abb30c743") {
+      outputDiv = document.getElementById("altair-viz-0f9a3d3edaa94ec0984a514abb30c743");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13381,6 +13381,13 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Each-repetition-yields-a-different-winning-probability-for-each-stack.">Each repetition yields a different winning probability for each stack.<a class="anchor-link" href="#Each-repetition-yields-a-different-winning-probability-for-each-stack.">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13392,12 +13399,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-46cdfe3a04c54d66bf2ac7da1cadba10"></div>
+<div id="altair-viz-6a1be8911d194de094ce77b77a7fc688"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-46cdfe3a04c54d66bf2ac7da1cadba10") {
-      outputDiv = document.getElementById("altair-viz-46cdfe3a04c54d66bf2ac7da1cadba10");
+    if (outputDiv.id !== "altair-viz-6a1be8911d194de094ce77b77a7fc688") {
+      outputDiv = document.getElementById("altair-viz-6a1be8911d194de094ce77b77a7fc688");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13439,7 +13446,7 @@ a.anchor-link {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "concat": [{"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Draw Card Pairs: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": {"type": "bar", "opacity": 0.7}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "order": {"type": "quantitative", "field": "stack"}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of Experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Draw Card Pairs: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}, {"layer": [{"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": {"type": "errorbar", "extent": "stdev", "rule": {"size": 2}}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "axis": null, "field": "stack"}, "y": {"type": "quantitative", "axis": null, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Draw Card Pairs: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": {"type": "point", "size": 0}, "encoding": {"x": {"type": "quantitative", "field": "stack", "scale": {"domain": [1, 4]}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Draw Card Pairs: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"name": "data-68be404e4225a66ef5e0f9f7fd8d840b"}, "mark": {"type": "text", "angle": 90, "baseline": "middle"}, "encoding": {"text": {"type": "nominal", "field": "text"}, "x": {"type": "quantitative", "field": "x"}, "y": {"type": "quantitative", "field": "y"}}}], "view": {"strokeWidth": 0}, "width": 25}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-68be404e4225a66ef5e0f9f7fd8d840b": [{"x": 4, "y": 0.4488, "text": "Mean \u00b1 Standard Deviation"}]}}, {"renderer": "svg", "mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "concat": [{"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": {"type": "bar", "opacity": 0.7}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}, {"layer": [{"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": {"type": "errorbar", "extent": "stdev", "rule": {"size": 2}}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "axis": null, "field": "stack"}, "y": {"type": "quantitative", "axis": null, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"url": "card_experiments.csv", "format": {"type": "csv", "parse": {"experiment": "number", "stack": "number", "card_pair": "number", "win": "number"}}}, "mark": {"type": "point", "size": 0}, "encoding": {"x": {"type": "quantitative", "field": "stack", "scale": {"domain": [1, 4]}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100.0, "step": 1, "name": "Pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= selector002.card_pair)"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"name": "data-68be404e4225a66ef5e0f9f7fd8d840b"}, "mark": {"type": "text", "angle": 90, "baseline": "middle"}, "encoding": {"text": {"type": "nominal", "field": "text"}, "x": {"type": "quantitative", "field": "x"}, "y": {"type": "quantitative", "field": "y"}}}], "view": {"strokeWidth": 0}, "width": 25}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-68be404e4225a66ef5e0f9f7fd8d840b": [{"x": 4, "y": 0.4488, "text": "Mean \u00b1 Standard Deviation"}]}}, {"renderer": "svg", "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13448,6 +13455,18 @@ a.anchor-link {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>A <strong>histogram</strong> can quantify how often we observed a certain outcome</li>
+<li>The <strong>standard deviation (std.)</strong> over the repetitions expresses this uncertainty in one number</li>
+<li>It corresponds to the <strong>standard error</strong> of the mean obtained in a single experiment.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
