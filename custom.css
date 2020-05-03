@@ -3,4 +3,5 @@ div.output_subarea {
     max-width: 100%; 
     padding-left: 11ex;
     padding-right: 8ex;
+    overflow: visible;
 }
