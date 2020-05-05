@@ -28,6 +28,7 @@ def df_to_datasource(
     Embedding will lead to big file sizes.
     """
     if not embed_in_slides and os.environ.get('CONVERT') == 'TRUE':
+        'slides'
         # the exported slide should be hosted such that
         # the data is hosted on the same server
         datafile = 'card_experiments.csv'
@@ -60,3 +61,64 @@ def df_to_datasource(
         alt.data_transformers.disable_max_rows()
         data = df
     return data
+
+
+
+def bar_chart_with_errorbars(data, n_card_pairs, n_card_pairs_init, n_repeats):
+
+    # define input selection
+    input_n_cards = alt.binding(
+        input='range',
+        min=1,
+        max=n_card_pairs, 
+        step=1, 
+        name='Card pairs per experiment: '
+    )
+    selection_n_cards = alt.selection_single(
+        bind=input_n_cards,
+        init={'card_pair': n_card_pairs_init}
+    )
+    input_experiment = alt.binding(
+        input='range',
+        min=1,
+        max=n_repeats, 
+        step=1, 
+        name='Select experiment: '
+    )
+    selection_experiment = alt.selection_single(
+        bind=input_experiment,
+        init={'experiment': 1}
+    )
+
+    # filter data
+    base = alt.Chart(data).add_selection(
+        selection_n_cards, selection_experiment
+    ).transform_filter(
+          (alt.datum.card_pair  <= selection_n_cards.card_pair)
+        & (alt.datum.experiment - selection_experiment.experiment == 0)
+    )
+
+    # plot bar chart
+    bars = base.mark_bar().encode(
+        alt.X('stack:N', title='Card Stack'),
+        alt.Y('mean(win):Q'),#, axis=alt.Axis(title='Number of Wins', tickMinStep=1)),
+        color=alt.Color('stack:N', legend=None)
+    )
+
+    # plot errorbars
+    errors=base.mark_errorbar(extent='stderr', rule=alt.MarkConfig(size=2)).encode(
+        y=alt.Y(
+            'win:Q',
+        ),
+        x=alt.X('stack:N'),
+    )
+
+    # combine plot
+    alt.layer(bars, errors).properties(
+        width=200,
+        height = 250
+    ).configure_axis(
+        grid=False
+    ).configure_view(
+        strokeWidth=0
+    ).display(renderer='svg')
