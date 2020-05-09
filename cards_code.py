@@ -38,10 +38,9 @@ def df_to_datasource(
     Embedding will lead to big file sizes.
     """
     if not embed_in_slides and os.environ.get('CONVERT') == 'TRUE':
-        'slides'
         # the exported slide should be hosted such that
         # the data is hosted on the same server
-        datafile = 'card_experiments.csv'
+        datafile = 'slides/card_experiments.csv'
         df.to_csv(datafile, index=False)
         data = alt.Data(
             url=datafile, 
