@@ -32,7 +32,9 @@ def repeated_experiments_df(p_win_1, p_win_2, n_cards, n_repeats, seed=0):
 def df_to_datasource(
         df,
         embed_in_notebook = True,
-        embed_in_slides   = False
+        embed_in_slides   = False,
+        export_dir  = 'slides',
+        export_file = '1_cards_data.csv'
     ):
     """Transparently replace datasource depending on notebook use or export.
     Embedding will lead to big file sizes.
@@ -40,10 +42,9 @@ def df_to_datasource(
     if not embed_in_slides and os.environ.get('CONVERT') == 'TRUE':
         # the exported slide should be hosted such that
         # the data is hosted on the same server
-        datafile = 'slides/1_cards_data.csv'
-        df.to_csv(datafile, index=False)
+        df.to_csv(os.path.join(export_dir, export_file), index=False)
         data = alt.Data(
-            url=datafile, 
+            url=export_file, 
             format={
                 'type': 'csv', 
                 # for some reason automatic type inferrence
