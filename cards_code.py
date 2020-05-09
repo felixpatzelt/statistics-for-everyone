@@ -40,7 +40,7 @@ def df_to_datasource(
     if not embed_in_slides and os.environ.get('CONVERT') == 'TRUE':
         # the exported slide should be hosted such that
         # the data is hosted on the same server
-        datafile = 'slides/card_experiments.csv'
+        datafile = 'slides/1_cards_data.csv'
         df.to_csv(datafile, index=False)
         data = alt.Data(
             url=datafile, 
