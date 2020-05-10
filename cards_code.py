@@ -42,32 +42,24 @@ def df_to_datasource(
     if not embed_in_slides and os.environ.get('CONVERT') == 'TRUE':
         # the exported slide should be hosted such that
         # the data is hosted on the same server
-        df.to_csv(os.path.join(export_dir, export_file), index=False)
+        df.to_csv(
+            os.path.join(export_dir, export_file), 
+            index=False
+        )
         data = alt.Data(
             url=export_file, 
-            format={
-                'type': 'csv', 
-                # for some reason automatic type inferrence
-                # gets confused arount experiment = 100
-                # should investigate and report bug
-                'parse': {
-                    'experiment': 'number', 
-                    'stack':      'number', 
-                    'card_pair': 'number', 
-                    'win':       'number'
-                }
-            }
+            format=dict(type='csv')
         )
     elif not embed_in_notebook:
-        # disable arning:
         # use data transformer
         # json creates bigger files but is more reliable (see manual parsing note above)
-        alt.data_transformers.enable('json')
+        alt.data_transformers.enable('csv')
         # make it work in Jupyter Lab
         alt.renderers.enable('mimetype')
         # note: this will export a static png when saving the notebook!
         data = df
     else:
+        # disable warning & embed data into notebook
         alt.data_transformers.disable_max_rows()
         data = df
     return data
@@ -99,13 +91,17 @@ def bar_chart_with_errorbars(data, n_card_pairs, n_card_pairs_init, n_repeats):
         bind=input_experiment,
         init={'experiment': 1}
     )
-
+    
     # filter data
     base = alt.Chart(data).add_selection(
         selection_n_cards, selection_experiment
     ).transform_filter(
-          (alt.datum.card_pair  <= selection_n_cards.card_pair)
-        & (alt.datum.experiment - selection_experiment.experiment == 0)
+        # there are sometimes problems with automatic types in comparisons, 
+        # when comparing datum with a selection.
+        # hence we just put the explicit types everywhere
+          (alt.expr.toNumber(alt.datum.card_pair)  <= alt.expr.toNumber(selection_n_cards.card_pair))
+        & (alt.expr.toNumber(alt.datum.experiment) == alt.expr.toNumber(selection_experiment.experiment))
+    
     )
 
     # plot bar chart
