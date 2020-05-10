@@ -96,13 +96,33 @@ def import_lato_font_in_notebook():
 
 def df_to_datasource(
         df,
-        embed_in_notebook = True,
+        embed_in_notebook = False,
         embed_in_slides   = False,
         export_dir  = 'slides',
         export_file = '1_cards_data.csv'
     ):
-    """Transparently replace datasource depending on notebook use or export.
-    Embedding will lead to big file sizes.
+    """Transparently replace datasource depending on notebook use or export. 
+    
+    - Embedding will lead to big files. 
+    - Altair will complain when embeding more than 5000 rows, so we disable that warning when embedding.
+    
+    Some explanations:
+    A better alternative to embedding is to load data from a url. The only issue is, that then you have
+    to pass a url that you can be accessed via the server. In Jupyter, you can find that url by right clicking 
+    on the file in the Jupyter file browser and opening it in a new browser tab. However, if you intend 
+    to export the notebook as slides, then this url ends up in your slides. In that case you have specify 
+    a url where you will host the file and where it will be accessible for viewers of the slides.html. 
+    Referencing local files doesn't work even when opening it locally (without a web server) because that is a 
+    security features of modern browsers.
+    
+    Luckily there is an automated solution for the notebook in the form of an altair data_transformer doing the
+    dirty work for us. However, we only can use it in the Notebook, not when exporting slides. So in that case
+    we will export the data as a csv and point to the location where it will be found when the slides and
+    the csv are hosted by a server with the same prefix.
+    
+    To view the exported slides locally when the data is not embedded, use python -m http.server --directory slides.
+    If you really want to mail the file to someone or view them offline, you have to embed and live with the
+    bigger file.
     """
     if not embed_in_slides and os.environ.get('CONVERT') == 'TRUE':
         # the exported slide should be hosted such that
@@ -115,7 +135,7 @@ def df_to_datasource(
             url=export_file, 
             format=dict(type='csv')
         )
-    elif not embed_in_notebook:
+    elif not embed_in_notebook and not os.environ.get('CONVERT') == 'TRUE':
         # use data transformer
         # json creates bigger files but is more reliable (see manual parsing note above)
         alt.data_transformers.enable('csv')
