@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Helper for automated notebook conversion & viewing
+# Helper for automated notebook conversion & local viewing
 # use:  python make_slides.py --serve True --watch True
 # more: python make_slides.py --help
 
@@ -21,6 +21,7 @@ OUTPUT_DIR = 'slides'
 SERVE      = False
 WATCH      = False
 PORT       = 8000
+HOST       = "localhost" # currently fixed
 
 def convert_notebook(
         filename,
@@ -43,11 +44,11 @@ def convert_notebook(
 
 
 def serve(directory, port):
-
+    "See https://docs.python.org/2/library/simplehttpserver.html"
     Handler = partial(SimpleHTTPRequestHandler, directory=directory)
     
-    with TCPServer(("localhost", port), Handler) as httpd:
-        print("serving at port", port)
+    with TCPServer((HOST, port), Handler) as httpd:
+        print(f"serving {directory} at http://{HOST}:{port}")
         httpd.serve_forever()
 
 
