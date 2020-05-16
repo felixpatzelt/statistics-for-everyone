@@ -13205,8 +13205,8 @@ a.anchor-link {
 <h2 id="Introductory-experiment:-drawing-cards-from-two-stacks">Introductory experiment: drawing cards from two stacks<a class="anchor-link" href="#Introductory-experiment:-drawing-cards-from-two-stacks">&#182;</a></h2><ul>
 <li>Imagine a game with <strong>two big stacks of cards</strong></li>
 <li>Each stack contains <strong>winning cards</strong> and <strong>blanks</strong>.</li>
-<li>Each turn, draw one card from each stack.</li>
-<li>How many pairs of cards do you have to draw to decide <strong>which stack has more wins</strong>?</li>
+<li>You have to decide <strong>which stack has more wins</strong></li>
+<li>How often do you have to draw pairs of cards (one from each stack)?</li>
 </ul>
 
 </div>
@@ -13221,7 +13221,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">Draw cards from two different stacks - one at a time from each stack<a class="anchor-link" href="#Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">&#182;</a></h3><ul>
+<h3 id="Draw-cards-from-two-different-stacks,-one-from-each-stack-at-a-time">Draw cards from two different stacks, one from each stack at a time<a class="anchor-link" href="#Draw-cards-from-two-different-stacks,-one-from-each-stack-at-a-time">&#182;</a></h3><ul>
 <li>What can we know after drawing a certain number of cards?</li>
 <li>When have we drawn enough cards to be certain?</li>
 </ul>
@@ -13239,12 +13239,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-1721f1f77b704ea2a3319d28e8d2fa2f"></div>
+<div id="altair-viz-b19fc86a9a824d3396ce02efab56fe26"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1721f1f77b704ea2a3319d28e8d2fa2f") {
-      outputDiv = document.getElementById("altair-viz-1721f1f77b704ea2a3319d28e8d2fa2f");
+    if (outputDiv.id !== "altair-viz-b19fc86a9a824d3396ce02efab56fe26") {
+      outputDiv = document.getElementById("altair-viz-b19fc86a9a824d3396ce02efab56fe26");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13313,12 +13313,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-17551043b3ed401383ab7b3dd1d962ba"></div>
+<div id="altair-viz-44288e0fb0b342b1a3a0ab4bcbb2752f"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-17551043b3ed401383ab7b3dd1d962ba") {
-      outputDiv = document.getElementById("altair-viz-17551043b3ed401383ab7b3dd1d962ba");
+    if (outputDiv.id !== "altair-viz-44288e0fb0b342b1a3a0ab4bcbb2752f") {
+      outputDiv = document.getElementById("altair-viz-44288e0fb0b342b1a3a0ab4bcbb2752f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13373,19 +13373,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>If we shuffle the cards and repeat the experiment,<br> will we get a different answer?</h3>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Repeat-the-experiment">Repeat the experiment<a class="anchor-link" href="#Repeat-the-experiment">&#182;</a></h3><ul>
-<li>Draw a fixed number of cards from each stack.</li>
-<li>Calculate each stack's winning probability = number of wins / number of cards.</li>
-<li>Shuffle the cards back into the stacks they came from.</li>
-<li>Repeat the experiment 50 times.</li>
+<li>Draw a fixed number of from each stack</li>
+<li>Calculate each stack's winning probability = number of wins / number of cards</li>
+<li>Repeat 50 times</li>
 </ul>
 
 </div>
@@ -13408,12 +13399,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-412ac19d77c24aba998057d857117ad7"></div>
+<div id="altair-viz-75d6ffe68d0e4e548807942899c89d9e"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-412ac19d77c24aba998057d857117ad7") {
-      outputDiv = document.getElementById("altair-viz-412ac19d77c24aba998057d857117ad7");
+    if (outputDiv.id !== "altair-viz-75d6ffe68d0e4e548807942899c89d9e") {
+      outputDiv = document.getElementById("altair-viz-75d6ffe68d0e4e548807942899c89d9e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13455,7 +13446,7 @@ a.anchor-link {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "bar", "opacity": 0.7}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}, {"layer": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "errorbar", "extent": "stdev", "rule": {"size": 2}}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "axis": null, "field": "stack"}, "y": {"type": "quantitative", "axis": null, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "point", "size": 0}, "encoding": {"x": {"type": "quantitative", "field": "stack", "scale": {"domain": [1, 4]}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"name": "data-68be404e4225a66ef5e0f9f7fd8d840b"}, "mark": {"type": "text", "angle": 90, "baseline": "middle"}, "encoding": {"text": {"type": "nominal", "field": "text"}, "x": {"type": "quantitative", "field": "x"}, "y": {"type": "quantitative", "field": "y"}}}], "height": 225, "view": {"strokeWidth": 0}, "width": 25}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-68be404e4225a66ef5e0f9f7fd8d840b": [{"x": 4, "y": 0.4488, "text": "Mean \u00b1 Standard Deviation"}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13469,177 +13460,9 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>The more cards we draw per experiment, the more similar the outcomes (circles)<br> of the different experiments become.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="We-can-count-how-often-the-outcome-falls-in-a-certain-range">We can count how often the outcome falls in a certain range<a class="anchor-link" href="#We-can-count-how-often-the-outcome-falls-in-a-certain-range">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-
-<div id="altair-viz-976e1c98d3da48b6a7fbf1585bf0d089"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-976e1c98d3da48b6a7fbf1585bf0d089") {
-      outputDiv = document.getElementById("altair-viz-976e1c98d3da48b6a7fbf1585bf0d089");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector003.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"mark": {"type": "bar", "binSpacing": 1, "cornerRadius": 2, "fillOpacity": 0.33, "strokeOpacity": 0.66, "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "stroke": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector003.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>A <strong>histogram</strong> shows how many experiments had a certain outcome (bar chart, right).</li>
-<li>It visualises the <strong>distribution</strong> of possible outcomes.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-standard-deviation-(std.)-measures-the-spread-of-the-observations">The <strong>standard deviation (std.)</strong> measures the spread of the observations<a class="anchor-link" href="#The-standard-deviation-(std.)-measures-the-spread-of-the-observations">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-
-<div id="altair-viz-ce67b2bce0c14858b5fb0f0371be9754"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ce67b2bce0c14858b5fb0f0371be9754") {
-      outputDiv = document.getElementById("altair-viz-ce67b2bce0c14858b5fb0f0371be9754");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "bar", "binSpacing": 1, "cornerRadius": 2, "fillOpacity": 0.33, "strokeOpacity": 0.66, "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "stroke": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}, {"layer": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "errorbar", "extent": "stdev", "rule": {"size": 2}}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "axis": null, "field": "stack"}, "y": {"type": "quantitative", "axis": null, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "point", "size": 0}, "encoding": {"x": {"type": "quantitative", "field": "stack", "scale": {"domain": [1, 4]}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"name": "data-cfb0c2bdaac45afb20e67f1aafe99e45"}, "mark": {"type": "text", "angle": 90, "baseline": "middle"}, "encoding": {"text": {"type": "nominal", "field": "text"}, "x": {"type": "quantitative", "field": "x"}, "y": {"type": "quantitative", "field": "y"}}}], "height": 225, "view": {"strokeWidth": 0}, "width": 25}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-cfb0c2bdaac45afb20e67f1aafe99e45": [{"x": 4, "y": 0.5, "text": "Mean \u00b1 Standard Deviation"}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
+<li>A <strong>histogram</strong> quantifies how often we observed a certain outcome</li>
+<li>The <strong>standard deviation (std.)</strong> over the repetitions measures uncertainty</li>
 <li>It corresponds to the <strong>standard error</strong> of the mean for a single experiment.</li>
-<li>That is, the uncertainty we'd have about the true winning probabilites after performing one experiment.</li>
 </ul>
 
 </div>
@@ -13667,12 +13490,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-f7d83223d6b949279122aae83cdd4468"></div>
+<div id="altair-viz-03be774ada204b59a125c08ef082f67e"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f7d83223d6b949279122aae83cdd4468") {
-      outputDiv = document.getElementById("altair-viz-f7d83223d6b949279122aae83cdd4468");
+    if (outputDiv.id !== "altair-viz-03be774ada204b59a125c08ef082f67e") {
+      outputDiv = document.getElementById("altair-viz-03be774ada204b59a125c08ef082f67e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13714,7 +13537,7 @@ a.anchor-link {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "field": "win", "title": "Winning probability"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector003.card_pair)) && (toNumber(datum.experiment) === toNumber(selector004.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "field": "win"}}, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector003.card_pair)) && (toNumber(datum.experiment) === toNumber(selector004.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13727,13 +13550,13 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Error-bars-commonly-represent-standard-errors">Error bars commonly represent standard errors<a class="anchor-link" href="#Error-bars-commonly-represent-standard-errors">&#182;</a></h3><p>For "well behaved" distributions, which we will explain in a followup,</p>
-<ul>
-<li>they show the uncertainty of the <code>mean</code> value of an observable</li>
-<li>they represent the range in which ~68% of the observations fall</li>
-<li>if they don't overlap, the corresponding <code>means</code> are different with ~97.5% probability</li>
-<li>therefore, false positives can still occur. To lower their probability, we can require several standard errors of difference.</li>
-<li>sometimes error bars can show other related measures, which should be noted near the figure</li>
+<h3 id="Error-bars-commonly-represent-standard-errors">Error bars commonly represent standard errors<a class="anchor-link" href="#Error-bars-commonly-represent-standard-errors">&#182;</a></h3><ul>
+<li>They show the uncertainty of the <code>mean</code> value of an observable</li>
+<li>They represent the range in which ~68% of the observations fall</li>
+<li>If they don't overlap, the corresponding <code>means</code> are different with ~97.5% probability</li>
+<li>Therefore, false positives can still occur. To lower their probability, we can require several standard errors of difference.</li>
+<li>Sometimes error bars can show other related measures, which should be noted near the figure</li>
+<li>They are only valid for "well behaved" distributions, which we will explain in a followup </li>
 </ul>
 
 </div>
@@ -13761,12 +13584,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-2aecfec2b0de46bebe77f31be8431534"></div>
+<div id="altair-viz-1e99bab516e34d2a83bb457a42f56ae9"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2aecfec2b0de46bebe77f31be8431534") {
-      outputDiv = document.getElementById("altair-viz-2aecfec2b0de46bebe77f31be8431534");
+    if (outputDiv.id !== "altair-viz-1e99bab516e34d2a83bb457a42f56ae9") {
+      outputDiv = document.getElementById("altair-viz-1e99bab516e34d2a83bb457a42f56ae9");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13808,7 +13631,7 @@ a.anchor-link {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector007": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector008": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector007.card_pair)) && (toNumber(datum.experiment) === toNumber(selector008.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "field": "win", "title": "Winning probability"}}, "selection": {"selector007": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector008": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector007.card_pair)) && (toNumber(datum.experiment) === toNumber(selector008.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "field": "win"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13825,6 +13648,9 @@ a.anchor-link {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 

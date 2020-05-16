@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>1_cards slides</title>
+<title>Normal_dist slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13199,33 +13199,30 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introductory-experiment:-drawing-cards-from-two-stacks">Introductory experiment: drawing cards from two stacks<a class="anchor-link" href="#Introductory-experiment:-drawing-cards-from-two-stacks">&#182;</a></h2><ul>
-<li>Imagine a game with <strong>two big stacks of cards</strong></li>
-<li>Each stack contains <strong>winning cards</strong> and <strong>blanks</strong>.</li>
-<li>Each turn, draw one card from each stack.</li>
-<li>How many pairs of cards do you have to draw to decide <strong>which stack has more wins</strong>?</li>
-</ul>
-
+<h1 id="How-make-a-decision,-if-the-means-of-two-samples-are-significantly-different?">How make a decision, if the means of two samples are significantly different?<a class="anchor-link" href="#How-make-a-decision,-if-the-means-of-two-samples-are-significantly-different?">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generate-a-Population-of-10,000,000-elements">Generate a Population of 10,000,000 elements<a class="anchor-link" href="#Generate-a-Population-of-10,000,000-elements">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">Draw cards from two different stacks - one at a time from each stack<a class="anchor-link" href="#Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">&#182;</a></h3><ul>
-<li>What can we know after drawing a certain number of cards?</li>
-<li>When have we drawn enough cards to be certain?</li>
-</ul>
-
+<h3 id="Mean-and-standard-deviation-from-the-Population:">Mean and standard deviation from the Population:<a class="anchor-link" href="#Mean-and-standard-deviation-from-the-Population:">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13237,57 +13234,9 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-1721f1f77b704ea2a3319d28e8d2fa2f"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1721f1f77b704ea2a3319d28e8d2fa2f") {
-      outputDiv = document.getElementById("altair-viz-1721f1f77b704ea2a3319d28e8d2fa2f");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "aggregate": "sum", "axis": {"tickMinStep": 1, "title": "Number of Wins"}, "field": "win"}}, "height": 250, "selection": {"selector001": {"type": "single", "bind": {"input": "range", "min": 1, "max": 40, "step": 1, "name": "Draw Card Pairs: "}, "init": {"card_pair": 1}}}, "transform": [{"filter": "datum.experiment == 1"}, {"filter": "(datum.card_pair <= toNumber(selector001.card_pair))"}], "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
+<div class="output_text output_subarea output_execute_result">
+<pre>(100.00276015806425, 19.999549970439965)</pre>
 </div>
 
 </div>
@@ -13295,11 +13244,47 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+width=401
+height=248
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="It-can-take-a-while-to-see-which-stack-is-better!">It can take a while to see which stack is better!<a class="anchor-link" href="#It-can-take-a-while-to-see-which-stack-is-better!">&#182;</a></h3>
+<h2 id="Drawing-two-random-samples-of-10-elements">Drawing two random samples of 10 elements<a class="anchor-link" href="#Drawing-two-random-samples-of-10-elements">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Mean-and-standard-deviation-from-the-samples:">Mean and standard deviation from the samples:<a class="anchor-link" href="#Mean-and-standard-deviation-from-the-samples:">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13311,57 +13296,9 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-17551043b3ed401383ab7b3dd1d962ba"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-17551043b3ed401383ab7b3dd1d962ba") {
-      outputDiv = document.getElementById("altair-viz-17551043b3ed401383ab7b3dd1d962ba");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"mark": {"type": "tick", "thickness": 1.5}, "encoding": {"color": {"type": "nominal", "field": "stack", "title": "Stack"}, "x": {"type": "quantitative", "axis": {"grid": false, "labels": false, "orient": "top", "ticks": false, "title": "Wins"}, "field": "card_pair", "title": "Cards drawn per stack"}, "y": {"type": "quantitative", "axis": null, "field": "stack", "scale": {"domain": [2, 0]}, "title": "Stack"}}, "height": 35, "transform": [{"filter": "(datum.experiment == 1) & (datum.win > 0)"}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": "line", "encoding": {"color": {"type": "nominal", "field": "stack", "title": "Stack"}, "x": {"type": "quantitative", "field": "card_pair", "title": "Cards drawn per stack"}, "y": {"type": "quantitative", "field": "cumulative_wins", "title": "Number of wins"}}, "height": 265, "transform": [{"window": [{"op": "sum", "field": "win", "as": "cumulative_wins"}], "frame": [null, 0], "groupby": ["experiment", "stack"]}, {"filter": "datum.experiment == 1"}], "width": 500}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
+<div class="output_text output_subarea output_execute_result">
+<pre>(101.21427981955935, 18.827291501471894)</pre>
 </div>
 
 </div>
@@ -13369,32 +13306,86 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(97.49407812007895, 17.70753951892392)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+width=388
+height=249
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+width=388
+height=248
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>If we shuffle the cards and repeat the experiment,<br> will we get a different answer?</h3>
+<h2 id="Drawing-100-independent-random-samples-from-the-population">Drawing 100 independent random samples from the population<a class="anchor-link" href="#Drawing-100-independent-random-samples-from-the-population">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
 
 </div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Repeat-the-experiment">Repeat the experiment<a class="anchor-link" href="#Repeat-the-experiment">&#182;</a></h3><ul>
-<li>Draw a fixed number of cards from each stack.</li>
-<li>Calculate each stack's winning probability = number of wins / number of cards.</li>
-<li>Shuffle the cards back into the stacks they came from.</li>
-<li>Repeat the experiment 50 times.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Each-repetition-yields-a-different-winning-probability-for-each-stack.">Each repetition yields a different winning probability for each stack.<a class="anchor-link" href="#Each-repetition-yields-a-different-winning-probability-for-each-stack.">&#182;</a></h3>
+<h3 id="Mean-and-standard-deviation-from-the-sample-means">Mean and standard deviation from the sample means<a class="anchor-link" href="#Mean-and-standard-deviation-from-the-sample-means">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13406,57 +13397,32 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-412ac19d77c24aba998057d857117ad7"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-412ac19d77c24aba998057d857117ad7") {
-      outputDiv = document.getElementById("altair-viz-412ac19d77c24aba998057d857117ad7");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
+<div class="output_text output_subarea output_execute_result">
+<pre>(99.88740847188424, 3.7330098625752286)</pre>
+</div>
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
+</div>
 
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
+</div>
+</div>
 
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
+</div>
+<div class="cell border-box-sizing code_cell rendered">
 
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+width=388
+height=248
+>
 </div>
 
 </div>
@@ -13468,17 +13434,14 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>The more cards we draw per experiment, the more similar the outcomes (circles)<br> of the different experiments become.</li>
-</ul>
-
+<h2 id="The-standard-deviation-of-the-means-can-be-derived-differently-and-is-generally-called-standard-error!">The standard deviation of the means can be derived differently and is generally called standard error!<a class="anchor-link" href="#The-standard-deviation-of-the-means-can-be-derived-differently-and-is-generally-called-standard-error!">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="We-can-count-how-often-the-outcome-falls-in-a-certain-range">We can count how often the outcome falls in a certain range<a class="anchor-link" href="#We-can-count-how-often-the-outcome-falls-in-a-certain-range">&#182;</a></h3>
+<h3 id="True-standard-error">True standard error<a class="anchor-link" href="#True-standard-error">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13490,57 +13453,9 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-976e1c98d3da48b6a7fbf1585bf0d089"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-976e1c98d3da48b6a7fbf1585bf0d089") {
-      outputDiv = document.getElementById("altair-viz-976e1c98d3da48b6a7fbf1585bf0d089");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector003.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"mark": {"type": "bar", "binSpacing": 1, "cornerRadius": 2, "fillOpacity": 0.33, "strokeOpacity": 0.66, "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "stroke": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector003.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
+<div class="output_text output_subarea output_execute_result">
+<pre>3.651401552920582</pre>
 </div>
 
 </div>
@@ -13552,18 +13467,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>A <strong>histogram</strong> shows how many experiments had a certain outcome (bar chart, right).</li>
-<li>It visualises the <strong>distribution</strong> of possible outcomes.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-standard-deviation-(std.)-measures-the-spread-of-the-observations">The <strong>standard deviation (std.)</strong> measures the spread of the observations<a class="anchor-link" href="#The-standard-deviation-(std.)-measures-the-spread-of-the-observations">&#182;</a></h3>
+<h3 id="Estimated-standard-error-purely-from-sample">Estimated standard error purely from sample<a class="anchor-link" href="#Estimated-standard-error-purely-from-sample">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13575,57 +13479,9 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-ce67b2bce0c14858b5fb0f0371be9754"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ce67b2bce0c14858b5fb0f0371be9754") {
-      outputDiv = document.getElementById("altair-viz-ce67b2bce0c14858b5fb0f0371be9754");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "bar", "binSpacing": 1, "cornerRadius": 2, "fillOpacity": 0.33, "strokeOpacity": 0.66, "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "stroke": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}, {"layer": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "errorbar", "extent": "stdev", "rule": {"size": 2}}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "axis": null, "field": "stack"}, "y": {"type": "quantitative", "axis": null, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "point", "size": 0}, "encoding": {"x": {"type": "quantitative", "field": "stack", "scale": {"domain": [1, 4]}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"name": "data-cfb0c2bdaac45afb20e67f1aafe99e45"}, "mark": {"type": "text", "angle": 90, "baseline": "middle"}, "encoding": {"text": {"type": "nominal", "field": "text"}, "x": {"type": "quantitative", "field": "x"}, "y": {"type": "quantitative", "field": "y"}}}], "height": 225, "view": {"strokeWidth": 0}, "width": 25}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-cfb0c2bdaac45afb20e67f1aafe99e45": [{"x": 4, "y": 0.5, "text": "Mean \u00b1 Standard Deviation"}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
+<div class="output_text output_subarea output_execute_result">
+<pre>(3.4961402623237583, 3.2882075392500876)</pre>
 </div>
 
 </div>
@@ -13633,29 +13489,6 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>It corresponds to the <strong>standard error</strong> of the mean for a single experiment.</li>
-<li>That is, the uncertainty we'd have about the true winning probabilites after performing one experiment.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A-single-small-experiment-(25-cards)">A single small experiment (25 cards)<a class="anchor-link" href="#A-single-small-experiment-(25-cards)">&#182;</a></h3><ul>
-<li><strong>Error bars</strong> show the <strong>standard error</strong> of a single experiment</li>
-<li>Here they <strong>overlap</strong> - the difference betwen the stacks is smaller than the uncertainty</li>
-<li><strong>We can't decide</strong> which stack is better $^{*▾}$</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13665,57 +13498,9 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-f7d83223d6b949279122aae83cdd4468"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f7d83223d6b949279122aae83cdd4468") {
-      outputDiv = document.getElementById("altair-viz-f7d83223d6b949279122aae83cdd4468");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "field": "win", "title": "Winning probability"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
+<div class="output_text output_subarea output_execute_result">
+<pre>(3.651401552920582, 3.7330098625752286, 3.4961402623237583, 3.2882075392500876)</pre>
 </div>
 
 </div>
@@ -13723,106 +13508,11 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Error-bars-commonly-represent-standard-errors">Error bars commonly represent standard errors<a class="anchor-link" href="#Error-bars-commonly-represent-standard-errors">&#182;</a></h3><p>For "well behaved" distributions, which we will explain in a followup,</p>
-<ul>
-<li>they show the uncertainty of the <code>mean</code> value of an observable</li>
-<li>they represent the range in which ~68% of the observations fall</li>
-<li>if they don't overlap, the corresponding <code>means</code> are different with ~97.5% probability</li>
-<li>therefore, false positives can still occur. To lower their probability, we can require several standard errors of difference.</li>
-<li>sometimes error bars can show other related measures, which should be noted near the figure</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="An-bigger-experiment-(100-cards)">An bigger experiment (100 cards)<a class="anchor-link" href="#An-bigger-experiment-(100-cards)">&#182;</a></h3><ul>
-<li>The <strong>error bars don't overlap</strong></li>
-<li>We can say the difference is <strong>statistically significant</strong></li>
-<li>We can be very certain that stack 1 has more wins</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-
-<div id="altair-viz-2aecfec2b0de46bebe77f31be8431534"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2aecfec2b0de46bebe77f31be8431534") {
-      outputDiv = document.getElementById("altair-viz-2aecfec2b0de46bebe77f31be8431534");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector007": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector008": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector007.card_pair)) && (toNumber(datum.experiment) === toNumber(selector008.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "field": "win", "title": "Winning probability"}}, "selection": {"selector007": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector008": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector007.card_pair)) && (toNumber(datum.experiment) === toNumber(selector008.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
-</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-calculate-these-quantities?">How to calculate these quantities?<a class="anchor-link" href="#How-to-calculate-these-quantities?">&#182;</a></h1><p>See next section <code>practical basics</code>!</p>
-
+<h2 id="We-can-derive-from-the-sample-itself-the-standard-error-and-thereby-the-precision-of-the-sample-mean!">We can derive from the sample itself the standard error and thereby the precision of the sample mean!<a class="anchor-link" href="#We-can-derive-from-the-sample-itself-the-standard-error-and-thereby-the-precision-of-the-sample-mean!">&#182;</a></h2>
 </div>
 </div>
 </div>

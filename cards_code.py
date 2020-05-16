@@ -236,7 +236,9 @@ def plot_first_experiment_lines(data):
     alt.vconcat(ticks, lines).display(renderer='svg')
     
 
-def plot_repeated_experiments(data, n_card_pairs, plot_height = 225):
+def plot_repeated_experiments(data, n_card_pairs, show='Experiments, Histogram, Std', plot_height=225):
+
+    plots = []
 
     # define input selection
     input_n_cards = alt.binding(
@@ -262,81 +264,95 @@ def plot_repeated_experiments(data, n_card_pairs, plot_height = 225):
     )
     scale = alt.Scale(domain=[-.1,1.1])
 
-    # plot individual experiments
-    dots = base.mark_point().encode(
-        x=alt.X('experiment:Q', title='Experiment'),
-        y=alt.Y(
-            'p_win:Q', 
-            scale=scale, 
-            axis=alt.Axis(
-                values=np.arange(0,1.1,.2),
-                grid=True
-            ), 
-            title='Winning probability'
-        ),
-        color='stack:N'
-    ).properties(
-        width=400,
-        height=plot_height
-    )
 
-    # plot histogram over experiment results
-    hist = base.mark_bar(opacity=.7).encode(
-        y=alt.X(
-            'p_win:Q', 
-            bin=alt.Bin(extent=[0,1], step=.1),
-            scale=scale, 
-            axis=alt.Axis(
-                values=np.arange(0,1.1,.2), 
-                title=None, 
-                labels=False,
-                grid=True
-            ), 
-        ),
-        x=alt.X(
-            'count(experiment):Q', 
-            stack=None, # no stacked bar chart
-            title='Number of experiments'
-        ),
-        color=alt.Color('stack:N', legend=alt.Legend(title='Stack')),
-        order='stack:Q'
-    ).properties(
-        width=150,
-        height=plot_height
-    )
-
-    # define custom label for standard deviation bars
-    std_text = alt.Chart(
-        pd.DataFrame({'x':[4], 'y':[.5], 'text':['Mean ± Standard Deviation']})
-    ).mark_text(
-        angle=90, baseline='middle'
-    ).encode(
-        x='x', y='y', text='text'
-    )
-
-    # plot standard deviation bars
-    errorbars = alt.layer(
-        base.mark_errorbar(extent='stdev', rule=alt.MarkConfig(size=2)).encode(
-            y=alt.Y('p_win:Q',
-                axis=None,#alt.Axis(orient='right', ticks=False, labels=False, grid=False, style=None), 
-                scale=scale,
+    if 'experiments' in show.lower():
+        # plot individual experiments
+        dots = base.mark_point().encode(
+            x=alt.X('experiment:Q', title='Experiment'),
+            y=alt.Y(
+                'p_win:Q', 
+                scale=scale, 
+                axis=alt.Axis(
+                    values=np.arange(0,1.1,.2),
+                    grid=True
+                ), 
+                title='Winning probability'
             ),
-            x=alt.X('stack:Q', axis=None),
-            color='stack:N',
-        ),
-        base.mark_point(size=0).encode(
-            y=alt.Y('p_win:Q', aggregate='mean', scale=scale),
-            x=alt.X('stack:Q', scale=alt.Scale(domain=[1,4])),
-        ),
-        std_text,
-        view=alt.ViewConfig(strokeWidth=0),
-    ).properties(
-        width=25,
-        height=plot_height
-    )
+            color='stack:N'
+        ).properties(
+            width=400,
+            height=plot_height
+        )
+        plots.append(dots)
+
+    if 'histogram' in show.lower():
+        # plot histogram over experiment results
+        hist = base.mark_bar(
+            fillOpacity=.33,
+            strokeOpacity=.66,
+            strokeWidth=2,
+            cornerRadius=2,
+            binSpacing=1
+        ).encode(
+            y=alt.Y(
+                'p_win:Q', 
+                bin=alt.Bin(extent=[0,1], step=.1),
+                scale=scale, 
+                axis=alt.Axis(
+                    values=np.arange(0,1.1,.2), 
+                    title=None, 
+                    labels=False,
+                    grid=True
+                ), 
+            ),
+            x=alt.X(
+                'count(experiment):Q', 
+                stack=None, # no stacked bar chart
+                title='Number of experiments'
+            ),
+            color=alt.Color('stack:N', legend=alt.Legend(title='Stack')),
+            stroke=alt.Color('stack:N', legend=None),
+            order='stack:Q',
+        ).properties(
+            width=150,
+            height=plot_height
+        )
+        plots.append(hist)
+
+    if 'std' in show.lower():
+        # define custom label for standard deviation bars
+        std_text = alt.Chart(
+            pd.DataFrame({'x':[4], 'y':[.5], 'text':['Mean ± Standard Deviation']})
+        ).mark_text(
+            angle=90, baseline='middle'
+        ).encode(
+            x='x', y='y', text='text'
+        )
+
+        # plot standard deviation bars
+        errorbars = alt.layer(
+            base.mark_errorbar(extent='stdev', rule=alt.MarkConfig(size=2)).encode(
+                y=alt.Y('p_win:Q',
+                    axis=None,#alt.Axis(orient='right', ticks=False, labels=False, grid=False, style=None), 
+                    scale=scale,
+                ),
+                x=alt.X('stack:Q', axis=None),
+                color='stack:N',
+            ),
+            base.mark_point(size=0).encode(
+                y=alt.Y('p_win:Q', aggregate='mean', scale=scale),
+                x=alt.X('stack:Q', scale=alt.Scale(domain=[1,4])),
+            ),
+            std_text,
+            view=alt.ViewConfig(strokeWidth=0),
+        ).properties(
+            width=25,
+            height=plot_height
+        )
+        plots.append(errorbars)
 
     # combine & show
-    alt.concat(dots, hist, errorbars).configure_axis(
+    alt.concat(*plots).configure_axis(
         grid=False
     ).configure_view(
         strokeWidth=0
@@ -362,7 +378,7 @@ def plot_experiment_bars_with_errors(data, n_card_pairs, n_card_pairs_init, n_re
         min=1,
         max=n_repeats, 
         step=1, 
-        name='Select experiment: '
+        name='Select one experiment: '
     )
     selection_experiment = alt.selection_single(
         bind=input_experiment,
@@ -383,17 +399,15 @@ def plot_experiment_bars_with_errors(data, n_card_pairs, n_card_pairs_init, n_re
 
     # plot bar chart
     bars = base.mark_bar().encode(
-        alt.X('stack:N', title='Card Stack'),
-        alt.Y('mean(win):Q'),#, axis=alt.Axis(title='Number of Wins', tickMinStep=1)),
+        x='stack:N',
+        y='mean(win):Q',
         color=alt.Color('stack:N', legend=None)
     )
 
     # plot errorbars
     errors=base.mark_errorbar(extent='stderr', rule=alt.MarkConfig(size=2)).encode(
-        y=alt.Y(
-            'win:Q',
-        ),
-        x=alt.X('stack:N'),
+        alt.Y('win:Q', title='Winning probability'),
+        x=alt.X('stack:N', title='Card Stack')
     )
 
     # combine plot
