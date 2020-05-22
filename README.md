@@ -4,8 +4,26 @@ This course for a wide audience shows you why and how a better understanding of 
 
 **Work in Progress**
 
+## Installation
 
-# Development
+Install [anaconda](https://docs.anaconda.com/anaconda/install/) or miniconda.
+
+Install conda environment
+
+```bash
+conda env create -f stats.yml
+# conda env update --file stats.yml --prune
+```
+
+and activate conda enviroment
+
+```bash
+conda activate stats
+# ...
+conda deactivate
+````
+
+## Development
 
 The interactive slides are generated from Jupyter Notebooks written in Python.
 
