@@ -1,3 +1,6 @@
+"""Helpers to style altair plots and to improve working with datasets.
+"""
+
 import altair as alt
 import numpy as np
 import pandas as pd

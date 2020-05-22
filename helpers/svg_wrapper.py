@@ -1,3 +1,4 @@
+"""SVGWrapper improves on IPython's SVG class."""
 from IPython.display import SVG
 
 class SVGWrapper():

@@ -1,7 +1,5 @@
 # Statistics for everyone
 
-How to use statistics to make better decisions.
-
 This course for a wide audience shows you why and how a better understanding of uncertainty can improve your decision making and your understanding of the world.
 
 **Work in Progress**
@@ -10,6 +8,8 @@ This course for a wide audience shows you why and how a better understanding of 
 # Development
 
 The interactive slides are generated from Jupyter Notebooks written in Python.
+
+[list of possible topics](topics.md)
 
 ### everything needed to edit slides is automated
 
