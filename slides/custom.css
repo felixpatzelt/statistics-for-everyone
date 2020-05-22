@@ -1,3 +1,12 @@
+/* 
+    Custom formatting for reveal.js slides
+    ======================================
+    
+    Improve figure placement and style html input elements
+    Needs to be in the same folder as the slides because that's where
+    reveal.js automatically looks.
+*/
+
 /* center figures */
 div.output_subarea {
     text-align: center;
