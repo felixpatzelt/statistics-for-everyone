@@ -25,6 +25,19 @@
       #fish {
         animation: hover 4s ease infinite;
       }
+      @keyframes blink {
+        0%   {fill:#d31500;}
+        42%  {fill:#d31500;}
+        44%  {fill:#ffff00;}
+        46%  {fill:#d31500;}
+        72%  {fill:#d31500;}
+        74%  {fill:#ffff00;}
+        76%  {fill:#d31500;}
+        100% {fill:#d31500;}
+      }
+      #sensor ellipse {
+        animation: blink 20s ease infinite;
+      }
       ]]>
     </style>
     <g id="aquarium">
