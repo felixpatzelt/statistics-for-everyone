@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2953 945" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="sign_panel" transform="matrix(1,0,0,1,-198.786,10.5066)">
+        <clipPath id="_clip1">
+            <rect x="257.307" y="80.459" width="2751.61" height="809.025"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(0.993274,-0.109434,22.6536,1.9594,-13752.6,-832.284)">
+                <rect x="-67.218" y="522.19" width="1989.84" height="228.587" style="fill:url(#_Radial2);"/>
+            </g>
+            <g transform="matrix(1,-0.110175,-5.89826e-18,1.15816,938.954,-209.435)">
+                <rect x="-67.218" y="522.19" width="1989.84" height="228.587" style="fill:white;"/>
+            </g>
+            <g transform="matrix(1,-0.110175,0,1,705.518,-101.129)">
+                <rect x="-67.218" y="522.19" width="1989.84" height="228.587" style="fill:url(#_Radial3);"/>
+            </g>
+            <g transform="matrix(1,-0.110175,1.1711,0.0833637,93.9814,606.112)">
+                <rect x="-67.218" y="522.19" width="1989.84" height="228.587" style="fill:url(#_Radial4);"/>
+            </g>
+            <g transform="matrix(0.993885,-0.110421,0,1.00615,497.924,215.337)">
+                <text x="365.588px" y="324.15px" style="font-family:'TeXGyreTermes-Regular', 'TeX Gyre Termes';font-size:66.667px;fill:rgb(170,9,9);">THE DOORS WILL UNLOCK AFTER FIVE MINUTES</text>
+                <text x="625.655px" y="403.317px" style="font-family:'TeXGyreTermes-Regular', 'TeX Gyre Termes';font-size:66.667px;fill:rgb(170,9,9);">JUS<tspan x="735.455px " y="403.317px ">T</tspan> W<tspan x="848.121px " y="403.317px ">A</tspan>LK OUT TO WIN £150,000</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-747.251,-321.918)">
+                <text x="1816.56px" y="1166.68px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:75px;">A sign on a beam below the ceiling</text>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="_Radial2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1034.64,215.839,-225.798,952.234,478.113,529.077)"><stop offset="0" style="stop-color:rgb(244,241,236);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(230,227,223);stop-opacity:1"/></radialGradient>
+        <radialGradient id="_Radial3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1032.75,95.7832,-110.916,977.949,889.877,650.316)"><stop offset="0" style="stop-color:rgb(249,247,244);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(241,239,237);stop-opacity:1"/></radialGradient>
+        <radialGradient id="_Radial4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1095.75,173.424,-99.4997,854.255,826.878,576.368)"><stop offset="0" style="stop-color:rgb(220,217,212);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(227,223,216);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>
