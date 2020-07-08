@@ -13202,48 +13202,40 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Basic statistics - practical skills</p>
-<ul>
-<li>What is actually a...<ul>
-<li>mean, median, mode</li>
-<li>standard deviation, standard error</li>
-<li>median and quantile</li>
-</ul>
-</li>
-<li>How to calculate them with pen &amp; pape for small examples</li>
-<li>Appendix: how to calculate the standard quantities in Excel, Tableau, Python</li>
-</ul>
+<h2 id="Practical-basics">Practical basics<a class="anchor-link" href="#Practical-basics">&#182;</a></h2><p>It is easy to calculate the quantities we encounter most often in statistics!</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>How to calculate these quantities</p>
-<ul>
-<li>mean</li>
-<li>standard deviation</li>
-<li>standard error</li>
+<h2 id="How-to-characterise-a-sample-of-quantitative-observations?">How to characterise a sample of quantitative observations?<a class="anchor-link" href="#How-to-characterise-a-sample-of-quantitative-observations?">&#182;</a></h2><ul>
+<li><strong>Central tendency</strong>: where are the observed values?</li>
+<li><strong>Dispersion</strong>: how far apart are the observed values?</li>
 </ul>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://en.wikipedia.org/wiki/File:Taylor_Swift_-_Mean.png#/media/File:Taylor_Swift_-_Mean.png">no, not this mean</a></p>
-<p>if you fount this funny, you may like <a href="https://www.isg.rhul.ac.uk/~sdg/mathsongs.html">this list.</a> You may also have issues.</p>
+<h3 id="For-example,-imagine-drawing-coins-from-a-pocket">For example, imagine drawing coins from a pocket<a class="anchor-link" href="#For-example,-imagine-drawing-coins-from-a-pocket">&#182;</a></h3><ul>
+<li>How much is each new coin worth?</li>
+<li>How certain are we about that value?</li>
+</ul>
+<p>Let's start with a sample of 7 coins...</p>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Measures-of-central-tendency">Measures of central tendency<a class="anchor-link" href="#Measures-of-central-tendency">&#182;</a></h3>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -13253,17 +13245,33 @@ a.anchor-link {
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
 
-<div class="output_text output_subarea output_execute_result">
-<pre>(0.09991996797437437, 0.09797958971132711)</pre>
-</div>
-
-</div>
-
-</div>
+            <object type="image/svg+xml" data="images/coins_central_tendency.svg" style="width: 70%; height: 100%; margin: auto;">
+                <img src="images/coins_central_tendency.svg" width="70%" height="100%"></img>
+            </object>
+            
 </div>
 
 </div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>*If there is an even number of observations in our sample, <br>the median is in between the two central ones.</p>
+<ul>
+<li>median({1,1,1,<strong>2</strong>,5,5,20}) = 2</li>
+<li>median({1,1,<strong>2</strong>,<strong>5</strong>,5,20}) = (2+5) / 2 = 3.5</li>
+</ul>
+<p>See also <a href="https://en.wikipedia.org/wiki/Central_tendency">https://en.wikipedia.org/wiki/Central_tendency</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -13272,9 +13280,57 @@ a.anchor-link {
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
 
-<div class="output_text output_subarea output_execute_result">
-<pre>(0.1, 0.09797958971132711)</pre>
+<div id="altair-viz-d99f6c05d7814a9f90e3ee56bedf928a"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-d99f6c05d7814a9f90e3ee56bedf928a") {
+      outputDiv = document.getElementById("altair-viz-d99f6c05d7814a9f90e3ee56bedf928a");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": null, "bin": true, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector003": {"type": "interval", "bind": "scales"}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -10, "max": 10, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "datum.t", "as": "t"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "width": 400}, {"mark": "tick", "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector003": {"type": "interval", "bind": "scales"}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -10, "max": 10, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "datum.t", "as": "t"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "view": {"strokeWidth": 0}, "width": 400}], "data": {"sequence": {"start": 0, "stop": 100, "as": "t"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
+</script>
 </div>
 
 </div>
@@ -13282,7 +13338,18 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>stack1, stack2 = draw_cards(
+    p_win_1 = 0.5,
+    p_win_2 = 0.4,
+    n_cards = 25,
+    seed     = 0
+)m1 = stack1.mean()
+m2 = stack2.mean()
+n  = len(stack1)
+np.sqrt(m1 * (1 - m1) / n), np.sqrt(m2 * (1 - m2) / n)np.sqrt(.5 * (1 - .5) / n), np.sqrt(.6 * (1 - .6) / n)
 <div class="cell border-box-sizing code_cell rendered">
 
 </div></section></section>
