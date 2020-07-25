@@ -20,6 +20,11 @@ form.vega-bindings {
     margin-top: 10px;
     font-size: .7em;
 }
+form .vega-bind {
+    display: inline-block;
+    margin-left: 1%;
+    margin-right: 1%;
+}
 form input[type=range] {
   -webkit-appearance: none;
   width: 100%;

@@ -13206,6 +13206,244 @@ a.anchor-link {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1025, 169.0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(205.0,
+ value    169.0
+ dtype: float64)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(36.0, 6.0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[64.0, 9.0, 9.0, 49.0, 49.0]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>36.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>value    36.0
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(value    36.0
+ dtype: float64,
+ value    45.0
+ dtype: float64)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.23606797749979</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>7.2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>45.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>value    9.0
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>20.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13225,7 +13463,7 @@ a.anchor-link {
 <li>How much is each new coin worth?</li>
 <li>How certain are we about that value?</li>
 </ul>
-<p>Let's start with a sample of 7 coins...</p>
+<p>Let's start with an example of 5 coins...</p>
 
 </div>
 </div>
@@ -13262,16 +13500,23 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>*If there is an even number of observations in our sample, <br>the median is in between the two central ones.</p>
+<h2 id="*">*<a class="anchor-link" href="#*">&#182;</a></h2><p>If there is an even number of observations in our sample, <br>the median is in between the two central ones:</p>
 <ul>
-<li>median({1,1,1,<strong>2</strong>,5,5,20}) = 2</li>
-<li>median({1,1,<strong>2</strong>,<strong>5</strong>,5,20}) = (2+5) / 2 = 3.5</li>
+<li>median([5,5,<strong>10</strong>,20,20]) = <strong>10</strong></li>
+<li>median([5,5,<strong>10</strong>,<strong>20</strong>,20,20]) = (<strong>10</strong>+<strong>20</strong>) / 2 = 15</li>
 </ul>
-<p>See also <a href="https://en.wikipedia.org/wiki/Central_tendency">https://en.wikipedia.org/wiki/Central_tendency</a></p>
+<p>See e.g. <a href="https://en.wikipedia.org/wiki/Central_tendency">https://en.wikipedia.org/wiki/Central_tendency</a> for details <br>on these and other measures of central tendency.</p>
 
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Measures-of-dispersion">Measures of dispersion<a class="anchor-link" href="#Measures-of-dispersion">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -13282,12 +13527,49 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-d99f6c05d7814a9f90e3ee56bedf928a"></div>
+            <object type="image/svg+xml" data="images/coins_dispersion.svg" style="width: 70%; height: 100%; margin: auto;">
+                <img src="images/coins_dispersion.svg" width="70%" height="100%"></img>
+            </object>
+            
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>See e.g. <a href="https://en.wikipedia.org/wiki/Statistical_dispersion">https://en.wikipedia.org/wiki/Statistical_dispersion</a> for details <br>on these and other measures of dispersion.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Try-it!">Try it!<a class="anchor-link" href="#Try-it!">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-a27e64c1f6034f9994d2db1afe6e200d"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d99f6c05d7814a9f90e3ee56bedf928a") {
-      outputDiv = document.getElementById("altair-viz-d99f6c05d7814a9f90e3ee56bedf928a");
+    if (outputDiv.id !== "altair-viz-a27e64c1f6034f9994d2db1afe6e200d") {
+      outputDiv = document.getElementById("altair-viz-a27e64c1f6034f9994d2db1afe6e200d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13329,7 +13611,7 @@ a.anchor-link {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": null, "bin": true, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector003": {"type": "interval", "bind": "scales"}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -10, "max": 10, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "datum.t", "as": "t"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "width": 400}, {"mark": "tick", "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector003": {"type": "interval", "bind": "scales"}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -10, "max": 10, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "datum.t", "as": "t"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "view": {"strokeWidth": 0}, "width": 400}], "data": {"sequence": {"start": 0, "stop": 100, "as": "t"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": null, "bin": {"maxbins": 7}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "samples"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "datum.t", "as": "t"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "width": 500}, {"mark": "tick", "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "samples"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "datum.t", "as": "t"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13338,6 +13620,15 @@ a.anchor-link {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Each time you change the parameters, new samples are drawn from a normal distribution.<br>
+The latter is also called Gaussian or bell curve and we will discuss it depth later.</p>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 
