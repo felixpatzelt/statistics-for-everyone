@@ -11,7 +11,7 @@ Basic statistics - practical skills
 - What is actually a...
     - mean, median, mode
     - standard deviation, standard error
-    - median and quantile
+    - median and quantiles
 - How to calculate them with pen & pape for small examples
 - Appendix: how to calculate the standard quantities in Excel, Tableau, Python
 
