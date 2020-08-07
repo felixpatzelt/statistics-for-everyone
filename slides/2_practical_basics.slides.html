@@ -13390,10 +13390,41 @@ MathJax.Hub.Config({
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="All-estimates-have-errors">All estimates have errors<a class="anchor-link" href="#All-estimates-have-errors">&#182;</a></h3><p>We often want to estimate the populalation mean from a sample. This "standard error" is calculated as follows:</p>
+<h3 id="All-estimates-have-errors">All estimates have errors<a class="anchor-link" href="#All-estimates-have-errors">&#182;</a></h3><p>We often want to estimate the populalation mean from a sample and how precise we expect it to be. This "standard error" is calculated as follows $^{*▾}$:</p>
 <p>$\text{Standard Error} = \sqrt{\frac{\text{Population Variance}}{\text{Sample Size}}}$.</p>
 <p>With the estimated population variance of our 5 coins, we obtain:</p>
 <p>$\text{Standard Error (coin example)} = \sqrt{\frac{\text{45}}{\text{5}}} = \sqrt{\text{9}} = \text{3}$.</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-standard-error-is-still-only-an-approximation">The standard error is still only an approximation<a class="anchor-link" href="#The-standard-error-is-still-only-an-approximation">&#182;</a></h3><ul>
+<li>It can also be written as population standard deviation divided by the square root of the number of observations.</li>
+<li>In contrast to the variance, the <a href="https://en.wikipedia.org/wiki/Unbiased_estimation_of_standard_deviation">standard deviation still has a bias</a> because the square root is a curved function.</li>
+<li>There are specific corrections for a number of scenarios</li>
+<li>Knowing approximately how precise your estimate of the mean is much better than knowing nothing about it!</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-now-can-answer-our-initial-question:">We now can answer our initial question:<a class="anchor-link" href="#We-now-can-answer-our-initial-question:">&#182;</a></h3><p><strong>Mean ± Standard Error</strong> is a common way to state an estimate and its uncertainty.</p>
+<ul>
+<li><p>As a rule of thumb, we have about 68% confidence that the difference between our estimate and the true population mean is at most two standard errors.</p>
+</li>
+<li><p>In the example with 5 coins, we can say we expect the value of taking one coin out of the pocket is 13 ± 3 Euros.</p>
+</li>
+<li><p>Some application require higher confidence levels. In these cases 2 or more standard errors are <a href="https://en.wikipedia.org/wiki/68–95–99.7_rule">reported</a></p>
+</li>
+<li><p>We will come back to this topic and also discuss when to prefer other measures like the median in the next sessions.</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -13415,12 +13446,12 @@ MathJax.Hub.Config({
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-4961dd740da740fcb38d47e9152edd82"></div>
+<div id="altair-viz-7660e5619d5d48f7ba7ad4f5059a6237"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4961dd740da740fcb38d47e9152edd82") {
-      outputDiv = document.getElementById("altair-viz-4961dd740da740fcb38d47e9152edd82");
+    if (outputDiv.id !== "altair-viz-7660e5619d5d48f7ba7ad4f5059a6237") {
+      outputDiv = document.getElementById("altair-viz-7660e5619d5d48f7ba7ad4f5059a6237");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13462,7 +13493,7 @@ MathJax.Hub.Config({
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": null, "bin": {"maxbins": 7}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "samples"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "width": 500}, {"mark": "tick", "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "samples"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "std"}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "mean"}, "init": {"mean": 0}}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"layer": [{"mark": {"type": "errorbar", "color": "red"}, "encoding": {"x": {"type": "quantitative", "field": "xmin"}, "x2": {"field": "xmax"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "tick", "color": "red"}, "encoding": {"x": {"type": "quantitative", "field": "mean"}}}, {"mark": {"type": "rule", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "aggregate": "mean", "axis": null, "field": "x", "scale": {"domain": [-10, 10]}}}, "view": {"strokeWidth": 0}, "width": 500}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": {"type": "bar", "color": "lightgrey"}, "encoding": {"x": {"type": "quantitative", "axis": null, "bin": {"maxbins": 7}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "width": 500}, {"mark": {"type": "tick", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "selector003['samples']", "as": "samples"}, {"calculate": "+datum.mean  -datum.std / sqrt(+datum.samples)", "as": "xmin"}, {"calculate": "+datum.mean + datum.std / sqrt(+datum.samples)", "as": "xmax"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13480,18 +13511,22 @@ The latter is also called Gaussian or bell curve and we will discuss it depth la
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
-</div>stack1, stack2 = draw_cards(
-    p_win_1 = 0.5,
-    p_win_2 = 0.4,
-    n_cards = 25,
-    seed     = 0
-)m1 = stack1.mean()
-m2 = stack2.mean()
-n  = len(stack1)
-np.sqrt(m1 * (1 - m1) / n), np.sqrt(m2 * (1 - m2) / n)np.sqrt(.5 * (1 - .5) / n), np.sqrt(.6 * (1 - .6) / n)
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 
 </div></section></section>
