@@ -2,14 +2,14 @@ import altair as alt
 import pandas as pd
 import numpy as np
 
-def mormal_dist_df(means, std, n_observations, n_repeats, seed=0):
+def normal_dist_df(means, std, n_observations, n_repeats, seed=0):
     res = []
     for j in range(len(means)):
         for i in range(n_repeats):
             obs =  np.random.normal(means[j], std, n_observations)
             res.append(
                 pd.DataFrame({
-                    'experiment': j+1,
+                    'population': j+1,
                     'sample': i+1,
                     'variable': obs
                 })
@@ -24,13 +24,13 @@ def plot_normal(data):
         pop_sd='stdev(variable)',
     ).transform_calculate(
         pop_mean='datum.pop_m',
-        pop_mean_m_sd='(datum.pop_m - datum.pop_sd)',
-        pop_mean_p_sd='(datum.pop_m + datum.pop_sd)'
+        pop_mean_m_sd='(+datum.pop_m - datum.pop_sd)',
+        pop_mean_p_sd='(+datum.pop_m + datum.pop_sd)'
     )
     
     alt.layer(
         base_chart.mark_bar().encode(
-            x=alt.X('variable', bin=alt.Bin(maxbins=50), title='Variable'),
+            x=alt.X('variable:Q', bin=alt.Bin(maxbins=50), title='Variable'),
             y=alt.Y('count()', title='Count')
         ),
         base_chart.mark_rule(
@@ -59,17 +59,17 @@ def plot_normal(data):
         renderer='svg'
     )
 
-def plot_normal_experiment(data):
-    """Plot experiment as historam"""
+def plot_normal_n_populations(data, n_populations):
+    """Plot population as historam"""
     selection1 = alt.selection_single(
         bind=alt.binding(
             input='range',
             min=1,
-            max=data['experiment'].max(), 
+            max=n_populations, 
             step=1, 
-            name='Experiment: '
+            name='Population: '
         ),
-        init={'experiment': 1}
+        init={'population': 1}
     )
 
     base_chart = alt.Chart(
@@ -79,13 +79,13 @@ def plot_normal_experiment(data):
         pop_sd='stdev(variable)',
     ).transform_calculate(
         pop_mean='datum.pop_m',
-        pop_mean_m_sd='(datum.pop_m - datum.pop_sd)',
-        pop_mean_p_sd='(datum.pop_m + datum.pop_sd)'
+        pop_mean_m_sd='(+datum.pop_m - datum.pop_sd)',
+        pop_mean_p_sd='(+datum.pop_m + datum.pop_sd)'
     )
 
     alt.layer(
         base_chart.mark_bar().encode(
-            x=alt.X('variable', bin=alt.Bin(maxbins=50), title='Variable'),
+            x=alt.X('variable:Q', bin=alt.Bin(maxbins=50), title='Variable'),
             y=alt.Y('count()', title='Count')
         ),
         base_chart.mark_rule(
@@ -106,7 +106,7 @@ def plot_normal_experiment(data):
     ).add_selection(
         selection1
     ).transform_filter(
-        0 == (alt.datum.experiment - selection1.experiment)
+        0 == (alt.datum.population - selection1.population)
     ).properties(
         width=250,
         height=250
@@ -119,24 +119,24 @@ def plot_normal_experiment(data):
     )
 
 
-def plot_normal_sample(data):
-    """Plot sample as historam"""
+def plot_normal_sample(data, n_populations, n_samples):
+    """Plot sample as histogram"""
     selection1 = alt.selection_single(
         bind=alt.binding(
             input='range',
             min=1,
-            max=data['experiment'].max(), 
+            max=n_populations, 
             step=1, 
-            name='Experiment: '
+            name='Population: '
         ),
-        init={'experiment': 1}
+        init={'population': 1}
     )
 
     selection2 = alt.selection_single(
         bind=alt.binding(
             input='range',
             min=1,
-            max=data['sample'].max(), 
+            max=n_samples, 
             step=1, 
             name='Sample: '
         ),
@@ -150,13 +150,13 @@ def plot_normal_sample(data):
         pop_sd='stdev(variable)',
     ).transform_calculate(
         pop_mean='datum.pop_m',
-        pop_mean_m_sd='(datum.pop_m - datum.pop_sd)',
-        pop_mean_p_sd='(datum.pop_m + datum.pop_sd)'
+        pop_mean_m_sd='(+datum.pop_m - datum.pop_sd)',
+        pop_mean_p_sd='(+datum.pop_m + datum.pop_sd)'
     )
 
     alt.layer(
         base_chart.mark_bar().encode(
-            x=alt.X('variable', bin=alt.Bin(maxbins=50), title='Variable'),
+            x=alt.X('variable:Q', bin=alt.Bin(maxbins=50), title='Variable'),
             y=alt.Y('count()', title='Count')
         ),
         base_chart.mark_rule(
@@ -177,7 +177,7 @@ def plot_normal_sample(data):
     ).add_selection(
         selection1
     ).transform_filter(
-        0 == (alt.datum.experiment - selection1.experiment)
+        0 == (alt.datum.population - selection1.population)
     ).add_selection(
         selection2
     ).transform_filter(
