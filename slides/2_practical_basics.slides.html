@@ -13401,7 +13401,7 @@ MathJax.Hub.Config({
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-standard-error-is-still-only-an-approximation">The standard error is still only an approximation<a class="anchor-link" href="#The-standard-error-is-still-only-an-approximation">&#182;</a></h3><ul>
+<h3 id="*The-standard-error-is-still-only-an-approximation">*The standard error is still only an approximation<a class="anchor-link" href="#*The-standard-error-is-still-only-an-approximation">&#182;</a></h3><ul>
 <li>It can also be written as population standard deviation divided by the square root of the number of observations.</li>
 <li>In contrast to the variance, the <a href="https://en.wikipedia.org/wiki/Unbiased_estimation_of_standard_deviation">standard deviation still has a bias</a> because the square root is a curved function.</li>
 <li>There are specific corrections for a number of scenarios</li>
@@ -13422,7 +13422,7 @@ MathJax.Hub.Config({
 </li>
 <li><p>Some application require higher confidence levels. In these cases 2 or more standard errors are <a href="https://en.wikipedia.org/wiki/68–95–99.7_rule">reported</a></p>
 </li>
-<li><p>We will come back to this topic and also discuss when to prefer other measures like the median in the next sessions.</p>
+<li><p>We will come back to this topic and also discuss when to prefer other measures like the median in a followp session.</p>
 </li>
 </ul>
 
@@ -13444,14 +13444,14 @@ MathJax.Hub.Config({
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-7660e5619d5d48f7ba7ad4f5059a6237"></div>
+<div id="altair-viz-638cc6caa087456591d537408dac0be7"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-7660e5619d5d48f7ba7ad4f5059a6237") {
-      outputDiv = document.getElementById("altair-viz-7660e5619d5d48f7ba7ad4f5059a6237");
+    if (outputDiv.id !== "altair-viz-638cc6caa087456591d537408dac0be7") {
+      outputDiv = document.getElementById("altair-viz-638cc6caa087456591d537408dac0be7");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13493,7 +13493,7 @@ MathJax.Hub.Config({
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"layer": [{"mark": {"type": "errorbar", "color": "red"}, "encoding": {"x": {"type": "quantitative", "field": "xmin"}, "x2": {"field": "xmax"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "tick", "color": "red"}, "encoding": {"x": {"type": "quantitative", "field": "mean"}}}, {"mark": {"type": "rule", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "aggregate": "mean", "axis": null, "field": "x", "scale": {"domain": [-10, 10]}}}, "view": {"strokeWidth": 0}, "width": 500}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": {"type": "bar", "color": "lightgrey"}, "encoding": {"x": {"type": "quantitative", "axis": null, "bin": {"maxbins": 7}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "width": 500}, {"mark": {"type": "tick", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "selector003['samples']", "as": "samples"}, {"calculate": "+datum.mean  -datum.std / sqrt(+datum.samples)", "as": "xmin"}, {"calculate": "+datum.mean + datum.std / sqrt(+datum.samples)", "as": "xmax"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"layer": [{"mark": {"type": "errorbar", "color": "red"}, "encoding": {"x": {"type": "quantitative", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": "Population mean"}, "field": "xmin"}, "x2": {"field": "xmax"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "tick", "color": "red"}, "encoding": {"x": {"type": "quantitative", "axis": {"title": ""}, "field": "mean", "scale": {"domain": [-10, 10]}}}}], "data": {"name": "data-a34019366e793aa5e70591f9693d64a7"}, "transform": [{"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "selector003['samples']", "as": "samples"}, {"calculate": "+datum.mean  -datum.std / sqrt(+datum.samples)", "as": "xmin"}, {"calculate": "+datum.mean + datum.std / sqrt(+datum.samples)", "as": "xmax"}], "view": {"strokeWidth": 0}, "width": 500}, {"vconcat": [{"layer": [{"mark": {"type": "errorbar", "color": "steelblue", "extent": "stderr"}, "encoding": {"x": {"type": "quantitative", "aggregate": "mean", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": ""}, "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "rule", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "aggregate": "mean", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": "Sample mean"}, "field": "x", "scale": {"domain": [-10, 10]}}}}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": "Samples"}, "bin": {}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "height": 100, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "width": 500}, {"mark": {"type": "tick", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}]}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-a34019366e793aa5e70591f9693d64a7": [{"x": 1}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13511,6 +13511,22 @@ The latter is also called Gaussian or bell curve and we will discuss it depth la
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Teaser">Teaser<a class="anchor-link" href="#Teaser">&#182;</a></h2><p>In the next session we will take a deeper dive into…</p>
+<ul>
+<li>Comparing two different statistical populations </li>
+<li>Statistical significance and p-values</li>
+<li>Statistical power and effect sizes</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
