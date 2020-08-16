@@ -164,7 +164,7 @@ def print_example_statistics(examples, print_only_sample=False):
                     (np.array(sample) - np.mean(sample))**2
                 )
             )
-            print("Sample Variance:           ", np.var(sample, ddof=0))
+            print("Sample Variance:           ", np.var(sample, ddof=0).round(3))
             print("Sample Standard deviation: ", np.std(sample, ddof=0).round(3))
             print("Population Variance:       ", np.var(sample, ddof=1).round(3))
             print("Pop. Standard deviation:   ", np.std(sample, ddof=1).round(3))
