@@ -1,4 +1,4 @@
-# Statistics for everyone
+# Statistics for Everyone
 
 This course for a wide audience shows you why and how a better understanding of uncertainty can improve your decision making and your understanding of the world.
 
@@ -11,13 +11,23 @@ The interactive slides are generated from Jupyter Notebooks written in Python.
 
 [list of possible topics](topics.md)
 
-### everything needed to edit slides is automated
+
+### Installation
+
+```sh
+# assuming python 3.7 is installed as python3
+python3 -m venv testenv
+source testenv/bin/activate
+pip install -r requirements.txt
+```
+
+### Everything needed to edit slides is automated
 
 - export all slides, serve at localhost:8000 & update upon changes:
 
     ``python make_slides.py --serve True --watch True``
 
-### manual alternative
+### Manual alternative
 
 - export:
 
@@ -26,3 +36,4 @@ The interactive slides are generated from Jupyter Notebooks written in Python.
 - viewing:
 
     ``python -m http.server --directory slides``
+    
