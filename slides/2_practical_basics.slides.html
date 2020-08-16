@@ -13401,7 +13401,7 @@ MathJax.Hub.Config({
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-standard-error-is-still-only-an-approximation">The standard error is still only an approximation<a class="anchor-link" href="#The-standard-error-is-still-only-an-approximation">&#182;</a></h3><ul>
+<h3 id="*The-standard-error-is-still-only-an-approximation">*The standard error is still only an approximation<a class="anchor-link" href="#*The-standard-error-is-still-only-an-approximation">&#182;</a></h3><ul>
 <li>It can also be written as population standard deviation divided by the square root of the number of observations.</li>
 <li>In contrast to the variance, the <a href="https://en.wikipedia.org/wiki/Unbiased_estimation_of_standard_deviation">standard deviation still has a bias</a> because the square root is a curved function.</li>
 <li>There are specific corrections for a number of scenarios</li>
@@ -13416,18 +13416,83 @@ MathJax.Hub.Config({
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="We-now-can-answer-our-initial-question:">We now can answer our initial question:<a class="anchor-link" href="#We-now-can-answer-our-initial-question:">&#182;</a></h3><p><strong>Mean ± Standard Error</strong> is a common way to state an estimate and its uncertainty.</p>
 <ul>
-<li><p>As a rule of thumb, we have about 68% confidence that the difference between our estimate and the true population mean is at most two standard errors.</p>
+<li><p>In the example with 5 coins, we can say we expect the value of taking one coin out of the pocket is 13 ± 3 cents.</p>
 </li>
-<li><p>In the example with 5 coins, we can say we expect the value of taking one coin out of the pocket is 13 ± 3 Euros.</p>
-</li>
-<li><p>Some application require higher confidence levels. In these cases 2 or more standard errors are <a href="https://en.wikipedia.org/wiki/68–95–99.7_rule">reported</a></p>
-</li>
-<li><p>We will come back to this topic and also discuss when to prefer other measures like the median in the next sessions.</p>
+<li><p>Some applications require higher confidence levels. In these cases 2 or more standard errors are <a href="https://en.wikipedia.org/wiki/68–95–99.7_rule">reported</a>.</p>
 </li>
 </ul>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-often-show-one-standard-error-(SE)-as-error-bars">We often show one standard error (SE) as error bars<a class="anchor-link" href="#We-often-show-one-standard-error-(SE)-as-error-bars">&#182;</a></h3><ul>
+<li><strong>1SE error bars show if the means from two samples are significantly different</strong>.</li>
+<li>If the bars don't overlap, the observed means are &gt; 2SE apart</li>
+<li>Because of this, 1SE is a very common size for error bars.</li>
+<li>This is what we looked at in the the card experiment in <a href="http://localhost:8000/1_cards.slides.html">section one</a>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+            <object type="image/svg+xml" data="images/error_bars.svg" style="width: 50%; height: 100%; margin: auto;">
+                <img src="images/error_bars.svg" width="50%" height="100%"></img>
+            </object>
+            
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Two-standard-errors-are-approximately-equal-to-the-95%-confidence-interval">Two standard errors are approximately equal to the 95% confidence interval<a class="anchor-link" href="#Two-standard-errors-are-approximately-equal-to-the-95%-confidence-interval">&#182;</a></h3><ul>
+<li>The 95% confidence interval (CI) contains the population mean with 95% probability.</li>
+<li>Sometimes used as the size for error bars - always check the description of a figure!</li>
+<li>Allows to test if a <strong>mean is different from an exact number</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+            <object type="image/svg+xml" data="images/error_bars_ci.svg" style="width: 50%; height: 100%; margin: auto;">
+                <img src="images/error_bars_ci.svg" width="50%" height="100%"></img>
+            </object>
+            
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13444,14 +13509,14 @@ MathJax.Hub.Config({
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-7660e5619d5d48f7ba7ad4f5059a6237"></div>
+<div id="altair-viz-7b3a5defc38c43bd8242af091f6c5bc3"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-7660e5619d5d48f7ba7ad4f5059a6237") {
-      outputDiv = document.getElementById("altair-viz-7660e5619d5d48f7ba7ad4f5059a6237");
+    if (outputDiv.id !== "altair-viz-7b3a5defc38c43bd8242af091f6c5bc3") {
+      outputDiv = document.getElementById("altair-viz-7b3a5defc38c43bd8242af091f6c5bc3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13493,7 +13558,7 @@ MathJax.Hub.Config({
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"layer": [{"mark": {"type": "errorbar", "color": "red"}, "encoding": {"x": {"type": "quantitative", "field": "xmin"}, "x2": {"field": "xmax"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "tick", "color": "red"}, "encoding": {"x": {"type": "quantitative", "field": "mean"}}}, {"mark": {"type": "rule", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "aggregate": "mean", "axis": null, "field": "x", "scale": {"domain": [-10, 10]}}}, "view": {"strokeWidth": 0}, "width": 500}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": {"type": "bar", "color": "lightgrey"}, "encoding": {"x": {"type": "quantitative", "axis": null, "bin": {"maxbins": 7}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count"}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "width": 500}, {"mark": {"type": "tick", "color": "steelblue"}, "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "interval", "bind": "scales"}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "selector003['samples']", "as": "samples"}, {"calculate": "+datum.mean  -datum.std / sqrt(+datum.samples)", "as": "xmin"}, {"calculate": "+datum.mean + datum.std / sqrt(+datum.samples)", "as": "xmax"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"layer": [{"mark": {"type": "errorbar", "color": "red", "rule": {"size": 1.5}, "ticks": true}, "encoding": {"x": {"type": "quantitative", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": "Population mean \u00b1 expected uncertainty"}, "field": "xmin"}, "x2": {"field": "xmax"}}, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1.5}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "point", "color": "red", "filled": true, "size": 20, "stroke": null}, "encoding": {"x": {"type": "quantitative", "axis": {"title": ""}, "field": "mean", "scale": {"domain": [-10, 10]}}}}], "data": {"name": "data-a34019366e793aa5e70591f9693d64a7"}, "transform": [{"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "selector003['samples']", "as": "samples"}, {"calculate": "selector004['ses']", "as": "ses"}, {"calculate": "+datum.mean - datum.ses * datum.std / sqrt(+datum.samples)", "as": "xmin"}, {"calculate": "+datum.mean + datum.ses * datum.std / sqrt(+datum.samples)", "as": "xmax"}], "view": {"strokeWidth": 0}, "width": 500}, {"vconcat": [{"layer": [{"mark": {"type": "errorbar", "rule": {"size": 1.5}, "ticks": true}, "encoding": {"x": {"type": "quantitative", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": "Sample mean \u00b1 sample uncertainty"}, "field": "bar_min", "scale": {"domain": [-10, 10]}}, "x2": {"field": "bar_max"}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 3, "step": 1, "name": "Show std. errors"}, "init": {"ses": 1}}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1.5}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}}, {"mark": {"type": "point", "filled": true, "size": 20, "stroke": null}, "encoding": {"x": {"type": "quantitative", "field": "sample_mean"}}}], "transform": [{"aggregate": [{"op": "mean", "field": "x", "as": "sample_mean"}, {"op": "stderr", "field": "x", "as": "sample_err"}]}, {"calculate": "selector004['ses']", "as": "ses"}, {"calculate": "+datum.sample_mean - datum.ses * datum.sample_err", "as": "bar_min"}, {"calculate": "+datum.sample_mean + datum.ses * datum.sample_err", "as": "bar_max"}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": {"type": "bar", "clip": true}, "encoding": {"x": {"type": "quantitative", "axis": {"domain": false, "labels": false, "orient": "top", "ticks": false, "title": "Sample Histogram"}, "bin": {}, "field": "x", "scale": {"domain": [-10, 10]}}, "y": {"type": "quantitative", "aggregate": "count", "title": "Count"}}, "height": 100, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 3, "step": 1, "name": "Show std. errors"}, "init": {"ses": 1}}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1.5}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "width": 500}, {"mark": {"type": "tick", "clip": true}, "encoding": {"x": {"type": "quantitative", "axis": {"title": "Sample Values"}, "field": "x", "scale": {"domain": [-10, 10]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 3, "step": 1, "name": "Show std. errors"}, "init": {"ses": 1}}, "selector003": {"type": "single", "bind": {"input": "range", "min": 10, "max": 200, "step": 1, "name": "Sample size"}, "init": {"samples": 50}}, "selector002": {"type": "single", "bind": {"input": "range", "min": 0.1, "max": 5, "step": 0.1, "name": "Pop. Std."}, "init": {"std": 1.5}}, "selector001": {"type": "single", "bind": {"input": "range", "min": -5, "max": 5, "step": 0.1, "name": "Pop. mean"}, "init": {"mean": 0}}}, "view": {"strokeWidth": 0}, "width": 500}], "data": {"sequence": {"start": 0, "stop": 200, "as": "t"}}, "transform": [{"filter": "(datum.t <= toNumber(selector003.samples))"}, {"calculate": "selector001['mean']", "as": "mean"}, {"calculate": "selector002['std']", "as": "std"}, {"calculate": "sampleNormal(+datum.mean,+datum.std)", "as": "x"}]}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-a34019366e793aa5e70591f9693d64a7": [{"x": 1}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
 </script>
 </div>
 
@@ -13507,25 +13572,217 @@ MathJax.Hub.Config({
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Each time you change the parameters, new samples are drawn from a normal distribution.<br>
-The latter is also called Gaussian or bell curve and we will discuss it depth later.</p>
+The latter is also called Gaussian or bell curve and we will hear more about it later.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notice-that-the...">Notice that the...<a class="anchor-link" href="#Notice-that-the...">&#182;</a></h3><ul>
+<li><strong>uncertainty goes up</strong> proportionally to the <strong>population standard deviation</strong> (std.)</li>
+<li><strong>uncertainty goes down</strong> proportionally to the square root of the <strong>sample size</strong>: fast for small sample sizes and then slower and slower.</li>
+<li><strong>error bars of population mean and sample mean</strong> overlap for <strong>95%</strong> of the samples when they show <strong>1 standard error</strong></li>
+<li><strong>true population mean is inside the sample error bars</strong> for <strong>95%</strong> of the samples when they show <strong>2 standard errors</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="In-the-next-session,">In the next session,<a class="anchor-link" href="#In-the-next-session,">&#182;</a></h2><p>we will take a deeper dive into…</p>
+<ul>
+<li>Comparing two different statistical populations </li>
+<li>Statistical significance and p-values</li>
+<li>Statistical power and effect sizes</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Complete the following exercises to become more familiar with the contents of this session.</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<h3 id="1.-Drawing-coins">1. Drawing coins<a class="anchor-link" href="#1.-Drawing-coins">&#182;</a></h3><p>Calculate mean, median, standard deviation, and standard error for the following samples. You can do it just like it was explained above.</p>
+<p>Solutions are on the next slide. Feel free to use your calculator of favourite software!</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Values in sample:           [2, 10, 10, 10, 50, 50]
+Values in sample:           [1, 1, 2, 2, 10, 20]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2>
+<h3 id="Solutions-to-Exercise-1">Solutions to Exercise 1<a class="anchor-link" href="#Solutions-to-Exercise-1">&#182;</a></h3>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Values in sample:           [2, 10, 10, 10, 50, 50]
+Sum of values:              132
+Mean:                       22.0
+Median:                     10.0
+Sum of deviations:          2400.0
+Sample Variance:            400.0
+Sample Standard deviation:  20.0
+Population Variance:        480.0
+Pop. Standard deviation:    21.909
+Standard error:             8.944
+
+Values in sample:           [1, 1, 2, 2, 10, 20]
+Sum of values:              36
+Mean:                       6.0
+Median:                     2.0
+Sum of deviations:          294.0
+Sample Variance:            49.0
+Sample Standard deviation:  7.0
+Population Variance:        58.8
+Pop. Standard deviation:    7.668
+Standard error:             3.13
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Drawing-cards">2. Drawing cards<a class="anchor-link" href="#2.-Drawing-cards">&#182;</a></h3><p>In section 1, we had an example where we drew cards.</p>
+<ul>
+<li>When we drew 25 cards, we got 12 wins for the first stack and 15 for the second one.</li>
+<li>When we drew 100 cards, we got 56 wins for the first stack and 40 for the second one.</li>
+</ul>
+<p>Calculate the winning probabilities and standard errors for both stacks for both 25 and 100 cards.</p>
+<ul>
+<li>Write the results down in the notation mean ± standard error.</li>
+<li>Can you remember when the difference was significant and why?</li>
+<li>Try to round to <a href="https://en.wikipedia.org/wiki/Significant_figures">significant digits</a>. If your value is e.g. 0.12345 ± 0.05432, you only report 0.12 ± 0.05!</li>
+</ul>
+<p>The solution is on the next slide</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Solution-to-2.">2. Solution to 2.<a class="anchor-link" href="#2.-Solution-to-2.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Stack 1 has 12 wins out of 25 cards
+Stack 2 has 15 wins out of 25 cards
+
+Stack 1 winning probabiltiy: 0.5 ± 0.1
+Stack 2 winning probabiltiy: 0.6 ± 0.1
+
+We can&#39;t decide which stack has a higher winning probability
+
+Stack 1 has 56 wins out of 100 cards
+Stack 2 has 40 wins out of 100 cards
+
+Stack 1 winning probabiltiy: 0.56 ± 0.05
+Stack 2 winning probabiltiy: 0.4 ± 0.05
+
+Stack 1 has a significantly higher winning probability than stack 2 (p &lt; 5%)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-Explore-your-favourite-software">3. Explore your favourite software<a class="anchor-link" href="#3.-Explore-your-favourite-software">&#182;</a></h3><ul>
+<li>Find out if the software you use for spreadsheets, Business Intelligence, or programming has these functions built in:<ul>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard Deviation</li>
+<li>Standard Error</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Find out how to use your favourite plotting software to draw a bar chart with error bars</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.-Explore-your-favourite-software">4. Explore your favourite software<a class="anchor-link" href="#4.-Explore-your-favourite-software">&#182;</a></h3><ul>
+<li>Find out if the software you use for spreadsheets, Business Intelligence, or programming has these functions built in:<ul>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard Deviation</li>
+<li>Standard Error</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Find out how to use your favourite plotting software to draw a bar chart with error bars. Try searching for the solution online.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
