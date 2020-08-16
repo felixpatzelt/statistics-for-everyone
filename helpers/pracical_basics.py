@@ -1,5 +1,6 @@
 import altair as alt
 import pandas as pd
+import numpy as np
 
 def plot_population_vs_sample_mean():
     """Create interactive plot with random samples from normal distribution.
@@ -148,3 +149,25 @@ def plot_population_vs_sample_mean():
     )
 
     (pop_mean & combined_sample).display(renderer='svg')
+    
+    
+    
+def print_example_statistics(examples, print_only_sample=False):
+    for sample in examples:
+        print("Values in sample:          ", sample)
+        if not print_only_sample:
+            print("Sum of values:             ", np.sum(sample))
+            print("Mean:                      ", np.mean(sample))
+            print("Median:                    ", np.median(sample))
+            print("Sum of deviations:         ", 
+                np.sum(
+                    (np.array(sample) - np.mean(sample))**2
+                )
+            )
+            print("Sample Variance:           ", np.var(sample, ddof=0))
+            print("Sample Standard deviation: ", np.std(sample, ddof=0).round(3))
+            print("Population Variance:       ", np.var(sample, ddof=1).round(3))
+            print("Pop. Standard deviation:   ", np.std(sample, ddof=1).round(3))
+            print("Standard error:            ", (np.std(sample, ddof=1) / np.sqrt(len(sample))).round(3))
+            print()
+

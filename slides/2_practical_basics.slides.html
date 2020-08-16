@@ -13511,12 +13511,12 @@ MathJax.Hub.Config({
 
 <div class="output_html rendered_html output_subarea ">
 
-<div id="altair-viz-6b21f5b2362d44d6a22cf0a40a85ebb2"></div>
+<div id="altair-viz-7b3a5defc38c43bd8242af091f6c5bc3"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6b21f5b2362d44d6a22cf0a40a85ebb2") {
-      outputDiv = document.getElementById("altair-viz-6b21f5b2362d44d6a22cf0a40a85ebb2");
+    if (outputDiv.id !== "altair-viz-7b3a5defc38c43bd8242af091f6c5bc3") {
+      outputDiv = document.getElementById("altair-viz-7b3a5defc38c43bd8242af091f6c5bc3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13580,6 +13580,19 @@ The latter is also called Gaussian or bell curve and we will hear more about it 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notice-that-the...">Notice that the...<a class="anchor-link" href="#Notice-that-the...">&#182;</a></h3><ul>
+<li><strong>uncertainty goes up</strong> proportionally to the <strong>population standard deviation</strong> (std.)</li>
+<li><strong>uncertainty goes down</strong> proportionally to the square root of the <strong>sample size</strong>: fast for small sample sizes and then slower and slower.</li>
+<li><strong>error bars of population mean and sample mean</strong> overlap for <strong>95%</strong> of the samples when they show <strong>1 standard error</strong></li>
+<li><strong>true population mean is inside the sample error bars</strong> for <strong>95%</strong> of the samples when they show <strong>2 standard errors</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="In-the-next-session,">In the next session,<a class="anchor-link" href="#In-the-next-session,">&#182;</a></h2><p>we will take a deeper dive into…</p>
 <ul>
 <li>Comparing two different statistical populations </li>
@@ -13593,7 +13606,178 @@ The latter is also called Gaussian or bell curve and we will hear more about it 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2>
+<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Complete the following exercises to become more familiar with the contents of this session.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-Drawing-coins">1. Drawing coins<a class="anchor-link" href="#1.-Drawing-coins">&#182;</a></h3><p>Calculate mean, median, standard deviation, and standard error for the following samples. You can do it just like it was explained above.</p>
+<p>Solutions are on the next slide. Feel free to use your calculator of favourite software!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Values in sample:           [2, 10, 10, 10, 50, 50]
+Values in sample:           [1, 1, 2, 2, 10, 20]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Solutions-to-Exercise-1">Solutions to Exercise 1<a class="anchor-link" href="#Solutions-to-Exercise-1">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Values in sample:           [2, 10, 10, 10, 50, 50]
+Sum of values:              132
+Mean:                       22.0
+Median:                     10.0
+Sum of deviations:          2400.0
+Sample Variance:            400.0
+Sample Standard deviation:  20.0
+Population Variance:        480.0
+Pop. Standard deviation:    21.909
+Standard error:             8.944
+
+Values in sample:           [1, 1, 2, 2, 10, 20]
+Sum of values:              36
+Mean:                       6.0
+Median:                     2.0
+Sum of deviations:          294.0
+Sample Variance:            49.0
+Sample Standard deviation:  7.0
+Population Variance:        58.8
+Pop. Standard deviation:    7.668
+Standard error:             3.13
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Drawing-cards">2. Drawing cards<a class="anchor-link" href="#2.-Drawing-cards">&#182;</a></h3><p>In section 1, we had an example where we drew cards.</p>
+<ul>
+<li>When we drew 25 cards, we got 12 wins for the first stack and 15 for the second one.</li>
+<li>When we drew 100 cards, we got 56 wins for the first stack and 40 for the second one.</li>
+</ul>
+<p>Calculate the winning probabilities and standard errors for both stacks for both 25 and 100 cards.</p>
+<ul>
+<li>Write the results down in the notation mean ± standard error.</li>
+<li>Can you remember when the difference was significant and why?</li>
+<li>Try to round to <a href="https://en.wikipedia.org/wiki/Significant_figures">significant digits</a>. If your value is e.g. 0.12345 ± 0.05432, you only report 0.12 ± 0.05!</li>
+</ul>
+<p>The solution is on the next slide</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Solution-to-2.">2. Solution to 2.<a class="anchor-link" href="#2.-Solution-to-2.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Stack 1 has 12 wins out of 25 cards
+Stack 2 has 15 wins out of 25 cards
+
+Stack 1 winning probabiltiy: 0.5 ± 0.1
+Stack 2 winning probabiltiy: 0.6 ± 0.1
+
+We can&#39;t decide which stack has a higher winning probability
+
+Stack 1 has 56 wins out of 100 cards
+Stack 2 has 40 wins out of 100 cards
+
+Stack 1 winning probabiltiy: 0.56 ± 0.05
+Stack 2 winning probabiltiy: 0.4 ± 0.05
+
+Stack 1 has a significantly higher winning probability than stack 2 (p &lt; 5%)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-Explore-your-favourite-software">3. Explore your favourite software<a class="anchor-link" href="#3.-Explore-your-favourite-software">&#182;</a></h3><ul>
+<li>Find out if the software you use for spreadsheets, Business Intelligence, or programming has these functions built in:<ul>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard Deviation</li>
+<li>Standard Error</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Find out how to use your favourite plotting software to draw a bar chart with error bars</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.-Explore-your-favourite-software">4. Explore your favourite software<a class="anchor-link" href="#4.-Explore-your-favourite-software">&#182;</a></h3><ul>
+<li>Find out if the software you use for spreadsheets, Business Intelligence, or programming has these functions built in:<ul>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard Deviation</li>
+<li>Standard Error</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Find out how to use your favourite plotting software to draw a bar chart with error bars. Try searching for the solution online.</li>
+</ul>
+
 </div>
 </div>
 </div>
