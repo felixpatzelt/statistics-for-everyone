@@ -4,6 +4,7 @@ This course for a wide audience shows you why and how a better understanding of 
 
 **Work in Progress**
 
+To view the lessons that are available so far, check out the hosted [finished slides](https://felixpatzelt.com/statistics-for-everyone).
 
 # Development
 

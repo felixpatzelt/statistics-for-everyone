@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>0_introduction slides</title>
+<title>1_introductory_card_experiment slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13202,18 +13202,28 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Statistics-for-everyone">Statistics for everyone<a class="anchor-link" href="#Statistics-for-everyone">&#182;</a></h1><p>How to use statistics to make better decisions</p>
+<h2 id="Introductory-experiment:-drawing-cards-from-two-stacks">Introductory experiment: drawing cards from two stacks<a class="anchor-link" href="#Introductory-experiment:-drawing-cards-from-two-stacks">&#182;</a></h2><ul>
+<li>Imagine a game with <strong>two big stacks of cards</strong></li>
+<li>Each stack contains <strong>winning cards</strong> and <strong>blanks</strong> in random order.</li>
+<li>Each turn, draw one card from each stack.</li>
+<li>How many pairs of cards do you have to draw to decide <strong>which stack has more wins</strong>?</li>
+</ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Intuitive-decision-making-can-lead-you-astray">Intuitive decision making can lead you astray<a class="anchor-link" href="#Intuitive-decision-making-can-lead-you-astray">&#182;</a></h1><ul>
-<li>B. F. Skinner <a href="https://www.youtube.com/watch?v=TtfQlkGwE2U">showed</a> that rewards reinforce behaviours.</li>
-<li>Hence, animals can be <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1473025/">trained</a> to do <a href="https://www.theatlantic.com/technology/archive/2013/06/skinner-marketing-were-the-rats-and-facebook-likes-are-the-reward/276613/">many tasks</a></li>
-<li>Randomly rewarding <a href="https://www.all-about-psychology.com/support-files/superstition-in-the-pigeon.pdf">pigeons</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2615824/">reinforced</a> apparently random behaviours ("<a href="https://www.psychologicalscience.org/observer/the-many-lives-of-superstition">superstitions</a>").</li>
+<h3 id="Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">Draw cards from two different stacks - one at a time from each stack<a class="anchor-link" href="#Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">&#182;</a></h3><ul>
+<li>What can we know after drawing a certain number of cards?</li>
+<li>When have we drawn enough cards to be certain?</li>
 </ul>
 
 </div>
@@ -13227,12 +13237,57 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 
-            <object type="image/svg+xml" data="images/pigeon.svg" style="width: 40%; height: 100%; margin: auto;">
-                <img src="images/pigeon.svg" width="40%" height="100%"></img>
-            </object>
-            
+<div id="altair-viz-2088f7f8f683496597106a23085f53c9"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-2088f7f8f683496597106a23085f53c9") {
+      outputDiv = document.getElementById("altair-viz-2088f7f8f683496597106a23085f53c9");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "aggregate": "sum", "axis": {"tickMinStep": 1, "title": "Number of Wins"}, "field": "win"}}, "height": 250, "selection": {"selector001": {"type": "single", "bind": {"input": "range", "min": 1, "max": 40, "step": 1, "name": "Draw Card Pairs: "}, "init": {"card_pair": 1}}}, "transform": [{"filter": "datum.experiment == 1"}, {"filter": "(datum.card_pair <= toNumber(selector001.card_pair))"}], "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
 </div>
 
 </div>
@@ -13244,9 +13299,371 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reasoning-and-discussing-isn't-always-enough">Reasoning and discussing isn't always enough<a class="anchor-link" href="#Reasoning-and-discussing-isn't-always-enough">&#182;</a></h1><ul>
-<li>Participants in the TV show <a href="https://en.wikipedia.org/wiki/Trick_or_Treat_%28TV_series%29">Trick or Treat (S2/E6)</a> had to find out how to score points.</li>
-<li>They developed complex ideas on how using various available objects scored points</li>
+<h3 id="It-can-take-a-while-to-see-which-stack-is-better!">It can take a while to see which stack is better!<a class="anchor-link" href="#It-can-take-a-while-to-see-which-stack-is-better!">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<div id="altair-viz-985041933c644b34a858168a55856afd"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-985041933c644b34a858168a55856afd") {
+      outputDiv = document.getElementById("altair-viz-985041933c644b34a858168a55856afd");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "vconcat": [{"mark": {"type": "tick", "thickness": 1.5}, "encoding": {"color": {"type": "nominal", "field": "stack", "title": "Stack"}, "x": {"type": "quantitative", "axis": {"grid": false, "labels": false, "orient": "top", "ticks": false, "title": "Wins"}, "field": "card_pair", "title": "Cards drawn per stack"}, "y": {"type": "quantitative", "axis": null, "field": "stack", "scale": {"domain": [2, 0]}, "title": "Stack"}}, "height": 35, "transform": [{"filter": "(datum.experiment == 1) & (datum.win > 0)"}], "view": {"strokeWidth": 0}, "width": 500}, {"mark": "line", "encoding": {"color": {"type": "nominal", "field": "stack", "title": "Stack"}, "x": {"type": "quantitative", "field": "card_pair", "title": "Cards drawn per stack"}, "y": {"type": "quantitative", "field": "cumulative_wins", "title": "Number of wins"}}, "height": 265, "transform": [{"window": [{"op": "sum", "field": "win", "as": "cumulative_wins"}], "frame": [null, 0], "groupby": ["experiment", "stack"]}, {"filter": "datum.experiment == 1"}], "width": 500}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>If we shuffle the cards and repeat the experiment,<br> will we get a different answer?</h3>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Repeat-the-experiment">Repeat the experiment<a class="anchor-link" href="#Repeat-the-experiment">&#182;</a></h3><ul>
+<li>Draw a fixed number of cards from each stack.</li>
+<li>Calculate each stack's winning probability = number of wins / number of cards.</li>
+<li>Shuffle the cards back into the stacks they came from.</li>
+<li>Repeat the experiment 50 times.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Each-repetition-yields-a-different-winning-probability-for-each-stack.">Each repetition yields a different winning probability for each stack.<a class="anchor-link" href="#Each-repetition-yields-a-different-winning-probability-for-each-stack.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<div id="altair-viz-40868bb114a040b0b0a0595d567987bd"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-40868bb114a040b0b0a0595d567987bd") {
+      outputDiv = document.getElementById("altair-viz-40868bb114a040b0b0a0595d567987bd");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector002": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector002.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The more cards we draw per experiment, the more similar the outcomes (circles)<br> of the different experiments become.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-can-count-how-often-the-outcome-falls-in-a-certain-range">We can count how often the outcome falls in a certain range<a class="anchor-link" href="#We-can-count-how-often-the-outcome-falls-in-a-certain-range">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<div id="altair-viz-c6f4918eda6146e38a48d9f37cc12b68"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-c6f4918eda6146e38a48d9f37cc12b68") {
+      outputDiv = document.getElementById("altair-viz-c6f4918eda6146e38a48d9f37cc12b68");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector003.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"mark": {"type": "bar", "binSpacing": 1, "cornerRadius": 2, "fillOpacity": 0.33, "strokeOpacity": 0.66, "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "stroke": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector003.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>A <strong>histogram</strong> shows how many experiments had a certain outcome (bar chart, right).</li>
+<li>It visualises the <strong>distribution</strong> of possible outcomes.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-standard-deviation-(std.)-measures-the-spread-of-the-outcomes">The <strong>standard deviation (std.)</strong> measures the spread of the outcomes<a class="anchor-link" href="#The-standard-deviation-(std.)-measures-the-spread-of-the-outcomes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<div id="altair-viz-116b97e3d2e74112848786332e82d8cc"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-116b97e3d2e74112848786332e82d8cc") {
+      outputDiv = document.getElementById("altair-viz-116b97e3d2e74112848786332e82d8cc");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "concat": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "field": "experiment", "title": "Experiment"}, "y": {"type": "quantitative", "axis": {"grid": true, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}, "title": "Winning probability"}}, "height": 225, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 400}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "bar", "binSpacing": 1, "cornerRadius": 2, "fillOpacity": 0.33, "strokeOpacity": 0.66, "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "stack", "legend": {"title": "Stack"}}, "order": {"type": "quantitative", "field": "stack"}, "stroke": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "quantitative", "aggregate": "count", "field": "experiment", "stack": null, "title": "Number of experiments"}, "y": {"type": "quantitative", "axis": {"grid": true, "labels": false, "title": null, "values": [0.0, 0.2, 0.4, 0.6000000000000001, 0.8, 1.0]}, "bin": {"extent": [0, 1], "step": 0.1}, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "height": 225, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}], "width": 150}, {"layer": [{"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "errorbar", "extent": "stdev", "rule": {"size": 2}}, "encoding": {"color": {"type": "nominal", "field": "stack"}, "x": {"type": "quantitative", "axis": null, "field": "stack"}, "y": {"type": "quantitative", "axis": null, "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "mark": {"type": "point", "size": 0}, "encoding": {"x": {"type": "quantitative", "field": "stack", "scale": {"domain": [1, 4]}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "p_win", "scale": {"domain": [-0.1, 1.1]}}}, "selection": {"selector004": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per Experiment: "}, "init": {"card_pair": 25}}}, "transform": [{"filter": "(datum.card_pair <= toNumber(selector004.card_pair))"}, {"aggregate": [{"op": "mean", "field": "win", "as": "p_win"}], "groupby": ["stack", "experiment"]}]}, {"data": {"name": "data-cfb0c2bdaac45afb20e67f1aafe99e45"}, "mark": {"type": "text", "angle": 90, "baseline": "middle"}, "encoding": {"text": {"type": "nominal", "field": "text"}, "x": {"type": "quantitative", "field": "x"}, "y": {"type": "quantitative", "field": "y"}}}], "height": 225, "view": {"strokeWidth": 0}, "width": 25}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-cfb0c2bdaac45afb20e67f1aafe99e45": [{"x": 4, "y": 0.5, "text": "Mean \u00b1 Standard Deviation"}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The standard deviation over many experiments corresponds to the <strong>standard error</strong> for a <strong>single experiment</strong>.$^{*▾}$</li>
+<li>That is, the uncertainty we'd have about the true winning probabilites after performing one experiment.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="*The-standard-error-of-the-mean...">*The standard error of the mean...<a class="anchor-link" href="#*The-standard-error-of-the-mean...">&#182;</a></h3><ul>
+<li>...is calculated by dividing the standard deviation<br>by the square root of the number of samples</li>
+<li>...will be discussed further in a followup </li>
+</ul>
+<p>See also: <a href="https://en.wikipedia.org/wiki/Standard_error">https://en.wikipedia.org/wiki/Standard_error</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A-single-small-experiment-(25-cards)">A single small experiment (25 cards)<a class="anchor-link" href="#A-single-small-experiment-(25-cards)">&#182;</a></h3><ul>
+<li><strong>Error bars</strong> show the <strong>standard error</strong> of a single experiment</li>
+<li>Here they <strong>overlap</strong> - the difference betwen the stacks is smaller than the uncertainty</li>
+<li><strong>We can't decide</strong> which stack is better $^{*▾}$</li>
 </ul>
 
 </div>
@@ -13260,12 +13677,57 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 
-            <object type="image/svg+xml" data="images/experiment.svg" style="width: 70%; height: 100%; margin: auto;">
-                <img src="images/experiment.svg" width="70%" height="100%"></img>
-            </object>
-            
+<div id="altair-viz-829339cb4ed0423fadc69eb41f5b1903"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-829339cb4ed0423fadc69eb41f5b1903") {
+      outputDiv = document.getElementById("altair-viz-829339cb4ed0423fadc69eb41f5b1903");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "field": "win", "title": "Winning probability"}}, "selection": {"selector005": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 25}}, "selector006": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector005.card_pair)) && (toNumber(datum.experiment) === toNumber(selector006.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
 </div>
 
 </div>
@@ -13273,51 +13735,29 @@ a.anchor-link {
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="*Error-bars-commonly-represent-standard-errors">*Error bars commonly represent standard errors<a class="anchor-link" href="#*Error-bars-commonly-represent-standard-errors">&#182;</a></h3><p>For "well behaved" distributions, which we will explain in a followup,</p>
+<ul>
+<li>they show the uncertainty of the <code>mean</code> value of an observable,</li>
+<li>they represent the range in which ~68% of the observations fall.</li>
+<li>If they don't overlap, the corresponding <code>means</code> are different with ~97.5% probability.</li>
+<li>Therefore, false positives can still occur. To lower their probability, we can require several standard errors of difference.</li>
+<li>Sometimes error bars can show other related measures, which should be noted near the figure.</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Humans-detect-patterns-where-there-are-none">Humans detect patterns where there are none<a class="anchor-link" href="#Humans-detect-patterns-where-there-are-none">&#182;</a></h1><p>In the show, points increased every time a fish swam across an aquarium</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-            <object type="image/svg+xml" data="images/fish.svg" style="width: 50%; height: 100%; margin: auto;">
-                <img src="images/fish.svg" width="50%" height="100%"></img>
-            </object>
-            
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>"We got to a hundred points, so we obviously did it right." - A participant.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Focusing-on-spurious-signals-can-be-costly">Focusing on spurious signals can be costly<a class="anchor-link" href="#Focusing-on-spurious-signals-can-be-costly">&#182;</a></h1><ul>
-<li>Participants missed actual hints that would have allowed them<br> to win more money more easily </li>
-<li>See <a href="https://www.youtube.com/watch?v=IDi2NlsA4nI">part 1</a> and <a href="https://www.youtube.com/watch?v=yzXSSPp4Epg">part 2</a></li>
+<h3 id="An-bigger-experiment-(100-cards)">An bigger experiment (100 cards)<a class="anchor-link" href="#An-bigger-experiment-(100-cards)">&#182;</a></h3><ul>
+<li>The <strong>error bars don't overlap</strong>.</li>
+<li>We can say the difference is <strong>statistically significant</strong>.</li>
+<li>We can be very certain that stack 1 has more wins.</li>
 </ul>
 
 </div>
@@ -13331,12 +13771,57 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 
-            <object type="image/svg+xml" data="images/sign.svg" style="width: 70%; height: 100%; margin: auto;">
-                <img src="images/sign.svg" width="70%" height="100%"></img>
-            </object>
-            
+<div id="altair-viz-10f4467819bf4c0e95d6628268b2d089"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-10f4467819bf4c0e95d6628268b2d089") {
+      outputDiv = document.getElementById("altair-viz-10f4467819bf4c0e95d6628268b2d089");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}, "axis": {"grid": false}, "view": {"strokeWidth": 0}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "stack", "legend": null}, "x": {"type": "nominal", "field": "stack"}, "y": {"type": "quantitative", "aggregate": "mean", "field": "win"}}, "selection": {"selector007": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector008": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector007.card_pair)) && (toNumber(datum.experiment) === toNumber(selector008.experiment)))"}]}, {"mark": {"type": "errorbar", "extent": "stderr", "rule": {"size": 2}}, "encoding": {"x": {"type": "nominal", "field": "stack", "title": "Card Stack"}, "y": {"type": "quantitative", "field": "win", "title": "Winning probability"}}, "selection": {"selector007": {"type": "single", "bind": {"input": "range", "min": 1, "max": 100, "step": 1, "name": "Card pairs per experiment: "}, "init": {"card_pair": 100}}, "selector008": {"type": "single", "bind": {"input": "range", "min": 1, "max": 50, "step": 1, "name": "Select one experiment: "}, "init": {"experiment": 1}}}, "transform": [{"filter": "((toNumber(datum.card_pair) <= toNumber(selector007.card_pair)) && (toNumber(datum.experiment) === toNumber(selector008.experiment)))"}]}], "data": {"url": "1_cards_data.csv", "format": {"type": "csv"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
 </div>
 
 </div>
@@ -13348,62 +13833,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>Even quantitative data can mislead<br> without proper analysis</h1>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-            <object type="image/svg+xml" data="images/spurious_correlations.svg" style="width: 100%; height: 100%; margin: auto;">
-                <img src="images/spurious_correlations.svg" width="100%" height="100%"></img>
-            </object>
-            
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>See also: <a href="http://www.tylervigen.com/spurious-correlations">Spurious correlations</a>, <a href="https://blog.datawrapper.de/dualaxis">Why not to use two axes</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Algorithms-can-make-similar-mistakes">Algorithms can make similar mistakes<a class="anchor-link" href="#Algorithms-can-make-similar-mistakes">&#182;</a></h1><p>A common problem in machine learning is <a href="https://en.wikipedia.org/wiki/Overfitting">over- or underfitting</a> variations in training data.<br> The resulting models don't generalise well to future observations.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Statistics-can-help-to-tell-the-signal-from-the-noise">Statistics can help to tell the signal from the noise<a class="anchor-link" href="#Statistics-can-help-to-tell-the-signal-from-the-noise">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="For-example:">For example:<a class="anchor-link" href="#For-example:">&#182;</a></h3><ul>
-<li>In 2016, many were certain that Clinton would win the US election.</li>
-<li>On Nov. 4, four days before the election, <a href="https://fivethirtyeight.com/features/trump-is-just-a-normal-polling-error-behind-clinton">a statistics website reported</a>:<br> "Trump Is Just A Normal Polling Error Behind Clinton"</li>
+<h2 id="Conclusion:-observations-have-uncertainty">Conclusion: observations have uncertainty<a class="anchor-link" href="#Conclusion:-observations-have-uncertainty">&#182;</a></h2><h3 id="Always-ask-about-the-uncertainty-to&#8230;">Always ask about the uncertainty to&#8230;<a class="anchor-link" href="#Always-ask-about-the-uncertainty-to&#8230;">&#182;</a></h3><ul>
+<li><strong>avoid overconfidence</strong>: you know what you don't know</li>
+<li><strong>avoid missing significant effects</strong>: you know when you probably know something</li>
 </ul>
 
 </div>
@@ -13412,11 +13844,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="You-can-get-better-at-statistics!">You can get better at statistics!<a class="anchor-link" href="#You-can-get-better-at-statistics!">&#182;</a></h1><ul>
-<li>Follow this course to improve your decision making skills</li>
-<li>Suitable for general audiences</li>
-</ul>
-<p>Next section: <a href="1_cards.slides.html">An introductory experiment</a></p>
+<h2 id="How-to-calculate-these-quantities-yourself?">How to calculate these quantities yourself?<a class="anchor-link" href="#How-to-calculate-these-quantities-yourself?">&#182;</a></h2><p>See next section <a href="2_practical_basics.slides.html">practical basics</a>!</p>
 
 </div>
 </div>
