@@ -15,13 +15,22 @@ from http.server import SimpleHTTPRequestHandler
 from socketserver import TCPServer
 from time import sleep
 
-
+# nb conversion
 INPUT_GLOB = '*.ipynb'
 OUTPUT_DIR = 'slides'
+
+# serving
 SERVE      = False
 WATCH      = False
 PORT       = 8000
 HOST       = "localhost" # currently fixed
+
+# template for index with table of contents
+INDEX_TEMPLATE_FILE = 'index.template.html'
+INDEX_TOC_PRE_TPL   = "  <ul>"
+INDEX_TOC_ENTRY_TPL = "    <li><a href={href}>{title}</li>"
+INDEX_TOC_POST_TPL  = "  </ul>"
+
 
 def convert_notebook(
         filename,
@@ -41,6 +50,43 @@ def convert_notebook(
         print(sp.stdout.decode())
         print(sp.stderr.decode())
     return sp
+    
+
+def make_index(output_dir):
+    """Create index.html with list of slide decks (.html files in output dir)
+    """
+    
+    print("updating index.html")
+    with open(INDEX_TEMPLATE_FILE, 'r') as f:
+        index_template = f.read()
+    
+    html_files = sorted(glob(os.path.join(output_dir, '*.html')))    
+    toc         = [INDEX_TOC_PRE_TPL]
+    for f in html_files:
+        href = f.split('/')[-1]
+        if href == "index.html":
+            continue
+        title = (
+            href.lower()
+            .replace('.html','')
+            .replace('.slides','')
+            .replace('_', ' ')
+            .title()
+        )
+        toc.append(INDEX_TOC_ENTRY_TPL.format(href=href, title=title))
+    toc.append(INDEX_TOC_POST_TPL)
+    
+    index_page = (index_template.format(table_of_contents="\n".join(toc)))
+    
+    with open(os.path.join(output_dir,'index.html'), 'w') as f:
+        f.write(index_page)
+        
+
+def convert_notebook_and_update_index(
+        notebook_filename, output_dir, **convert_nb_kwargs
+    ):
+    convert_notebook(notebook_filename, output_dir, **convert_nb_kwargs)
+    make_index(output_dir)
 
 
 def serve(directory, port):
@@ -79,6 +125,7 @@ class Watcher():
             file: 0 for file in nb_files
         }
         
+        
     def update(self):
         nb_files = glob(self.glob_pattern)
         for file in nb_files:
@@ -104,7 +151,10 @@ def main(input_glob, output_dir, serve, watch, port):
     else:
         server = None
     
-    watcher = Watcher(input_glob, partial(convert_notebook, output_dir=output_dir))
+    watcher = Watcher(
+        input_glob, 
+        partial(convert_notebook_and_update_index, output_dir=output_dir)
+    )
     
     if watch:
         watcher.watch()
