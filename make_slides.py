@@ -28,7 +28,7 @@ HOST       = "localhost" # currently fixed
 # template for index with table of contents
 INDEX_TEMPLATE_FILE = 'index.template.html'
 INDEX_TOC_PRE_TPL   = "  <ul>"
-INDEX_TOC_ENTRY_TPL = "    <li><a href={href}>{title}</li>"
+INDEX_TOC_ENTRY_TPL = "    <li><a href={href}>{title}</a></li>"
 INDEX_TOC_POST_TPL  = "  </ul>"
 
 
