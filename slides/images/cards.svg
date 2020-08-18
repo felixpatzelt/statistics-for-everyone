@@ -18,13 +18,13 @@
             transition-delay: .25s;
             opacity: 0%;
         }
-        .card:hover .shape {
+        .card:hover .shape, .card:active .shape {
             transform: rotateX(180deg);
         }
-        .card:hover .front {
+        .card:hover .front, .card:active .front {
             opacity: 0%;
         }
-        .card:hover .back {
+        .card:hover .back, .card:active .back {
             opacity: 100%;
         }
     </style>
