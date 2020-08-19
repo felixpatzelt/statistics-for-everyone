@@ -284,7 +284,7 @@ def plot_experiment_bars_with_errors(data, n_card_pairs, n_card_pairs_init, n_re
     )
 
     # plot errorbars
-    errors=base.mark_errorbar(extent='stderr', rule=alt.MarkConfig(size=2)).encode(
+    errors=base.mark_errorbar(extent='ci', rule=alt.MarkConfig(size=2)).encode(
         alt.Y('win:Q', title='Winning probability'),
         x=alt.X('stack:N', title='Card Stack')
     )
