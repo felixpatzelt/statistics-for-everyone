@@ -51,7 +51,7 @@ def plot_population_vs_sample_mean():
     )
     uncertainty_selection = alt.selection_single(
         bind=input_uncertainty,
-        init={'ses': 1}
+        init={'ses': 2}
     )
 
 
@@ -73,7 +73,7 @@ def plot_population_vs_sample_mean():
             x=alt.X(
                 "xmin:Q", 
                 axis=alt.Axis(
-                    title="Population mean ± expected uncertainty", **title_only_ax_kwargs
+                    title="Population mean ± expected sample uncertainty", **title_only_ax_kwargs
                 )
             ),
             x2="xmax:Q",
