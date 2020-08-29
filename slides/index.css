@@ -4,21 +4,20 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 body {
-    font-family: "Lato", sans-serif;
-    margin: auto;
-    font-size: 1.2em;
+  font-family: "Lato", sans-serif;
+  margin: auto;
+  font-size: 1.2em;
+  width: 90%;
 }
-@media (min-width: 782px) {
-  body {
-    width: 720px;
-	}
+p {
+  text-align: justify;
 }
-@media (max-width: 782px) {
+@media (min-width: 980px) {
   body {
-    width: 92%;
+    width: 780px;
 	}
 	p {
-	  text-align: justify;
+	  text-align: left;
 	}
 }
 
@@ -57,4 +56,3 @@ h6 {
   text-shadow: none;
   word-wrap: break-word; 
 }
-
