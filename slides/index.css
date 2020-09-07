@@ -1,0 +1,58 @@
+/* center index page contents & use the same typeface as reveal.js simple theme */
+
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: auto;
+  font-size: 1.2em;
+  width: 90%;
+}
+p {
+  text-align: justify;
+}
+@media (min-width: 980px) {
+  body {
+    width: 780px;
+	}
+	p {
+	  text-align: left;
+	}
+}
+
+a {
+  color: #00008B;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; 
+  word-wrap: break-word; 
+}
+
+a:hover {
+  color: #0000f1;
+  text-shadow: none;
+  border: none;
+}
+
+ul {
+  /* no bullets go better with table of content list */
+  list-style-type: none; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.6em 0 .8em 0;
+  font-family: "News Cycle", Impact, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word; 
+}
