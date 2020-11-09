@@ -13275,12 +13275,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-fdffb7d2a14749c3b421dea6932274fd"></div>
+<div id="altair-viz-747e93dcc64e44ee88ff5d22290f01a5"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fdffb7d2a14749c3b421dea6932274fd") {
-      outputDiv = document.getElementById("altair-viz-fdffb7d2a14749c3b421dea6932274fd");
+    if (outputDiv.id !== "altair-viz-747e93dcc64e44ee88ff5d22290f01a5") {
+      outputDiv = document.getElementById("altair-viz-747e93dcc64e44ee88ff5d22290f01a5");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13345,7 +13345,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="A-continuous-example:-a-spinning-disc-with-markings-that-can-rotate-freely.">A continuous example: a spinning disc with markings that can rotate freely.<a class="anchor-link" href="#A-continuous-example:-a-spinning-disc-with-markings-that-can-rotate-freely.">&#182;</a></h3><ul>
 <li>If you spin it, it will stop at a random angle.</li>
-<li>If we say it stopped at 18°, we mean it was closest to that marking.</li>
+<li>If we say it stopped at e.g. 18°, we mean it was closest to that marking.</li>
 <li>There are infinitely many angles between 17.5° and 18.5°.</li>
 <li>The probability to hit a specific one is zero.</li>
 <li>The probability to end up somewhere in this 1° intervall, is 1/360!</li>
@@ -13396,14 +13396,38 @@ a.anchor-link {
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-11abbd826743439b9269f8df5af4a6dc"></div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Binding({
+  input: &#39;range&#39;,
+  max: 1,
+  min: 0,
+  step: 0.1
+})</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<div id="altair-viz-437fe990d7364dec9c7816563d6857e3"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-11abbd826743439b9269f8df5af4a6dc") {
-      outputDiv = document.getElementById("altair-viz-11abbd826743439b9269f8df5af4a6dc");
+    if (outputDiv.id !== "altair-viz-437fe990d7364dec9c7816563d6857e3") {
+      outputDiv = document.getElementById("altair-viz-437fe990d7364dec9c7816563d6857e3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13445,7 +13469,7 @@ a.anchor-link {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "data": {"sequence": {"start": -5, "stop": 5, "step": 0.1, "as": "x"}}, "mark": "line", "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {}}, "y": {"type": "quantitative", "field": "px", "scale": {}}}, "selection": {"selector003": {"type": "single", "bind": {"input": "range", "min": 0, "max": 5, "step": 0.1, "name": "Max"}, "init": {"value": 2}}, "selector002": {"type": "single", "bind": {"input": "range", "min": -5, "max": 0, "step": 0.1, "name": "Min"}, "init": {"value": 0}}}, "transform": [{"calculate": "selector002.value", "as": "min"}, {"calculate": "selector003.value", "as": "max"}, {"calculate": "densityUniform(datum.x, datum.min, datum.max)", "as": "px"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite"});
+  })({"config": {"title": {"fontSize": 24.0, "font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "labelFontSize": 16, "titleFont": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"], "fontSize": 14.4}}, "hconcat": [{"hconcat": [{"layer": [{"mark": "line", "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-0.1, 3.1], "nice": false}}, "y": {"type": "quantitative", "field": "px", "scale": {"domain": [0, 2]}, "title": "Probability Density"}}, "selection": {"selector002": {"type": "interval", "encodings": ["x"]}, "selector003": {"type": "single", "bind": {"input": "range", "min": 0.5, "max": 3, "step": 0.1, "name": "Max"}, "init": {"value": 2}}}, "width": 400}, {"mark": {"type": "area", "opacity": 0.5}, "encoding": {"x": {"type": "quantitative", "field": "x", "scale": {"domain": [-0.1, 3.1], "nice": false}}, "y": {"type": "quantitative", "field": "px", "scale": {"domain": [0, 2]}, "title": "Probability Density"}}, "transform": [{"filter": {"selection": "selector002"}}], "width": 400}]}, {"mark": {"type": "bar", "clip": true}, "encoding": {"x": {"type": "quantitative", "axis": null, "bin": {"step": 3}, "field": "x", "scale": {"domain": [-0.1, 3.1], "nice": false}}, "y": {"type": "quantitative", "aggregate": "sum", "field": "probability", "scale": {"domain": [0, 1.1]}, "title": "Probability in Selection"}}, "selection": {"selector002": {"type": "interval", "encodings": ["x"]}, "selector003": {"type": "single", "bind": {"input": "range", "min": 0.5, "max": 3, "step": 0.1, "name": "Max"}, "init": {"value": 2}}}, "transform": [{"filter": {"selection": "selector002"}}, {"calculate": "datum.px*0.003", "as": "probability"}], "width": 50}]}], "data": {"sequence": {"start": -0.1, "stop": 3.1, "step": 0.003, "as": "x"}}, "transform": [{"calculate": "selector003.value", "as": "max"}, {"calculate": "1 / datum.max * ((datum.x > 0 ) & (datum.x < datum.max))", "as": "px"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"actions": false, "mode": "vega-lite", "renderer": "svg"});
 </script>
 </div>
 
@@ -13472,12 +13496,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-2c9641ab304c4ded8810c8b62dfad8e7"></div>
+<div id="altair-viz-6792b0cf7e67453e936730ab9a1bd333"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2c9641ab304c4ded8810c8b62dfad8e7") {
-      outputDiv = document.getElementById("altair-viz-2c9641ab304c4ded8810c8b62dfad8e7");
+    if (outputDiv.id !== "altair-viz-6792b0cf7e67453e936730ab9a1bd333") {
+      outputDiv = document.getElementById("altair-viz-6792b0cf7e67453e936730ab9a1bd333");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -13539,12 +13563,12 @@ a.anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-00a360588cdc4ff79ec8d7ea7b7e3283"></div>
+<div id="altair-viz-3cf43f26bc91466db7b8722bc73f3564"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-00a360588cdc4ff79ec8d7ea7b7e3283") {
-      outputDiv = document.getElementById("altair-viz-00a360588cdc4ff79ec8d7ea7b7e3283");
+    if (outputDiv.id !== "altair-viz-3cf43f26bc91466db7b8722bc73f3564") {
+      outputDiv = document.getElementById("altair-viz-3cf43f26bc91466db7b8722bc73f3564");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
