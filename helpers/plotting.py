@@ -5,6 +5,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import os
+from IPython.core.display import HTML
 
 def slide_theme():
     """Set a theme with a bigger font size for better readability during presenstations.
@@ -66,7 +67,6 @@ def import_lato_font_in_notebook():
     """Have "Lato", the font used by the "simple" reveal.js theme, available in notebook.
     Returns a hidden HTML element.
     """
-    from IPython.core.display import HTML
     return HTML("""<style>@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);</style>""")
 
 
@@ -124,3 +124,16 @@ def df_to_datasource(
         alt.data_transformers.disable_max_rows()
         data = df
     return data
+
+
+def parameter_selection(
+        min:float, max:float, step:float, init_value:float, name:str, type:float='range'
+    ) -> alt.selection:
+    """Return selection bound to parameter input element."""
+    b = alt.binding(
+        input=type, min=min, max=max, step=step, name=name
+    )
+    return alt.selection_single(
+        bind = b,
+        init = dict(value=init_value)
+    )
