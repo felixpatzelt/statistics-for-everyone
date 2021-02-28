@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ### To edit or create new lessons
 
-- Each lesson is a (jupyter)[https://jupyter.org] notebook. Start
+- Each lesson is a [jupyter](https://jupyter.org) notebook. Start
 
     `jupyter lab`
     
