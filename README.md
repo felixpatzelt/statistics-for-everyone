@@ -44,4 +44,4 @@ pip install -r requirements.txt
     
     `make theme`
 
-    to compile the stylesheets and copy them to the `slides` directory.
+    which compiles the stylesheets and copies them to the `slides` directory.
