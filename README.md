@@ -58,7 +58,6 @@ pip install -r requirements.txt
 - Reveal.js is included as a (git subtree)[https://www.atlassian.com/git/tutorials/git-subtree]. To update, run
 
 ```sh
-cd reveal.js
-git subtree pull --prefix reveal.js https://github.com/hakimel/reveal.js.git
+git subtree --prefix reveal.js pull https://github.com/hakimel/reveal.js.git 0582f57517c97a4c7bfeb58762138c78883f94c5 --squash
 ```
-Append a commit ID at the end of the above command if desired (e.g. 0582f57517c97a4c7bfeb58762138c78883f94c5).
+Change the commit ID as desired.
