@@ -47,5 +47,11 @@ $heading4Size: 1.2em;
 
 // Overrides
 .reveal h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
+
+a.anchor-link {
+  display: none;
+}
+
+@import "statistics-for-everyone-vega.css";
