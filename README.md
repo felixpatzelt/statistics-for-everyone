@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
     to compile the stylesheets and copy them to the `slides` directory.
     
-- Reveal.js is included as a (git subtree)[https://www.atlassian.com/git/tutorials/git-subtree]. To update, run
+- Reveal.js is included as a [git subtree](https://www.atlassian.com/git/tutorials/git-subtree). To update, run
 
 ```sh
 git subtree --prefix reveal.js pull https://github.com/hakimel/reveal.js.git 0582f57517c97a4c7bfeb58762138c78883f94c5 --squash
