@@ -39,7 +39,7 @@ def convert_notebook(
         output_dir,
         cmd_tpl = (
             "jupyter nbconvert --execute {filename} "
-            "--output-dir={output_dir} --to slides  --no-input "
+            "--output-dir={output_dir} --to slides --no-input "
             f"--TemplateExporter.extra_template_basedirs={TEMPLATE_DIR} "
             f" --template {TEMPLATE_NAME}"
         ),
