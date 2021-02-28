@@ -34,15 +34,15 @@ pip install -r requirements.txt
 
 ### Editing the slide theme
 
-If you are editing the theme for the first time, you need to run
+- If you are editing the theme for the first time, you need to run
 
     `make build-reveal`
 
-You may need to install [node.js](https://nodejs.org/en/) first.
+    You may need to install [node.js](https://nodejs.org/en/) first.
 
-Now you can edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` 
-and run
+- Edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` 
+    and run
 
-    `make theme`
+        `make theme`
 
-to compile the stylesheets and copy them to the `slides` directory.
+    to compile the stylesheets and copy them to the `slides` directory.
