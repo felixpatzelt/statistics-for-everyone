@@ -49,7 +49,11 @@
 {% block footer_js %}
 <script src="{{ reveal_url_prefix }}/reveal.js"></script>
 <script>
-Reveal.initialize();
+Reveal.initialize({
+  width: 960,
+  height: 640,
+  hash: true
+});
 </script>
 {% endblock footer_js %}
 </html>
