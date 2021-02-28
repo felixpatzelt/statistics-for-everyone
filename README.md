@@ -26,15 +26,23 @@ pip install -r requirements.txt
 
 - export all slides, serve at localhost:8000 & update upon changes:
 
-    ``python make_slides.py --serve True --watch True``
+    ``make serve``
 
-### Manual alternative
+- convert to slides only once:
 
-- export:
+    ``make slides``
 
-    ``export CONVERT=TRUE; jupyter nbconvert --execute 1_cards.ipynb --output-dir='./slides' --to slides --no-inpuexport CONVERT=TRUE; jupyter nbconvert --execute 1_cards.ipynb --output-dir='./slides' --to slides --no-input``
+### Editing the slide theme
 
-- viewing:
+If you are editing the theme for the first time, you need to run
 
-    ``python -m http.server --directory slides``
-    
+    ``make build-reveal``
+
+You may need to install [node.js](https://nodejs.org/en/) first.
+
+Now you can edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` 
+and run
+
+    ``make theme``
+
+to compile the stylesheets and copy them to the `slides` directory.
