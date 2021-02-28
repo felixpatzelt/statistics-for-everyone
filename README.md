@@ -47,7 +47,7 @@ pip install -r requirements.txt
     
     `make build-reveal`.
     
-    You may need to install [node.js](https://nodejs.org/en/) first.
+    You may need to install [node.js](https://nodejs.org) first.
 
 - Edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` and run
     
