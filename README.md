@@ -26,23 +26,23 @@ pip install -r requirements.txt
 
 - export all slides, serve at localhost:8000 & update upon changes:
 
-    ``make serve``
+    `make serve`
 
 - convert to slides only once:
 
-    ``make slides``
+    `make slides`
 
 ### Editing the slide theme
 
 If you are editing the theme for the first time, you need to run
 
-    ``make build-reveal``
+    `make build-reveal`
 
 You may need to install [node.js](https://nodejs.org/en/) first.
 
 Now you can edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` 
 and run
 
-    ``make theme``
+    `make theme`
 
 to compile the stylesheets and copy them to the `slides` directory.
