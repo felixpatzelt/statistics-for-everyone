@@ -22,21 +22,30 @@ source testenv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Everything needed to edit slides is automated
+### To edit or create new lessons
 
-- export all slides, serve at localhost:8000 & update upon changes:
+- Each lesson is a (jupyter)[https://jupyter.org] notebook. Start
+
+    `jupyter lab`
+    
+    and open any of the `.ipynb`files or create a new one.
+
+
+### Converting notebooks to slides is automated
+
+- Export all slides, serve at localhost:8000 & update upon changes with
 
     `make serve`
 
-- convert to slides only once:
+- or convert to slides only once with
 
-    `make slides`
+    `make slides`.
 
-### Editing the slide theme
+### Editing the reveal.js theme 
 
 - If you are editing the theme for the first time, you need to run
     
-    `make build-reveal`
+    `make build-reveal`.
     
     You may need to install [node.js](https://nodejs.org/en/) first.
 
@@ -44,4 +53,12 @@ pip install -r requirements.txt
     
     `make theme`
 
-    which compiles the stylesheets and copies them to the `slides` directory.
+    to compile the stylesheets and copy them to the `slides` directory.
+    
+- Reveal.js is included as a (git subtree)[https://www.atlassian.com/git/tutorials/git-subtree]. To update, run
+
+```sh
+cd reveal.js
+git subtree pull --prefix reveal.js https://github.com/hakimel/reveal.js.git
+```
+Append a commit ID at the end of the above command if desired (e.g. 0582f57517c97a4c7bfeb58762138c78883f94c5).
