@@ -41,7 +41,7 @@ pip install -r requirements.txt
     You may need to install [node.js](https://nodejs.org/en/) first.
 
 - Edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` and run
-
+    
     `make theme`
 
     to compile the stylesheets and copy them to the `slides` directory.
