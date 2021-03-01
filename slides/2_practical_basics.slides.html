@@ -17,29 +17,12 @@
 <div class="slides"><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Practical-basics">Practical basics<a class="anchor-link" href="#Practical-basics">&#182;</a></h2><p>It is easy to calculate the quantities we encounter most often in statistics!</p>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[2]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="p">&gt;</span>
-<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-    <span class="s2">&quot;HTML-CSS&quot;</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">mtextFontInherit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->
 
 
 <!--block data_html scoped-->
@@ -55,14 +38,6 @@ MathJax.Hub.Config({
 
 
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[3]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for the exercises only</span>
-<span class="kn">from</span> <span class="nn">helpers.cards</span> <span class="kn">import</span> <span class="n">draw_cards</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
-</pre></div>
-
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="How-to-characterise-a-sample-of-quantitative-observations?">How to characterise a sample of quantitative observations?<a class="anchor-link" href="#How-to-characterise-a-sample-of-quantitative-observations?">&#182;</a></h3><ul>
 <li><strong>Central tendency</strong>: where are the observed values?</li>
@@ -76,22 +51,12 @@ MathJax.Hub.Config({
 <p>Let's start with an example of 5 coins...</p>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Measures-of-central-tendency">Measures of central tendency<a class="anchor-link" href="#Measures-of-central-tendency">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[4]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVGImg</span><span class="p">(</span><span class="s1">&#39;images/coins_central_tendency.svg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;70%&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;slides&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[4]:
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
@@ -112,22 +77,12 @@ MathJax.Hub.Config({
 <p>See e.g. <a href="https://en.wikipedia.org/wiki/Central_tendency">https://en.wikipedia.org/wiki/Central_tendency</a> for details <br>on these and other measures of central tendency.</p>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Measures-of-dispersion">Measures of dispersion<a class="anchor-link" href="#Measures-of-dispersion">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[5]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVGImg</span><span class="p">(</span><span class="s1">&#39;images/coins_dispersion.svg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;70%&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;slides&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[5]:
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
@@ -155,22 +110,12 @@ MathJax.Hub.Config({
 </ul>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="The-sample-variance-is-a-biased-estimate-of-the-population-variance!">The sample variance is a biased estimate of the population variance!<a class="anchor-link" href="#The-sample-variance-is-a-biased-estimate-of-the-population-variance!">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[6]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVGImg</span><span class="p">(</span><span class="s1">&#39;images/population_vs_sample.svg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;slides&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[6]:
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
@@ -210,22 +155,12 @@ MathJax.Hub.Config({
 <li>This can be useful to test if an effect is significantly different from 0.</li>
 </ul>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[7]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVGImg</span><span class="p">(</span><span class="s1">&#39;images/error_bars_ci.svg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;slides&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[7]:
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
@@ -246,22 +181,12 @@ MathJax.Hub.Config({
 <li>There are other tests for significance that we will discuss in a followup</li>
 </ul>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[8]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVGImg</span><span class="p">(</span><span class="s1">&#39;images/error_bars.svg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;slides&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[8]:
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
@@ -275,34 +200,22 @@ MathJax.Hub.Config({
 
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Try-it!">Try it!<a class="anchor-link" href="#Try-it!">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[9]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># infinite population &amp; random sample</span>
-<span class="c1"># ===================================    </span>
-<span class="n">plot_population_vs_sample_mean</span><span class="p">()</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-c364b03c11264ee7a5862cde19595da8"></div>
+<div id="altair-viz-37de4d737c744b0d8f1501b25d96da95"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-c364b03c11264ee7a5862cde19595da8") {
-      outputDiv = document.getElementById("altair-viz-c364b03c11264ee7a5862cde19595da8");
+    if (outputDiv.id !== "altair-viz-37de4d737c744b0d8f1501b25d96da95") {
+      outputDiv = document.getElementById("altair-viz-37de4d737c744b0d8f1501b25d96da95");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -368,36 +281,15 @@ The latter is also called Gaussian or bell curve and we will hear more about it 
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Complete the following exercises to become more familiar with the contents of this session.</p>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[10]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># simple examples to calculate mostly mentally</span>
-<span class="n">coin_example_samples</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1">#[5, 10, 10, 20, 20], # we already did this one</span>
-    <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
-    <span class="p">[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,],</span>
-<span class="p">]</span>
-</pre></div>
-
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="1.-Drawing-coins">1. Drawing coins<a class="anchor-link" href="#1.-Drawing-coins">&#182;</a></h3><p>Calculate mean, median, standard deviation, and standard error for the following samples. You can do it just like it was explained above.</p>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[11]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_example_statistics</span><span class="p">(</span><span class="n">coin_example_samples</span><span class="p">,</span> <span class="n">print_only_sample</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->
 
 <!--block stream_stdout-->
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
@@ -411,22 +303,12 @@ Values in sample:           [1, 1, 2, 2, 10, 20]
 <!--block markdowncell scoped--><!--block empty_in_prompt--><p>Solutions are on the next slide. Feel free to use your calculator or favourite software!</p>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Solutions-to-exercise-1">Solutions to exercise 1<a class="anchor-link" href="#Solutions-to-exercise-1">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[12]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_example_statistics</span><span class="p">(</span><span class="n">coin_example_samples</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->
 
 <!--block stream_stdout-->
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
@@ -459,42 +341,13 @@ Standard error:             3.13
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="2.-Drawing-cards">2. Drawing cards<a class="anchor-link" href="#2.-Drawing-cards">&#182;</a></h3><p>In section 1, we had an example where we drew cards.</p>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[13]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stack_1_cards</span><span class="p">,</span> <span class="n">stack_2_cards</span> <span class="o">=</span> <span class="n">draw_cards</span><span class="p">(</span>
-    <span class="n">p_win_1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-    <span class="n">p_win_2</span> <span class="o">=</span> <span class="mf">0.38</span><span class="p">,</span>
-    <span class="n">n_cards</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-    <span class="n">seed</span>    <span class="o">=</span> <span class="mi">0</span>
-<span class="p">)</span>
-<span class="n">n_cards_small_experiment</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">n_cards_bigger_experiment</span> <span class="o">=</span> <span class="mi">100</span>
-</pre></div>
-
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[14]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">md</span><span class="p">(</span>
-    <span class="sa">f</span><span class="s2">&quot;- We drew </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">stack_1_cards</span><span class="p">[:</span><span class="n">n_cards_small_experiment</span><span class="p">])</span><span class="si">}</span><span class="s2"> cards &quot;</span>
-    <span class="sa">f</span><span class="s2">&quot;and we got </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">stack_1_cards</span><span class="p">[:</span><span class="n">n_cards_small_experiment</span><span class="p">])</span><span class="si">}</span><span class="s2"> wins for the first stack &quot;</span>
-    <span class="sa">f</span><span class="s2">&quot;and </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">stack_2_cards</span><span class="p">[:</span><span class="n">n_cards_small_experiment</span><span class="p">])</span><span class="si">}</span><span class="s2"> for the second one.</span><span class="se">\n</span><span class="s2">&quot;</span>
-    <span class="sa">f</span><span class="s2">&quot;- We drew </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">stack_1_cards</span><span class="p">)</span><span class="si">}</span><span class="s2"> cards and we got </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">stack_1_cards</span><span class="p">)</span><span class="si">}</span><span class="s2"> wins &quot;</span>
-    <span class="sa">f</span><span class="s2">&quot;for the first stack and </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">stack_2_cards</span><span class="p">)</span><span class="si">}</span><span class="s2"> for the second one.&quot;</span>
-<span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[14]:
 
 <!--block execute_result !!-->
 <!--block data_markdown scoped-->
@@ -518,74 +371,13 @@ Standard error:             3.13
 <p>The solution is on the next slide</p>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Solution-to-exercise-2">Solution to exercise 2<a class="anchor-link" href="#Solution-to-exercise-2">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[16]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># but this way might be more educational</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-
-<span class="k">def</span> <span class="nf">report_winning_probabilities_with_errors</span><span class="p">(</span>
-        <span class="n">n_cards</span><span class="p">,</span> <span class="n">stack_1_wins</span><span class="p">,</span> <span class="n">stack_2_wins</span>
-    <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return results for a card experiment including significant digits of mean ± standard error as markdown&quot;&quot;&quot;</span>
-    <span class="c1"># check this code - we do the calculations just like on the slide where we explained them</span>
-    <span class="c1"># of course it would be faster and more concise to use e.g. the mean and std functions from numpy</span>
-    
-    <span class="c1"># winning probabilities - same as taking a mean</span>
-    <span class="n">stack_1_p_win</span> <span class="o">=</span> <span class="n">stack_1_wins</span> <span class="o">/</span> <span class="n">n_cards</span>
-    <span class="n">stack_2_p_win</span> <span class="o">=</span> <span class="n">stack_2_wins</span> <span class="o">/</span> <span class="n">n_cards</span>
-    
-    <span class="c1"># the educational way to calculate the variance</span>
-    <span class="n">stack_1_pop_var</span> <span class="o">=</span> <span class="p">(</span><span class="n">stack_1_wins</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">stack_1_p_win</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">n_cards</span> <span class="o">-</span> <span class="n">stack_1_wins</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="n">stack_1_p_win</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_cards</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">stack_2_pop_var</span> <span class="o">=</span> <span class="p">(</span><span class="n">stack_2_wins</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">stack_2_p_win</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">n_cards</span> <span class="o">-</span> <span class="n">stack_2_wins</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="n">stack_2_p_win</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_cards</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-    
-    <span class="n">stack_1_pop_std</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">stack_1_pop_var</span><span class="p">)</span>
-    <span class="n">stack_2_pop_std</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">stack_2_pop_var</span><span class="p">)</span>
-    
-    <span class="n">stack_1_se</span> <span class="o">=</span> <span class="n">stack_1_pop_std</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n_cards</span><span class="p">)</span>
-    <span class="n">stack_2_se</span> <span class="o">=</span> <span class="n">stack_2_pop_std</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n_cards</span><span class="p">)</span>
-    
-    <span class="n">n_significant_digits</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">stack_1_se</span><span class="p">)))</span>
-
-    <span class="k">if</span> <span class="n">stack_1_p_win</span> <span class="o">+</span> <span class="mf">1.96</span> <span class="o">*</span> <span class="n">stack_1_se</span> <span class="o">&lt;</span>  <span class="n">stack_2_p_win</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">stack_2_se</span><span class="p">:</span>
-        <span class="n">conclusion</span> <span class="o">=</span> <span class="s2">&quot;Stack 1 has a significantly higher winning probability than stack 2 (p &lt; 5%)&quot;</span>
-    <span class="k">elif</span> <span class="n">stack_1_p_win</span> <span class="o">-</span> <span class="mi">196</span> <span class="o">*</span> <span class="n">stack_1_se</span> <span class="o">&gt;</span>  <span class="n">stack_2_p_win</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">stack_2_se</span><span class="p">:</span>
-        <span class="n">conclusion</span> <span class="o">=</span> <span class="s2">&quot;Stack 1 has a significantly higher winning probability than stack 2 (p &lt; 5%)&quot;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">conclusion</span> <span class="o">=</span> <span class="s2">&quot;We can&#39;t decide which stack has a higher winning probability&quot;</span>
-    
-    <span class="k">return</span> <span class="n">md</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;Drawing </span><span class="si">{</span><span class="n">n_cards</span><span class="si">}</span><span class="s2"> cards:</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;- Stack 1 has </span><span class="si">{</span><span class="n">stack_1_wins</span><span class="si">}</span><span class="s2"> wins</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;- Stack 2 has </span><span class="si">{</span><span class="n">stack_2_wins</span><span class="si">}</span><span class="s2"> wins</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;- Stack 1 winning probabiltiy: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">stack_1_p_win</span><span class="p">,</span> <span class="n">n_significant_digits</span><span class="p">)</span><span class="si">}</span><span class="s2"> ± </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">stack_1_se</span><span class="p">,</span> <span class="n">n_significant_digits</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;- Stack 2 winning probabiltiy: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">stack_2_p_win</span><span class="p">,</span> <span class="n">n_significant_digits</span><span class="p">)</span><span class="si">}</span><span class="s2"> ± </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">stack_2_se</span><span class="p">,</span> <span class="n">n_significant_digits</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="s2">&quot;- &quot;</span>
-        <span class="o">+</span> <span class="n">conclusion</span>
-     <span class="p">)</span>
-</pre></div>
-
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[17]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_cards</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">stack_1_wins</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stack_1_cards</span><span class="p">[:</span><span class="n">n_cards</span><span class="p">])</span>
-<span class="n">stack_2_wins</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stack_2_cards</span><span class="p">[:</span><span class="n">n_cards</span><span class="p">])</span>
-
-<span class="n">report_winning_probabilities_with_errors</span><span class="p">(</span><span class="n">n_cards</span><span class="p">,</span> <span class="n">stack_1_wins</span><span class="p">,</span> <span class="n">stack_2_wins</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[17]:
 
 <!--block execute_result !!-->
 <!--block data_markdown scoped-->
@@ -604,26 +396,12 @@ Standard error:             3.13
 
 
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[18]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_cards</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">stack_1_wins</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stack_1_cards</span><span class="p">[:</span><span class="n">n_cards</span><span class="p">])</span>
-<span class="n">stack_2_wins</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stack_2_cards</span><span class="p">[:</span><span class="n">n_cards</span><span class="p">])</span>
-
-<span class="n">report_winning_probabilities_with_errors</span><span class="p">(</span><span class="n">n_cards</span><span class="p">,</span> <span class="n">stack_1_wins</span><span class="p">,</span> <span class="n">stack_2_wins</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[18]:
 
 <!--block execute_result !!-->
 <!--block data_markdown scoped-->
@@ -661,12 +439,6 @@ $$\sigma_s^2 = \frac{1}{n-1} \sum_{i = 1}^{n} (x_i - \mu_s)^2$$<p>If we know the
 $$\sigma_{s,p}^2 = \frac{1}{n} \sum_{i = 1}^{n} (x_i - \mu_p)^2$$<p>Finally the standard error of the mean of the sample is</p>
 $$\sigma_{\mu_{s}} = \frac{\sigma_s}{\sqrt{n}}$$<p>$ $</p>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[&nbsp;]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
 </section></section>
 </div>
 </div>
@@ -675,7 +447,9 @@ $$\sigma_{\mu_{s}} = \frac{\sigma_s}{\sqrt{n}}$$<p>$ $</p>
 
 <script src="reveal.js/dist/reveal.js"></script>
 <script>
-Reveal.initialize();
+Reveal.initialize({
+  hash: True;
+});
 </script>
 
 </html>

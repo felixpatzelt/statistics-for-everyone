@@ -25,33 +25,13 @@
 <li>How many pairs of cards do you have to draw to decide <strong>which stack has more wins</strong>?</li>
 </ul>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[1]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># setup</span>
-<span class="kn">from</span> <span class="nn">helpers.cards</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">helpers.plotting</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="kn">from</span> <span class="nn">helpers.svg_wrapper</span> <span class="kn">import</span> <span class="n">SVGImg</span>
-<span class="n">pt</span><span class="o">.</span><span class="n">enable_slide_theme</span><span class="p">()</span>
-</pre></div>
-
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[3]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SVGImg</span><span class="p">(</span><span class="s1">&#39;images/cards.svg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;slides&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
-
-    
-<!--block output_area_prompt-->Out[3]:
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
@@ -64,47 +44,28 @@
 
 
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[5]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># transparently export data if needed</span>
-<span class="c1"># if you have issues viewing the plots, try embedding the data</span>
-<span class="c1"># this will increase the file size!</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">df_to_datasource</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</pre></div>
-
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">Draw cards from two different stacks - one at a time from each stack<a class="anchor-link" href="#Draw-cards-from-two-different-stacks---one-at-a-time-from-each-stack">&#182;</a></h3><ul>
 <li>What can we know after drawing a certain number of cards?</li>
 <li>When have we drawn enough cards to be certain?</li>
 </ul>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[6]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_first_experiment_bars</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_card_pairs</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">n_card_pairs</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-1342ad4c67544c5da09baf5915848492"></div>
+<div id="altair-viz-9e137ae5f26348afbdb88ff1243d1369"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1342ad4c67544c5da09baf5915848492") {
-      outputDiv = document.getElementById("altair-viz-1342ad4c67544c5da09baf5915848492");
+    if (outputDiv.id !== "altair-viz-9e137ae5f26348afbdb88ff1243d1369") {
+      outputDiv = document.getElementById("altair-viz-9e137ae5f26348afbdb88ff1243d1369");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -153,32 +114,22 @@
 
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="It-can-take-a-while-to-see-which-stack-is-better!">It can take a while to see which stack is better!<a class="anchor-link" href="#It-can-take-a-while-to-see-which-stack-is-better!">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[7]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_first_experiment_lines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-e515044d2df440c78a3cfb494108cb50"></div>
+<div id="altair-viz-a125fee5e8314038a51fc3696b197af1"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e515044d2df440c78a3cfb494108cb50") {
-      outputDiv = document.getElementById("altair-viz-e515044d2df440c78a3cfb494108cb50");
+    if (outputDiv.id !== "altair-viz-a125fee5e8314038a51fc3696b197af1") {
+      outputDiv = document.getElementById("altair-viz-a125fee5e8314038a51fc3696b197af1");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -236,32 +187,22 @@
 </ul>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="Each-repetition-yields-a-different-winning-probability-for-each-stack.">Each repetition yields a different winning probability for each stack.<a class="anchor-link" href="#Each-repetition-yields-a-different-winning-probability-for-each-stack.">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[8]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_repeated_experiments</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_card_pairs</span><span class="o">=</span><span class="n">n_card_pairs</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;Experiments&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-0e32e250fd3c4669b3b8eecee28d51b5"></div>
+<div id="altair-viz-f863d3e0085e48c0955adb69da87069e"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0e32e250fd3c4669b3b8eecee28d51b5") {
-      outputDiv = document.getElementById("altair-viz-0e32e250fd3c4669b3b8eecee28d51b5");
+    if (outputDiv.id !== "altair-viz-f863d3e0085e48c0955adb69da87069e") {
+      outputDiv = document.getElementById("altair-viz-f863d3e0085e48c0955adb69da87069e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -314,32 +255,22 @@
 </ul>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="We-can-count-how-often-the-outcome-falls-in-a-certain-range">We can count how often the outcome falls in a certain range<a class="anchor-link" href="#We-can-count-how-often-the-outcome-falls-in-a-certain-range">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[9]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_repeated_experiments</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_card_pairs</span><span class="o">=</span><span class="n">n_card_pairs</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;Experiments, Histogram&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-d0d2063eb546418e8dbf891603b4c4f6"></div>
+<div id="altair-viz-8dded5480a884f76bc4d6f91d0b63b5c"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d0d2063eb546418e8dbf891603b4c4f6") {
-      outputDiv = document.getElementById("altair-viz-d0d2063eb546418e8dbf891603b4c4f6");
+    if (outputDiv.id !== "altair-viz-8dded5480a884f76bc4d6f91d0b63b5c") {
+      outputDiv = document.getElementById("altair-viz-8dded5480a884f76bc4d6f91d0b63b5c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -393,32 +324,22 @@
 </ul>
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="The-standard-deviation-(std.)-measures-the-spread-of-the-outcomes">The <strong>standard deviation (std.)</strong> measures the spread of the outcomes<a class="anchor-link" href="#The-standard-deviation-(std.)-measures-the-spread-of-the-outcomes">&#182;</a></h3><!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[10]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_repeated_experiments</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_card_pairs</span><span class="o">=</span><span class="n">n_card_pairs</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;Experiments, Histogram, Std&#39;</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-5b19aa0dcbec48a08a868118a787df4a"></div>
+<div id="altair-viz-995ba3b87ff741b08b16e7610b3e6912"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5b19aa0dcbec48a08a868118a787df4a") {
-      outputDiv = document.getElementById("altair-viz-5b19aa0dcbec48a08a868118a787df4a");
+    if (outputDiv.id !== "altair-viz-995ba3b87ff741b08b16e7610b3e6912") {
+      outputDiv = document.getElementById("altair-viz-995ba3b87ff741b08b16e7610b3e6912");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -484,32 +405,22 @@
 <li><strong>We can't decide</strong> which stack is better $^{*▾}$</li>
 </ul>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[11]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_experiment_bars_with_errors</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_card_pairs</span><span class="o">=</span><span class="n">n_card_pairs</span><span class="p">,</span> <span class="n">n_card_pairs_init</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">n_repeats</span><span class="o">=</span><span class="n">n_repeats</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-6532c5a1470b49d79abe045aabf0caad"></div>
+<div id="altair-viz-ca2f1ba67502417899988300c9298431"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6532c5a1470b49d79abe045aabf0caad") {
-      outputDiv = document.getElementById("altair-viz-6532c5a1470b49d79abe045aabf0caad");
+    if (outputDiv.id !== "altair-viz-ca2f1ba67502417899988300c9298431") {
+      outputDiv = document.getElementById("altair-viz-ca2f1ba67502417899988300c9298431");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -575,32 +486,22 @@
 <li>We can be very certain that stack 1 has more wins.</li>
 </ul>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[12]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_experiment_bars_with_errors</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_card_pairs</span><span class="o">=</span><span class="n">n_card_pairs</span><span class="p">,</span> <span class="n">n_card_pairs_init</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_repeats</span><span class="o">=</span><span class="n">n_repeats</span><span class="p">)</span>
-</pre></div>
-
 
 <!--block output_group-->
-
 
 <!--block outputs-->
 
 <!--block output-->
 
-    
-<!--block output_area_prompt-->
-
 
 <!--block data_html scoped-->
 
-<div id="altair-viz-20ba2ad8cce24341a2246a3085490b06"></div>
+<div id="altair-viz-a0b402896db5403683f390e3a672ff6c"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-20ba2ad8cce24341a2246a3085490b06") {
-      outputDiv = document.getElementById("altair-viz-20ba2ad8cce24341a2246a3085490b06");
+    if (outputDiv.id !== "altair-viz-a0b402896db5403683f390e3a672ff6c") {
+      outputDiv = document.getElementById("altair-viz-a0b402896db5403683f390e3a672ff6c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -655,12 +556,6 @@
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="How-to-calculate-these-quantities-yourself?">How to calculate these quantities yourself?<a class="anchor-link" href="#How-to-calculate-these-quantities-yourself?">&#182;</a></h2><p>See next section <a href="2_practical_basics.slides.html">practical basics</a>!</p>
 <!--block codecell-->
-<!--block input_group-->
-<!--block in_prompt-->In&nbsp;[&nbsp;]:
-<!--block input-->
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
 </section></section>
 </div>
 </div>
@@ -669,7 +564,9 @@
 
 <script src="reveal.js/dist/reveal.js"></script>
 <script>
-Reveal.initialize();
+Reveal.initialize({
+  hash: True;
+});
 </script>
 
 </html>
