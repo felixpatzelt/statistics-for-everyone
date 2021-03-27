@@ -3,6 +3,10 @@
     ===========================================
 */
 
+/* show plots as block */
+.vega-embed {
+  display: block;
+}
 /* nicer range sliders */
 form.vega-bindings {
     margin-top: 10px;
