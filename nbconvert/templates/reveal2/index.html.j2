@@ -48,12 +48,22 @@
 {% block footer %}
 {% block footer_js %}
 <script src="{{ reveal_url_prefix }}/reveal.js"></script>
+<script src="{{ reveal_url_prefix }}/plugin/math/math.js"></script>
 <script>
 Reveal.initialize({
   width: 1120,
   height: 700,
   margin: 0.05,
-  hash: true
+  hash: true,
+  math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      // e.g.
+      //TeX: { Macros: { RR: "{\\bf R}" } }
+      // see also: http://docs.mathjax.org/en/latest/web/configuration.html
+    },
+    plugins: [ RevealMath ]
 });
 </script>
 {% endblock footer_js %}
