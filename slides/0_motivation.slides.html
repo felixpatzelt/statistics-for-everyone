@@ -26,19 +26,21 @@
 
 <!--block output_group-->
 
-<!--block outputs-->
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <!--block output-->
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
 
-            <object type="image/svg+xml" data="images/pigeon.svg" style="width: 35%; height: 100%; margin: auto;">
-                <img src="images/pigeon.svg" width="35%" height="100%"></img>
-            </object>
-            
+                <object type="image/svg+xml" data="images/pigeon.svg" style="width: 35%; height: 100%; margin: auto;">
+                    <img src="images/pigeon.svg" width="35%" height="100%"></img>
+                </object>
+                
 <!--end block execute result !!-->
 
+</div>
+<!--end block outputs-->
 
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Reasoning-and-discussing-isn't-always-enough">Reasoning and discussing isn't always enough<a class="anchor-link" href="#Reasoning-and-discussing-isn't-always-enough">&#182;</a></h2><ul>
@@ -49,19 +51,21 @@
 
 <!--block output_group-->
 
-<!--block outputs-->
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <!--block output-->
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
 
-            <object type="image/svg+xml" data="images/experiment.svg" style="width: 50%; height: 100%; margin: auto;">
-                <img src="images/experiment.svg" width="50%" height="100%"></img>
-            </object>
-            
+                <object type="image/svg+xml" data="images/experiment.svg" style="width: 50%; height: 100%; margin: auto;">
+                    <img src="images/experiment.svg" width="50%" height="100%"></img>
+                </object>
+                
 <!--end block execute result !!-->
 
+</div>
+<!--end block outputs-->
 
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Humans-detect-patterns-where-there-are-none">Humans detect patterns where there are none<a class="anchor-link" href="#Humans-detect-patterns-where-there-are-none">&#182;</a></h2><p>In the show, points increased every time a fish swam across an aquarium</p>
@@ -69,19 +73,21 @@
 
 <!--block output_group-->
 
-<!--block outputs-->
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <!--block output-->
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
 
-            <object type="image/svg+xml" data="images/fish.svg" style="width: 45%; height: 100%; margin: auto;">
-                <img src="images/fish.svg" width="45%" height="100%"></img>
-            </object>
-            
+                <object type="image/svg+xml" data="images/fish.svg" style="width: 45%; height: 100%; margin: auto;">
+                    <img src="images/fish.svg" width="45%" height="100%"></img>
+                </object>
+                
 <!--end block execute result !!-->
 
+</div>
+<!--end block outputs-->
 
 
 <!--block markdowncell scoped--><!--block empty_in_prompt--><p>"We got to a hundred points, so we obviously did it right." - A participant.</p>
@@ -94,38 +100,42 @@
 
 <!--block output_group-->
 
-<!--block outputs-->
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <!--block output-->
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
 
-            <object type="image/svg+xml" data="images/sign.svg" style="width: 70%; height: 100%; margin: auto;">
-                <img src="images/sign.svg" width="70%" height="100%"></img>
-            </object>
-            
+                <object type="image/svg+xml" data="images/sign.svg" style="width: 70%; height: 100%; margin: auto;">
+                    <img src="images/sign.svg" width="70%" height="100%"></img>
+                </object>
+                
 <!--end block execute result !!-->
 
+</div>
+<!--end block outputs-->
 
 </section></section><section><section>
 <!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Even-quantitative-data-can-mislead-without-proper-analysis">Even quantitative data can mislead without proper analysis<a class="anchor-link" href="#Even-quantitative-data-can-mislead-without-proper-analysis">&#182;</a></h2><!--block codecell-->
 
 <!--block output_group-->
 
-<!--block outputs-->
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <!--block output-->
 
 <!--block execute_result !!-->
 <!--block data_html scoped-->
 
-            <object type="image/svg+xml" data="images/spurious_correlations.svg" style="width: 90%; height: 100%; margin: auto;">
-                <img src="images/spurious_correlations.svg" width="90%" height="100%"></img>
-            </object>
-            
+                <object type="image/svg+xml" data="images/spurious_correlations.svg" style="width: 90%; height: 100%; margin: auto;">
+                    <img src="images/spurious_correlations.svg" width="90%" height="100%"></img>
+                </object>
+                
 <!--end block execute result !!-->
 
+</div>
+<!--end block outputs-->
 
 
 <!--block markdowncell scoped--><!--block empty_in_prompt--><p>See also: <a href="http://www.tylervigen.com/spurious-correlations">Spurious correlations</a>, <a href="https://blog.datawrapper.de/dualaxis">Why not to use two axes</a></p>
@@ -154,12 +164,22 @@
 
 
 <script src="reveal.js/dist/reveal.js"></script>
+<script src="reveal.js/dist/plugin/math/math.js"></script>
 <script>
 Reveal.initialize({
   width: 1120,
   height: 700,
   margin: 0.05,
-  hash: true
+  hash: true,
+  math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      // e.g.
+      //TeX: { Macros: { RR: "{\\bf R}" } }
+      // see also: http://docs.mathjax.org/en/latest/web/configuration.html
+    },
+    plugins: [ RevealMath ]
 });
 </script>
 

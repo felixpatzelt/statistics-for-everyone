@@ -69,7 +69,6 @@ class SVGImg():
         self.width = width
         self.height = height
         self.center = center
-        
         if output_dir is not None:
             output_url = os.path.join(output_dir, url)
             os.makedirs(os.path.dirname(output_url), exist_ok=True)
@@ -80,9 +79,12 @@ class SVGImg():
         style = f"width: {self.width}; height: {self.height};"
         if self.center:
             style += " margin: auto;"
-        html = f"""
-            <object type="image/svg+xml" data="{self.url}" style="{style}">
-                <img src="{self.url}" width="{self.width}" height="{self.height}"></img>
-            </object>
-            """
+        html = f"""<img src="{self.url}" width="{self.width}" height="{self.height}"></img>"""
+        if os.environ.get('CONVERT') == 'TRUE':
+            html = f"""
+                <object type="image/svg+xml" data="{self.url}" style="{style}">
+                    {html}
+                </object>
+                """
+            
         return html
