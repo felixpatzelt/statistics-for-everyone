@@ -32,7 +32,11 @@
 {% endblock output_group %}
 
 {% block outputs %}
+{%- if 'tags' in cell.metadata and 'block_layout' in cell.metadata.tags -%}
+<div class="jp-OutputArea jp-Cell-outputArea block_layout">
+{%- else -%}
 <div class="jp-OutputArea jp-Cell-outputArea">
+{%- endif -%}
 {{ super() }}
 </div>
 <!--end block outputs-->
@@ -78,12 +82,20 @@
 {% endblock output %}
 
 {% block markdowncell scoped %}
-<!--block markdowncell scoped-->
+{%- if 'tags' in cell.metadata and 'block_layout' in cell.metadata.tags -%}
+<div class='block_layout'><!--block markdowncell scoped-->
+{%- else -%}
+<div><!--block markdowncell scoped-->
+{%- endif -%}
 {%- if resources.global_content_filter.include_input_prompt-%}
     {{ self.empty_in_prompt() }}
 {%- endif -%}
+{%- if 'tags' in cell.metadata and 'unroll_lists' in cell.metadata.tags -%}
+{{ cell.source  | markdown2html | strip_files_prefix | replace('<li','<li class="fragment"')}}
+{%- else -%}
 {{ cell.source  | markdown2html | strip_files_prefix }}
-{%- endblock markdowncell %}
+{%- endif -%}
+</div>{%- endblock markdowncell %}
 
 {% block unknowncell scoped %}
 <!--block unknowncell scoped-->

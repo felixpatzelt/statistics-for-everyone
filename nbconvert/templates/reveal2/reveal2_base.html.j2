@@ -1,32 +1,53 @@
 {%- extends 'clean_base.html.j2' -%}
 
 {%- block any_cell scoped -%}
+
 {%- if cell.metadata.get('slide_start', False) -%}
 <section>
 {%- endif -%}
+
 {%- if cell.metadata.get('subslide_start', False) -%}
 <section>
 {%- endif -%}
-{%- if cell.metadata.get('fragment_start', False) -%}
+
+{%- if 'tags' in cell.metadata and 'flex_layout' in cell.metadata.tags -%}
+{%- if not flex_cells.flag %}
+<div class="flex">
+{% endif -%}
+{{ flex_cells.update({'flag': True }) or "" }}
+{%- elif not 'tags' in cell.metadata or not 'flex_layout' in cell.metadata.tags -%}
+{%- if flex_cells.flag %}
+</div>{{ flex_cells.update({'flag': False}) or "" }}<!-- end flex -->
+{% endif -%}
+{%- endif -%}
+
+
+{%- if cell.metadata.get('fragment_start', False) %}
 <div class="fragment">
 {%- endif -%}
 
-{%- if cell.metadata.slide_type == 'notes' -%}
+{%- if cell.metadata.slide_type == 'notes' %}
 <aside class="notes">
 {{ super() }}
 </aside>
-{%- elif cell.metadata.slide_type == 'skip' -%}
-{%- else -%}
+{%- elif cell.metadata.slide_type == 'skip' %}
+{%- else %}
 {{ super() }}
 {%- endif -%}
 
 {%- if cell.metadata.get('fragment_end', False) -%}
 </div>
 {%- endif -%}
+
 {%- if cell.metadata.get('subslide_end', False) -%}
+{%- if flex_cells.flag %}
+</div>{{ flex_cells.update({'flag': False }) or "" }}<!-- end flex by section -->
+{% endif -%}
 </section>
 {%- endif -%}
+
 {%- if cell.metadata.get('slide_end', False) -%}
 </section>
 {%- endif -%}
+
 {%- endblock any_cell -%}

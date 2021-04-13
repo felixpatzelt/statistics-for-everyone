@@ -1,6 +1,7 @@
 {%- extends 'reveal2_base.html.j2' -%}
 
 {% set reveal_url_prefix = 'reveal.js/dist' %}
+{% set flex_cells = {'flag': False} -%}
 
 {%- block header -%}
 <!DOCTYPE html>
@@ -58,6 +59,9 @@ Reveal.initialize({
   math: {
       mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
       config: 'TeX-AMS_HTML-full',
+      "HTML-CSS" : {
+        mtextFontInherit: true,
+      }
       // pass other options into `MathJax.Hub.Config()`
       // e.g.
       //TeX: { Macros: { RR: "{\\bf R}" } }

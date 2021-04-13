@@ -22,8 +22,8 @@ $mainColor: #222;
 $headingColor: #222;
 
 $mainFontSize: 20px;
-$mainFont: 'Source Sans Pro', serif;
-$headingFont: 'Dosis', serif;
+$mainFont: 'Source Sans Pro', sans-serif;
+$headingFont: 'Dosis', sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: normal;
@@ -52,6 +52,41 @@ $heading4Size: 1.2em;
 
 a.anchor-link {
   display: none;
+}
+
+.jp-Cell-outputArea {
+  margin-top: 1.4em;
+  margin-bottom: 0.7em;
+  //text-align: center;
+}
+
+//.reveal .slides > section > section { text-align:left; }
+.reveal .slides>section>section.present {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;      
+}
+
+.flex {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+}
+
+.flex div, ul {
+	margin: 1em;
+}
+
+.block_layout {
+ margin-left: 20%;
+ margin-right: 20%;
+ text-align: left;
+}
+
+.reveal pre, blockquote {
+	box-shadow: none;
+	font-size: $mainFontSize;
 }
 
 @import "statistics-for-everyone-vega.css";

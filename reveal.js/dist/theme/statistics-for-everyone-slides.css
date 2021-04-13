@@ -13,12 +13,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 :root {
   --background-color: #fff;
-  --main-font: Source Sans Pro, serif;
+  --main-font: Source Sans Pro, sans-serif;
   --main-font-size: 20px;
   --main-color: #222;
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
-  --heading-font: Dosis, serif;
+  --heading-font: Dosis, sans-serif;
   --heading-color: #222;
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
@@ -41,7 +41,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   background-color: #fff; }
 
 .reveal {
-  font-family: "Source Sans Pro", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   font-weight: normal;
   color: #222; }
@@ -72,7 +72,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #222;
-  font-family: "Dosis", serif;
+  font-family: "Dosis", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: normal;
@@ -299,3 +299,30 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 a.anchor-link {
   display: none; }
+
+.jp-Cell-outputArea {
+  margin-top: 1.4em;
+  margin-bottom: 0.7em; }
+
+.reveal .slides > section > section.present {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.flex div, ul {
+  margin: 1em; }
+
+.block_layout {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left; }
+
+.reveal pre, blockquote {
+  box-shadow: none;
+  font-size: 20px; }
