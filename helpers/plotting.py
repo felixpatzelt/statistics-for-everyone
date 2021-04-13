@@ -15,7 +15,7 @@ def slide_theme():
     """
     # global font settings
     base_font_size = 16
-    font = ["Lato",  "Helvetica Neue", "Helvetica", "Arial", "Sans Serif"]
+    font = ["Source Sans Pro",  "serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
     labelFont  = font
     sourceFont = font
     return {
@@ -63,11 +63,14 @@ def enable_slide_theme():
     alt.renderers.set_embed_options(actions=False);
     
     
-def import_lato_font_in_notebook():
-    """Have "Lato", the font used by the "simple" reveal.js theme, available in notebook.
+def import_slide_theme_font_in_notebook():
+    """Have the font used by the slide theme, available in notebook.
     Returns a hidden HTML element.
     """
-    return HTML("""<style>@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);</style>""")
+    return HTML(
+        '<link rel="stylesheet" type="text/css" '
+        'href="./reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css">'
+    )
 
 
 def df_to_datasource(
