@@ -45,7 +45,7 @@ $heading4Size: 1.2em;
 @import "../template/theme";
 // ---------------------------------------------
 
-// Overrides
+// Overrides -----------------------------------
 .reveal h1 {
   font-weight: 400;
 }
@@ -88,5 +88,35 @@ a.anchor-link {
 	box-shadow: none;
 	font-size: $mainFontSize;
 }
+// ---------------------------------------------
 
+// Branding ------------------------------------
+#logo {
+  width: 83%;
+  margin: 5px;
+}
+#watermark {
+  position: absolute;
+  z-index: 9999;
+  opacity: 33%;
+  width: 3%;
+  overflow: hidden;
+}
+#watermark:hover {
+  opacity: 100%;
+  overflow: visible;
+}
+#logo-label {
+	position: absolute;
+	top: 8px;
+	left: 110%;
+	width: 3333%;
+	font-family: $headingFont;
+	font-size: 1.2em;
+}
+// ---------------------------------------------
+
+
+// Vega ----------------------------------------
 @import "statistics-for-everyone-vega.css";
+// ---------------------------------------------
