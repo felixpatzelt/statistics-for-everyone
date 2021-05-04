@@ -316,7 +316,8 @@ a.anchor-link {
   height: 100%; }
 
 .flex div, ul {
-  margin: 1em; }
+  margin: 1em;
+  min-width: 25%; }
 
 .block_layout {
   margin-left: 20%;
