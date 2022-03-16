@@ -33,7 +33,7 @@ p {
 }
 
 a {
-  color: #00008B;
+  color: #2a76dd;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: #0000f1;
+  color: #6ca0e8;
   text-shadow: none;
   border: none;
 }

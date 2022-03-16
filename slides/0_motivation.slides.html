@@ -13,6 +13,14 @@
 <link rel="stylesheet" href="reveal.js/dist/theme/statistics-for-everyone-slides.css" id="theme">
 <!--<link rel="stylesheet" href="custom.css" id="custom">--></head>
 <body>
+<div id="watermark">
+  <div id="logo">
+	<a href="index.html">
+	  <img src="images/logo_tiny.svg" width="100%"></img>
+	</a>
+  </div>
+  <div id="logo-label">Statistics for Everyone - back to overview</div>
+</div>
 <div class="reveal">
 <div class="slides"><section><section>
 <div><!--block markdowncell scoped--><!--block empty_in_prompt--><h1 id="Statistics-for-everyone">Statistics for everyone<a class="anchor-link" href="#Statistics-for-everyone">&#182;</a></h1><p>How to use statistics to make better decisions</p>
@@ -144,12 +152,77 @@
 <div><!--block markdowncell scoped--><!--block empty_in_prompt--><p>See also: <a href="http://www.tylervigen.com/spurious-correlations">Spurious correlations</a>, <a href="https://blog.datawrapper.de/dualaxis">Why not to use two axes</a></p>
 </div></section></section><section><section>
 <div><!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Algorithms-can-make-similar-mistakes">Algorithms can make similar mistakes<a class="anchor-link" href="#Algorithms-can-make-similar-mistakes">&#182;</a></h2><ul>
-<li>A common problem in machine learning is <a href="https://en.wikipedia.org/wiki/Overfitting">over- or underfitting</a> variations in training data.</li>
+<li>One common problem in machine learning is <a href="https://en.wikipedia.org/wiki/Overfitting">over- or underfitting</a> variations in training data.</li>
 <li>The resulting models don't generalise well to future observations.</li>
 </ul>
-</div></section></section><section><section>
+</div>
+<!--block codecell-->
+
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+
+
+<!--block data_html scoped-->
+
+<div id="altair-viz-078ebf268cd84996b5fc879d6c417296"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-078ebf268cd84996b5fc879d6c417296") {
+      outputDiv = document.getElementById("altair-viz-078ebf268cd84996b5fc879d6c417296");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 20.0, "font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontWeight": "normal", "orient": "bottom"}, "axisX": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontSize": 14.4}, "view": {"strokeWidth": 0}}, "hconcat": [{"layer": [{"mark": {"type": "circle", "color": "black"}, "encoding": {"x": {"type": "quantitative", "axis": null, "field": "x", "scale": {"padding": 1}}, "y": {"type": "quantitative", "axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}}}}, {"mark": "line", "encoding": {"x": {"type": "quantitative", "axis": null, "field": "x", "scale": {"padding": 1}}, "y": {"type": "quantitative", "axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}}}, "height": 100, "title": "Underfit", "transform": [{"on": "x", "regression": "y", "method": "poly", "order": 1}], "width": 150}]}, {"layer": [{"mark": {"type": "circle", "color": "black"}, "encoding": {"x": {"type": "quantitative", "axis": null, "field": "x", "scale": {"padding": 1}}, "y": {"type": "quantitative", "axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}}}}, {"mark": "line", "encoding": {"x": {"type": "quantitative", "axis": null, "field": "x", "scale": {"padding": 1}}, "y": {"type": "quantitative", "axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}}}, "height": 100, "title": "Good Fit", "transform": [{"on": "x", "regression": "y", "method": "poly", "order": 2}], "width": 150}]}, {"layer": [{"mark": {"type": "circle", "color": "black"}, "encoding": {"x": {"type": "quantitative", "axis": null, "field": "x", "scale": {"padding": 1}}, "y": {"type": "quantitative", "axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}}}}, {"mark": "line", "encoding": {"x": {"type": "quantitative", "axis": null, "field": "x", "scale": {"padding": 1}}, "y": {"type": "quantitative", "axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}}}, "height": 100, "title": "Overfit", "transform": [{"on": "x", "regression": "y", "method": "poly", "order": 9}], "width": 150}]}], "data": {"name": "data-8c5206655986f1db94933dda959fe8ba"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-8c5206655986f1db94933dda959fe8ba": [{"x": -1.5, "y": -2.087565463633676}, {"x": -1.2222222222222223, "y": -1.5550028018588349}, {"x": -0.9444444444444444, "y": -0.9447924838683208}, {"x": -0.6666666666666666, "y": -0.5517413066600615}, {"x": -0.38888888888888884, "y": -0.06469380496876666}, {"x": -0.11111111111111116, "y": -0.24249954870037396}, {"x": 0.16666666666666674, "y": 0.14670339864387022}, {"x": 0.44444444444444464, "y": -0.27365155428704135}, {"x": 0.7222222222222223, "y": -0.48970102866589516}, {"x": 1.0, "y": -1.024937037547741}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+
+
+</div>
+<!--end block outputs-->
+
+</section></section><section><section>
 <div><!--block markdowncell scoped--><!--block empty_in_prompt--><h2 id="Statistics-can-help-to-tell-the-signal-from-the-noise">Statistics can help to tell the signal from the noise<a class="anchor-link" href="#Statistics-can-help-to-tell-the-signal-from-the-noise">&#182;</a></h2></div>
-<div><!--block markdowncell scoped--><!--block empty_in_prompt--><h3 id="For-example:">For example:<a class="anchor-link" href="#For-example:">&#182;</a></h3><ul>
+<div><!--block markdowncell scoped--><!--block empty_in_prompt--><h3><br>For example:</h3>
+<ul>
 <li>In 2016, many were certain that Clinton would win the US election.</li>
 <li>On Nov. 4, four days before the election, <a href="https://fivethirtyeight.com/features/trump-is-just-a-normal-polling-error-behind-clinton">a statistics website reported</a>:<br> "Trump Is Just A Normal Polling Error Behind Clinton"</li>
 </ul>

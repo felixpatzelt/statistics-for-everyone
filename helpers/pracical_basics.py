@@ -54,7 +54,6 @@ def plot_population_vs_sample_mean():
         init={'ses': 2}
     )
 
-
     scale = alt.Scale(domain=[-10,10])
 
     # simple plot with population mean + population error
