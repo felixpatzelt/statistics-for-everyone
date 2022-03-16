@@ -16,8 +16,10 @@ from socketserver import TCPServer
 from time import sleep
 
 # nb conversion
-INPUT_GLOB = '*.ipynb'
-OUTPUT_DIR = 'slides'
+INPUT_GLOB    = '*.ipynb'
+OUTPUT_DIR    = 'slides'
+TEMPLATE_DIR  = './nbconvert/templates'
+TEMPLATE_NAME = 'reveal2'
 
 # serving
 SERVE      = False
@@ -37,12 +39,17 @@ def convert_notebook(
         output_dir,
         cmd_tpl = (
             "jupyter nbconvert --execute {filename} "
-            "--output-dir={output_dir} --to slides --no-input"
+            "--output-dir={output_dir} --to slides --no-input "
+            f"--TemplateExporter.extra_template_basedirs={TEMPLATE_DIR} "
+            f" --template {TEMPLATE_NAME}"
         ),
         extra_env = {'CONVERT':'TRUE'},
         verbose=True
     ):
-    cmd = cmd_tpl.format(filename=filename, output_dir=output_dir)
+    cmd = cmd_tpl.format(
+        filename=filename, 
+        output_dir=output_dir,
+    )
     env = os.environ.copy()
     env.update(extra_env)
     sp = subprocess.run(shlex.split(cmd), env=env, capture_output=True)

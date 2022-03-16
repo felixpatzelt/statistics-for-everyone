@@ -1,0 +1,29 @@
+/* 
+  Dosis font by Edgar Tolentino, Pablo Impallari, Igino Marini
+
+  The files in this directory are compressed. For the originals, see:  
+  https://github.com/impallari/Dosis
+*/
+@font-face {
+    font-family: 'Dosis';
+    src: url('./Dosis-Light.woff2') format('woff2'),
+         url('./Dosis-Light.woff')  format('woff');
+    font-weight: 300;
+    font-style:  normal;
+}
+@font-face {
+    font-family: 'Dosis';
+    src: url('dosis-regular.woff2') format('woff2'),
+         url('dosis-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Dosis';
+    src: url('dosis-medium.woff2') format('woff2'),
+         url('dosis-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}

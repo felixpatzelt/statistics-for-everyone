@@ -1,10 +1,10 @@
 /* center index page contents & use the same typeface as reveal.js simple theme */
 
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(reveal.js/dist/theme/fonts/dosis/dosis.css);
+@import url(reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css);
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin: auto;
   font-size: 1.2em;
   width: 90%;
@@ -21,8 +21,19 @@ p {
 	}
 }
 
+#title-wrapper {
+	text-align: center;
+	margin-top: 1.6em;
+}
+#title-contents {
+	display: inline-block;;
+}
+#title-contents h1 {
+  margin-top: 0.4em;
+}
+
 a {
-  color: #00008B;
+  color: #2a76dd;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -31,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: #0000f1;
+  color: #6ca0e8;
   text-shadow: none;
   border: none;
 }
@@ -48,8 +59,8 @@ h4,
 h5,
 h6 {
   margin: 1.6em 0 .8em 0;
-  font-family: "News Cycle", Impact, sans-serif;
-  font-weight: bold;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;

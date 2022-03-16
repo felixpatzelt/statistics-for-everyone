@@ -48,7 +48,7 @@ def plot_first_experiment_bars(data, n_card_pairs):
     )
 
     # filter data & plot bar chart
-    alt.Chart(data).mark_bar().encode(
+    return alt.Chart(data).mark_bar().encode(
         alt.X('stack:N', title='Card Stack'),
         alt.Y('sum(win):Q', axis=alt.Axis(title='Number of Wins', tickMinStep=1)),
         color=alt.Color('stack:N', legend=None)
@@ -68,7 +68,7 @@ def plot_first_experiment_bars(data, n_card_pairs):
         grid=False
     ).configure_view(
         strokeWidth=0
-    ).display(renderer='svg')
+    )#.display(renderer='svg')
     
 def plot_first_experiment_lines(data):
     """Plot course of first experiment as line chart"""

@@ -1,19 +1,11 @@
 /* 
-    Custom formatting for reveal.js slides
-    ======================================
-    
-    Improve figure placement and style html input elements
-    Needs to be in the same folder as the slides because that's where
-    reveal.js automatically looks.
+    Custom formatting for vega (altair) figures
+    ===========================================
 */
 
-/* center figures */
-div.output_subarea {
-    text-align: center;
-    max-width: 100%; 
-    padding-left: 11ex;
-    padding-right: 8ex;
-    overflow: visible;
+/* show plots as block */
+.vega-embed {
+  display: block;
 }
 /* nicer range sliders */
 form.vega-bindings {
@@ -22,6 +14,7 @@ form.vega-bindings {
 }
 form .vega-bind {
     display: inline-block;
+    width: 150px;
     margin-left: 1%;
     margin-right: 1%;
 }

@@ -1,0 +1,123 @@
+/**
+ * Custom theme for reveal.js for statistics-for-everyone course by Felix Patzelt
+ * Based on "white" Theme for reveal.js by Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts (found in dist dir)
+@import url(./fonts/dosis/dosis.css);
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 20px;
+$mainFont: 'Source Sans Pro', sans-serif;
+$headingFont: 'Dosis', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: normal;
+$headingFontWeight: 500;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 3em;
+$heading2Size: 2em;
+$heading3Size: 1.5em;
+$heading4Size: 1.2em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Overrides -----------------------------------
+.reveal h1 {
+  font-weight: 400;
+}
+
+a.anchor-link {
+  display: none;
+}
+
+.jp-Cell-outputArea {
+  margin-top: 1.4em;
+  margin-bottom: 0.7em;
+  //text-align: center;
+}
+
+//.reveal .slides > section > section { text-align:left; }
+.reveal .slides>section>section.present {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;      
+}
+
+.flex {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+}
+
+.flex div, ul {
+	margin: 1em;
+	min-width: 25%;
+}
+
+.block_layout {
+ margin-left: 20%;
+ margin-right: 20%;
+ text-align: left;
+}
+
+.reveal pre, blockquote {
+	box-shadow: none;
+	font-size: $mainFontSize;
+}
+// ---------------------------------------------
+
+// Branding ------------------------------------
+#logo {
+  width: 83%;
+  margin: 5px;
+}
+#watermark {
+  position: absolute;
+  z-index: 9999;
+  opacity: 33%;
+  width: 3%;
+  overflow: hidden;
+}
+#watermark:hover {
+  opacity: 100%;
+  overflow: visible;
+}
+#logo-label {
+	position: absolute;
+	top: 8px;
+	left: 110%;
+	width: 3333%;
+	font-family: $headingFont;
+	font-size: 1.2em;
+}
+// ---------------------------------------------
+
+
+// Vega ----------------------------------------
+@import "statistics-for-everyone-vega.css";
+// ---------------------------------------------

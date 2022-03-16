@@ -1,0 +1,83 @@
+{%- extends 'reveal2_base.html.j2' -%}
+
+{% set reveal_url_prefix = 'reveal.js/dist' %}
+{% set flex_cells = {'flag': False} -%}
+
+{%- block header -%}
+<!DOCTYPE html>
+<html>
+<head>
+
+{%- block html_head -%}
+<meta charset="utf-8" />
+
+{% set nb_title = nb.metadata.get('title', '') or resources['metadata']['name'] %}
+<title>{{nb_title}} slides</title>
+
+{#<!-- standard scripts -->
+{%- block html_head_js -%}
+{%- block html_head_js_jquery -%}
+<script src="{{ resources.jquery_url }}"></script>
+{%- endblock html_head_js_jquery -%}
+{%- block html_head_js_requirejs -%}
+<script src="{{ resources.require_js_url }}"></script>
+{%- endblock html_head_js_requirejs -%}
+{%- endblock html_head_js -%}#}
+
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="{{ reveal_url_prefix }}/reveal.css">
+<link rel="stylesheet" href="{{ reveal_url_prefix }}/theme/statistics-for-everyone-slides.css" id="theme">
+<!--<link rel="stylesheet" href="custom.css" id="custom">-->
+
+{%- endblock html_head -%}
+</head>
+{% endblock header%}
+
+{%- block body_header -%}
+<body>
+<div id="watermark">
+  <div id="logo">
+	<a href="index.html">
+	  <img src="images/logo_tiny.svg" width="100%"></img>
+	</a>
+  </div>
+  <div id="logo-label">Statistics for Everyone - back to overview</div>
+</div>
+<div class="reveal">
+<div class="slides">
+{%- endblock body_header -%}
+
+{% block body_footer %}
+</div>
+</div>
+</body>
+{% endblock body_footer %}
+
+{% block footer %}
+{% block footer_js %}
+<script src="{{ reveal_url_prefix }}/reveal.js"></script>
+<script src="{{ reveal_url_prefix }}/plugin/math/math.js"></script>
+<script>
+Reveal.initialize({
+  width: 1120,
+  height: 700,
+  margin: 0.05,
+  hash: true,
+  math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      "HTML-CSS" : {
+        mtextFontInherit: true,
+      }
+      // pass other options into `MathJax.Hub.Config()`
+      // e.g.
+      //TeX: { Macros: { RR: "{\\bf R}" } }
+      // see also: http://docs.mathjax.org/en/latest/web/configuration.html
+    },
+    plugins: [ RevealMath ]
+});
+</script>
+{% endblock footer_js %}
+</html>
+{% endblock footer %}

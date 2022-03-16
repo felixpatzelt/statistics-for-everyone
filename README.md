@@ -22,19 +22,42 @@ source testenv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Everything needed to edit slides is automated
+### To edit or create new lessons
 
-- export all slides, serve at localhost:8000 & update upon changes:
+- Each lesson is a [jupyter](https://jupyter.org) notebook. Start
 
-    ``python make_slides.py --serve True --watch True``
-
-### Manual alternative
-
-- export:
-
-    ``export CONVERT=TRUE; jupyter nbconvert --execute 1_cards.ipynb --output-dir='./slides' --to slides --no-inpuexport CONVERT=TRUE; jupyter nbconvert --execute 1_cards.ipynb --output-dir='./slides' --to slides --no-input``
-
-- viewing:
-
-    ``python -m http.server --directory slides``
+    `jupyter lab`
     
+    and open any of the `.ipynb`files or create a new one.
+
+
+### Converting notebooks to slides is automated
+
+- Export all slides, serve at localhost:8000 & update upon changes with
+
+    `make serve`
+
+- or convert to slides only once with
+
+    `make slides`.
+
+### Editing the reveal.js theme 
+
+- If you are editing the theme for the first time, you need to run
+    
+    `make build-reveal`.
+    
+    You may need to install [node.js](https://nodejs.org) first.
+
+- Edit `reveal.js/css/theme/source/statistics-for-everyone-slides.scss` and run
+    
+    `make theme`
+
+    to compile the stylesheets and copy them to the `slides` directory.
+    
+- Reveal.js is included as a [git subtree](https://www.atlassian.com/git/tutorials/git-subtree). To update, run
+
+```sh
+git subtree --prefix reveal.js pull https://github.com/hakimel/reveal.js.git 0582f57517c97a4c7bfeb58762138c78883f94c5 --squash
+```
+Change the commit ID as desired.
