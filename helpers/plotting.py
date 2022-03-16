@@ -15,13 +15,13 @@ def slide_theme():
     """
     # global font settings
     base_font_size = 16
-    font = ["Source Sans Pro",  "serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
+    font = ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
     labelFont  = font
     sourceFont = font
     return {
         "config": {
             "title": {
-                "fontSize": base_font_size * 1.5,
+                "fontSize": base_font_size * 1.25,
                 "font": font,
                 "fontWeight": 'normal',
             },
