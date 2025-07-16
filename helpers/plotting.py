@@ -130,13 +130,13 @@ def df_to_datasource(
 
 
 def parameter_selection(
-        min:float, max:float, step:float, init_value:float, name:str, type:float='range'
+        min:float, max:float, step:float, init_value:float, name:str
     ) -> alt.selection:
     """Return selection bound to parameter input element."""
-    b = alt.binding(
-        input=type, min=min, max=max, step=step, name=name
+    b = alt.binding_range(
+        min=min, max=max, step=step, name=name
     )
-    return alt.selection_single(
+    return alt.selection_point(
         bind = b,
-        init = dict(value=init_value)
+        #value = dict(value=[init_value])
     )

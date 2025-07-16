@@ -9,49 +9,44 @@ def plot_population_vs_sample_mean():
     # inputs
     plot_width  = 500
     max_samples = 200
-    input_mean = alt.binding(
-        input='range',
+    input_mean = alt.binding_range(
         min=-5,
         max=5,
         step=.1,
         name='Pop. mean'
     )
-    input_std = alt.binding(
-        input='range',
+    input_std = alt.binding_range(
         min=0.1,
         max=5,
         step=.1,
         name='Pop. Std.'
     )
-    input_samples = alt.binding(
-        input='range',
+    input_samples = alt.binding_range(
         min=10,
         max=max_samples,
         step=1,
         name='Sample size'
     )
-    input_uncertainty = alt.binding(
-        input='range',
-        min=1,
+    input_uncertainty = alt.binding_range(
         max=3,
         step=1,
         name='Show std. errors'
     )
     mean_selection = alt.selection_single(
         bind=input_mean,
-        init={'mean': 0}
+        value={'mean': 0}
     )
     std_selection = alt.selection_single(
         bind=input_std,
-        init={'std': 1.5}
+        value={'std': 1.5}
     )
     samples_selection = alt.selection_single(
         bind=input_samples,
-        init={'samples': 50}
+        value={'samples': 50}
     )
     uncertainty_selection = alt.selection_single(
         bind=input_uncertainty,
-        init={'ses': 2}
+        value={'ses': 2}
     )
 
     scale = alt.Scale(domain=[-10,10])
