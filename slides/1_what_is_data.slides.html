@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta charset="utf-8"/>
+<title>1_what_is_data slides</title>
+<!-- General and theme style sheets -->
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/statistics-for-everyone-slides.css" id="theme" rel="stylesheet"/>
+<!--<link rel="stylesheet" href="custom.css" id="custom">--></head>
+<body>
+<div id="watermark">
+<div id="logo">
+<a href="index.html">
+<img alt="No description has been provided for this image" src="images/logo_tiny.svg" width="100%"/>
+</a>
+</div>
+<div id="logo-label">Statistics for Everyone - back to overview</div>
+</div>
+<div class="reveal">
+<div class="slides"><section><section>
+<div><!--block markdowncell scoped--><h1 id="Data---What-Why-How?">Data - What Why How?<a class="anchor-link" href="#Data---What-Why-How?">¶</a></h1></div>
+<!--block codecell-->
+<!--block codecell-->
+<div class="flex">
+<!--block codecell-->
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div class="flex">
+<div><!--block markdowncell scoped--><h2 id="What-is-Data?">What is Data?<a class="anchor-link" href="#What-is-Data?">¶</a></h2><br/>
+<p>"<strong>A <em>fact</em> given or granted</strong>,"<br/>
+from Latin plural of datum "given"</p>
+<p><small><a href="https://www.etymonline.com/word/data">https://www.etymonline.com/word/data</a></small></p>
+</div>
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:Scholar_at_his_desk,_Jan_Steen,_c._1668-1669,_oil_on_oak,_46.5_by_42.5_cm,_National_Gallery_in_Prague.jpg" title="Jan Steen (1625/26-1679), Public domain, via Wikimedia Commons"><img alt="Scholar at his desk, Jan Steen, c. 1668-1669, oil on oak, 46.5 by 42.5 cm, National Gallery in Prague" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Scholar_at_his_desk%2C_Jan_Steen%2C_c._1668-1669%2C_oil_on_oak%2C_46.5_by_42.5_cm%2C_National_Gallery_in_Prague.jpg/512px-Scholar_at_his_desk%2C_Jan_Steen%2C_c._1668-1669%2C_oil_on_oak%2C_46.5_by_42.5_cm%2C_National_Gallery_in_Prague.jpg?20191107224343" width="512"/></a>
+<br/><small>Scholar at his desk, Jan Steen, c. 1668-1669</small></p>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Examples-for-Data">Examples for Data<a class="anchor-link" href="#Examples-for-Data">¶</a></h2></div>
+<div class="flex">
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:Tilia_tomentosa_coupe_MHNT.jpg" title="Muséum de Toulouse
+, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"><img alt="Tilia tomentosa coupe MHNT" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Tilia_tomentosa_coupe_MHNT.jpg/512px-Tilia_tomentosa_coupe_MHNT.jpg?20220210071541" width="512"/></a></p>
+</div>
+<div><!--block markdowncell scoped--><ul>
+<li class="fragment">Growth rings in a Tree (see image)</li>
+<li class="fragment">The contents of books</li>
+<li class="fragment">The temperature shown on a thermometer</li>
+</ul>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Examples-for-Data-in-Electronic-data-Processing">Examples for Data <em>in Electronic data Processing</em><a class="anchor-link" href="#Examples-for-Data-in-Electronic-data-Processing">¶</a></h2></div>
+<div class="flex">
+<div><!--block markdowncell scoped--><ul>
+<li class="fragment"><p><strong>In modern computers, everything is binary</strong></p>
+<ul>
+<li class="fragment">e.g. <code>101010</code></li>
+</ul>
+</li>
+<li class="fragment"><p><strong>Data types make a datum easier to use</strong></p>
+<ul>
+<li class="fragment">Integers: <code>42</code></li>
+<li class="fragment">Floating point numbers: <code>3.14</code></li>
+<li class="fragment">Strings: <code>"This is a string!"</code></li>
+</ul>
+</li>
+</ul>
+</div>
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:Blue-punch-card-front-horiz.png" title="Blue-punch-card-front.png: Gwern
+derivative work: agr, Public domain, via Wikimedia Commons"><img alt="Blue-punch-card-front-horiz" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Blue-punch-card-front-horiz.png/512px-Blue-punch-card-front-horiz.png?20230521161055" width="512"/></a>
+<br/>
+<small>A punched card from the 1960s</small></p>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div class="flex">
+<div><!--block markdowncell scoped--><h3 id="We-can-organise-data"><strong>We can organise data</strong><a class="anchor-link" href="#We-can-organise-data">¶</a></h3><ul>
+<li class="fragment"><strong>Lists</strong> (Arrays), e.g. <code>[1,2,3]</code></li>
+<li class="fragment"><strong>Tables</strong> / DataFrames,<br/>i.e. values organised in columns / rows</li>
+<li class="fragment"><strong>Databases</strong> containing tables</li>
+<li class="fragment">An <code>.mp4</code> file containing video and audio 🎬🍿</li>
+</ul>
+</div>
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:Visicalc.png" title="User:Gortu, Public domain, via Wikimedia Commons"><img alt="Image of the first spreadsheet program; VisiCalc" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Visicalc.png?20061204131248" width="512"/></a>
+<br/>
+<small>Visicalc, the first spreatsheed, on an Apple II</small></p>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div class="flex">
+<div><!--block markdowncell scoped--><h3 id="%22Structured-data%22">"Structured data"<a class="anchor-link" href="#%22Structured-data%22">¶</a></h3><ul>
+<li class="fragment">Rigid schema</li>
+<li class="fragment">E.g. in an SQL table each column has a<ul>
+<li class="fragment">Unique name</li>
+<li class="fragment">Data type</li>
+<li class="fragment">…and hopefully also semantic meaning</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="fragment">
+<div><!--block markdowncell scoped--><h3 id="%22Unstructured-data%22">"Unstructured data"<a class="anchor-link" href="#%22Unstructured-data%22">¶</a></h3><ul>
+<li class="fragment">No single predefined format (schema) for its contents<ul>
+<li class="fragment">A collection of emails</li>
+<li class="fragment">A collection of images</li>
+</ul>
+</li>
+<li class="fragment">Often lives in a data lake or document store (like s3, mongoDB, …)</li>
+</ul>
+</div></div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="How-and-Why-is-Data-used?">How and Why is Data used?<a class="anchor-link" href="#How-and-Why-is-Data-used?">¶</a></h2></div>
+<div class="flex">
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:Ishango_bone_(cropped).jpg" title="Joeykentin, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"><img alt="Ishango bone (cropped)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ishango_bone_%28cropped%29.jpg/256px-Ishango_bone_%28cropped%29.jpg?20230907182012" width="256"/></a>
+<br/>
+<small>The <a href="https://en.wikipedia.org/wiki/Ishango_bone">Ishango bone</a>, ~20000 BCE</small></p>
+</div>
+<div><!--block markdowncell scoped--><p>Recording symbols, marks, and images might be as old as humanity</p>
+<ul>
+<li class="fragment">Help to remember something for later</li>
+<li class="fragment">Pass information to others</li>
+<li class="fragment">As a tool for complex resoning or calculations</li>
+</ul>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div class="flex">
+<div><!--block markdowncell scoped--><h3 id="Accounting">Accounting<a class="anchor-link" href="#Accounting">¶</a></h3><p>Economic activities often involve recording<br/>
+and processing of data, e.g. for</p>
+<ul>
+<li class="fragment">bookeeping</li>
+<li class="fragment">reporting</li>
+<li class="fragment">taxes</li>
+</ul>
+</div>
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:Cuneiform_tablet-_administrative_account_with_entries_concerning_malt_and_barley_groats_MET_DP293245.jpg" title="Metropolitan Museum of Art
+, CC0, via Wikimedia Commons"><img alt="Cuneiform tablet: administrative account with entries concerning malt and barley groats (MET, 1988.433.3)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cuneiform_tablet-_administrative_account_with_entries_concerning_malt_and_barley_groats_MET_DP293245.jpg/512px-Cuneiform_tablet-_administrative_account_with_entries_concerning_malt_and_barley_groats_MET_DP293245.jpg?20220925095604" width="512"/></a>
+<br/>
+<small>Administrative account with entries concerning malt and barley groats, circa 3100–2900 B.C.</small></p>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div class="flex">
+<div><!--block markdowncell scoped--><h3 id="Descriptive-Statistic(s)">Descriptive Statistic(s)<a class="anchor-link" href="#Descriptive-Statistic(s)">¶</a></h3><ul>
+<li class="fragment"><p>Making a summary ("statistic") that quantitatively describes data</p>
+<ul>
+<li class="fragment">The number of participants in a survey 💯</li>
+<li class="fragment">The average height of an adult in a certain region 📏</li>
+<li class="fragment">The income distribution in a society 💰</li>
+</ul>
+</li>
+<li class="fragment"><p>Using and analysing such summaries.</p>
+</li>
+</ul>
+</div>
+<div class="fragment">
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block data_html scoped-->
+<style>
+form.vega-bindings {
+  position: absolute;
+  left: 70px;
+  top: -60px;
+}
+</style>
+<!--block output-->
+<!--block data_html scoped-->
+<style>
+  #altair-viz-356c32ca00ad43099485eb89ecc219ff.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-356c32ca00ad43099485eb89ecc219ff.vega-embed details,
+  #altair-viz-356c32ca00ad43099485eb89ecc219ff.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-356c32ca00ad43099485eb89ecc219ff"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-356c32ca00ad43099485eb89ecc219ff") {
+      outputDiv = document.getElementById("altair-viz-356c32ca00ad43099485eb89ecc219ff");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.20.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.20.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 20.0, "font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontSize": 14.4}}, "layer": [{"mark": {"type": "bar"}, "encoding": {"opacity": {"condition": [{"param": "param_1", "value": 1}], "value": 0.7}, "x": {"field": "Monat", "type": "ordinal"}, "y": {"aggregate": "mean", "field": "Precipation", "scale": {"domain": [0, 111.32708333333333]}, "type": "quantitative"}}, "name": "view_1", "transform": [{"filter": {"param": "param_2"}}]}, {"mark": {"type": "rule", "color": "firebrick"}, "encoding": {"size": {"value": 3}, "y": {"aggregate": "mean", "field": "Precipation", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_2"}}, {"filter": {"param": "param_1"}}]}], "data": {"name": "data-577af4fbac095e17c16d7cb1b40458f4"}, "params": [{"name": "param_2", "select": {"type": "point", "fields": ["Region"]}, "bind": {"input": "select", "options": ["Baden-Wuerttemberg", "Bayern", "Brandenburg", "Brandenburg/Berlin", "Deutschland", "Hessen", "Mecklenburg-Vorpommern", "Niedersachsen", "Niedersachsen/Hamburg/Bremen", "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig-Holstein", "Thueringen", "Thueringen/Sachsen-Anhalt"], "name": "Region: "}, "value": "Deutschland", "views": ["view_1"]}, {"name": "param_1", "select": {"type": "interval", "encodings": ["x"]}, "views": ["view_1"]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-577af4fbac095e17c16d7cb1b40458f4": [{"Monat": 1, "Region": "Baden-Wuerttemberg", "Jahr": 1953.0, "Precipation": 68.90275862068965}, {"Monat": 1, "Region": "Bayern", "Jahr": 1953.0, "Precipation": 63.048965517241385}, {"Monat": 1, "Region": "Brandenburg", "Jahr": 1953.0, "Precipation": 41.89310344827586}, {"Monat": 1, "Region": "Brandenburg/Berlin", "Jahr": 1953.0, "Precipation": 41.933793103448274}, {"Monat": 1, "Region": "Deutschland", "Jahr": 1953.0, "Precipation": 59.228965517241384}, {"Monat": 1, "Region": "Hessen", "Jahr": 1953.0, "Precipation": 61.59862068965517}, {"Monat": 1, "Region": "Mecklenburg-Vorpommern", "Jahr": 1953.0, "Precipation": 45.580000000000005}, {"Monat": 1, "Region": "Niedersachsen", "Jahr": 1953.0, "Precipation": 60.63103448275862}, {"Monat": 1, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1953.0, "Precipation": 60.57862068965517}, {"Monat": 1, "Region": "Nordrhein-Westfalen", "Jahr": 1953.0, "Precipation": 75.00137931034483}, {"Monat": 1, "Region": "Rheinland-Pfalz", "Jahr": 1953.0, "Precipation": 64.17655172413794}, {"Monat": 1, "Region": "Saarland", "Jahr": 1953.0, "Precipation": 82.54344827586206}, {"Monat": 1, "Region": "Sachsen", "Jahr": 1953.0, "Precipation": 51.179310344827584}, {"Monat": 1, "Region": "Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 40.29724137931035}, {"Monat": 1, "Region": "Schleswig-Holstein", "Jahr": 1953.0, "Precipation": 61.172413793103445}, {"Monat": 1, "Region": "Thueringen", "Jahr": 1953.0, "Precipation": 52.88275862068966}, {"Monat": 1, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 45.86344827586207}, {"Monat": 2, "Region": "Baden-Wuerttemberg", "Jahr": 1953.0, "Precipation": 60.66206896551724}, {"Monat": 2, "Region": "Bayern", "Jahr": 1953.0, "Precipation": 53.69724137931035}, {"Monat": 2, "Region": "Brandenburg", "Jahr": 1953.0, "Precipation": 33.635862068965515}, {"Monat": 2, "Region": "Brandenburg/Berlin", "Jahr": 1953.0, "Precipation": 33.675862068965515}, {"Monat": 2, "Region": "Deutschland", "Jahr": 1953.0, "Precipation": 48.964137931034486}, {"Monat": 2, "Region": "Hessen", "Jahr": 1953.0, "Precipation": 51.01724137931034}, {"Monat": 2, "Region": "Mecklenburg-Vorpommern", "Jahr": 1953.0, "Precipation": 35.06551724137931}, {"Monat": 2, "Region": "Niedersachsen", "Jahr": 1953.0, "Precipation": 47.52551724137931}, {"Monat": 2, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1953.0, "Precipation": 47.49448275862069}, {"Monat": 2, "Region": "Nordrhein-Westfalen", "Jahr": 1953.0, "Precipation": 60.80344827586207}, {"Monat": 2, "Region": "Rheinland-Pfalz", "Jahr": 1953.0, "Precipation": 53.76137931034482}, {"Monat": 2, "Region": "Saarland", "Jahr": 1953.0, "Precipation": 67.01310344827586}, {"Monat": 2, "Region": "Sachsen", "Jahr": 1953.0, "Precipation": 44.2248275862069}, {"Monat": 2, "Region": "Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 33.29793103448276}, {"Monat": 2, "Region": "Schleswig-Holstein", "Jahr": 1953.0, "Precipation": 47.13310344827586}, {"Monat": 2, "Region": "Thueringen", "Jahr": 1953.0, "Precipation": 44.983448275862074}, {"Monat": 2, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 38.467586206896556}, {"Monat": 3, "Region": "Baden-Wuerttemberg", "Jahr": 1953.0, "Precipation": 64.21103448275862}, {"Monat": 3, "Region": "Bayern", "Jahr": 1953.0, "Precipation": 57.91103448275862}, {"Monat": 3, "Region": "Brandenburg", "Jahr": 1953.0, "Precipation": 36.24}, {"Monat": 3, "Region": "Brandenburg/Berlin", "Jahr": 1953.0, "Precipation": 36.2248275862069}, {"Monat": 3, "Region": "Deutschland", "Jahr": 1953.0, "Precipation": 51.461379310344824}, {"Monat": 3, "Region": "Hessen", "Jahr": 1953.0, "Precipation": 51.60620689655172}, {"Monat": 3, "Region": "Mecklenburg-Vorpommern", "Jahr": 1953.0, "Precipation": 38.36689655172414}, {"Monat": 3, "Region": "Niedersachsen", "Jahr": 1953.0, "Precipation": 49.22275862068965}, {"Monat": 3, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1953.0, "Precipation": 49.20413793103449}, {"Monat": 3, "Region": "Nordrhein-Westfalen", "Jahr": 1953.0, "Precipation": 60.490344827586206}, {"Monat": 3, "Region": "Rheinland-Pfalz", "Jahr": 1953.0, "Precipation": 54.355172413793106}, {"Monat": 3, "Region": "Saarland", "Jahr": 1953.0, "Precipation": 66.03862068965518}, {"Monat": 3, "Region": "Sachsen", "Jahr": 1953.0, "Precipation": 49.215172413793105}, {"Monat": 3, "Region": "Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 37.153103448275864}, {"Monat": 3, "Region": "Schleswig-Holstein", "Jahr": 1953.0, "Precipation": 47.32206896551724}, {"Monat": 3, "Region": "Thueringen", "Jahr": 1953.0, "Precipation": 47.59310344827586}, {"Monat": 3, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 41.77379310344828}, {"Monat": 4, "Region": "Baden-Wuerttemberg", "Jahr": 1953.0, "Precipation": 67.12827586206897}, {"Monat": 4, "Region": "Bayern", "Jahr": 1953.0, "Precipation": 61.91103448275862}, {"Monat": 4, "Region": "Brandenburg", "Jahr": 1953.0, "Precipation": 36.88275862068966}, {"Monat": 4, "Region": "Brandenburg/Berlin", "Jahr": 1953.0, "Precipation": 36.877931034482756}, {"Monat": 4, "Region": "Deutschland", "Jahr": 1953.0, "Precipation": 51.648275862068964}, {"Monat": 4, "Region": "Hessen", "Jahr": 1953.0, "Precipation": 50.60551724137931}, {"Monat": 4, "Region": "Mecklenburg-Vorpommern", "Jahr": 1953.0, "Precipation": 38.48758620689655}, {"Monat": 4, "Region": "Niedersachsen", "Jahr": 1953.0, "Precipation": 46.9248275862069}, {"Monat": 4, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1953.0, "Precipation": 46.897241379310344}, {"Monat": 4, "Region": "Nordrhein-Westfalen", "Jahr": 1953.0, "Precipation": 55.388275862068966}, {"Monat": 4, "Region": "Rheinland-Pfalz", "Jahr": 1953.0, "Precipation": 51.258620689655174}, {"Monat": 4, "Region": "Saarland", "Jahr": 1953.0, "Precipation": 56.930344827586204}, {"Monat": 4, "Region": "Sachsen", "Jahr": 1953.0, "Precipation": 51.18}, {"Monat": 4, "Region": "Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 37.87034482758621}, {"Monat": 4, "Region": "Schleswig-Holstein", "Jahr": 1953.0, "Precipation": 45.4703448275862}, {"Monat": 4, "Region": "Thueringen", "Jahr": 1953.0, "Precipation": 48.99103448275862}, {"Monat": 4, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 42.79034482758621}, {"Monat": 5, "Region": "Baden-Wuerttemberg", "Jahr": 1953.0, "Precipation": 87.88206896551723}, {"Monat": 5, "Region": "Bayern", "Jahr": 1953.0, "Precipation": 86.39241379310344}, {"Monat": 5, "Region": "Brandenburg", "Jahr": 1953.0, "Precipation": 50.211724137931036}, {"Monat": 5, "Region": "Brandenburg/Berlin", "Jahr": 1953.0, "Precipation": 50.19103448275862}, {"Monat": 5, "Region": "Deutschland", "Jahr": 1953.0, "Precipation": 66.57655172413793}, {"Monat": 5, "Region": "Hessen", "Jahr": 1953.0, "Precipation": 63.7303448275862}, {"Monat": 5, "Region": "Mecklenburg-Vorpommern", "Jahr": 1953.0, "Precipation": 48.98965517241379}, {"Monat": 5, "Region": "Niedersachsen", "Jahr": 1953.0, "Precipation": 56.4551724137931}, {"Monat": 5, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1953.0, "Precipation": 56.436551724137935}, {"Monat": 5, "Region": "Nordrhein-Westfalen", "Jahr": 1953.0, "Precipation": 63.85724137931034}, {"Monat": 5, "Region": "Rheinland-Pfalz", "Jahr": 1953.0, "Precipation": 63.03793103448276}, {"Monat": 5, "Region": "Saarland", "Jahr": 1953.0, "Precipation": 69.2248275862069}, {"Monat": 5, "Region": "Sachsen", "Jahr": 1953.0, "Precipation": 66.26482758620689}, {"Monat": 5, "Region": "Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 51.17310344827587}, {"Monat": 5, "Region": "Schleswig-Holstein", "Jahr": 1953.0, "Precipation": 52.57241379310345}, {"Monat": 5, "Region": "Thueringen", "Jahr": 1953.0, "Precipation": 64.02896551724139}, {"Monat": 5, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 56.85448275862069}, {"Monat": 6, "Region": "Baden-Wuerttemberg", "Jahr": 1953.0, "Precipation": 99.83379310344827}, {"Monat": 6, "Region": "Bayern", "Jahr": 1953.0, "Precipation": 103.86896551724138}, {"Monat": 6, "Region": "Brandenburg", "Jahr": 1953.0, "Precipation": 60.38551724137931}, {"Monat": 6, "Region": "Brandenburg/Berlin", "Jahr": 1953.0, "Precipation": 60.46344827586207}, {"Monat": 6, "Region": "Deutschland", "Jahr": 1953.0, "Precipation": 77.77724137931035}, {"Monat": 6, "Region": "Hessen", "Jahr": 1953.0, "Precipation": 70.37862068965516}, {"Monat": 6, "Region": "Mecklenburg-Vorpommern", "Jahr": 1953.0, "Precipation": 59.743448275862065}, {"Monat": 6, "Region": "Niedersachsen", "Jahr": 1953.0, "Precipation": 66.73931034482759}, {"Monat": 6, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1953.0, "Precipation": 66.69655172413793}, {"Monat": 6, "Region": "Nordrhein-Westfalen", "Jahr": 1953.0, "Precipation": 74.52068965517242}, {"Monat": 6, "Region": "Rheinland-Pfalz", "Jahr": 1953.0, "Precipation": 70.1103448275862}, {"Monat": 6, "Region": "Saarland", "Jahr": 1953.0, "Precipation": 71.23793103448276}, {"Monat": 6, "Region": "Sachsen", "Jahr": 1953.0, "Precipation": 76.14413793103448}, {"Monat": 6, "Region": "Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 58.72344827586207}, {"Monat": 6, "Region": "Schleswig-Holstein", "Jahr": 1953.0, "Precipation": 63.51931034482758}, {"Monat": 6, "Region": "Thueringen", "Jahr": 1953.0, "Precipation": 70.94}, {"Monat": 6, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1953.0, "Precipation": 64.13862068965517}, {"Monat": 7, "Region": "Baden-Wuerttemberg", "Jahr": 1952.5, "Precipation": 99.73402777777778}, {"Monat": 7, "Region": "Bayern", "Jahr": 1952.5, "Precipation": 111.32708333333333}, {"Monat": 7, "Region": "Brandenburg", "Jahr": 1952.5, "Precipation": 70.28472222222223}, {"Monat": 7, "Region": "Brandenburg/Berlin", "Jahr": 1952.5, "Precipation": 70.25902777777777}, {"Monat": 7, "Region": "Deutschland", "Jahr": 1952.5, "Precipation": 87.36527777777778}, {"Monat": 7, "Region": "Hessen", "Jahr": 1952.5, "Precipation": 79.02291666666666}, {"Monat": 7, "Region": "Mecklenburg-Vorpommern", "Jahr": 1952.5, "Precipation": 72.04930555555556}, {"Monat": 7, "Region": "Niedersachsen", "Jahr": 1952.5, "Precipation": 81.79236111111112}, {"Monat": 7, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1952.5, "Precipation": 81.82916666666667}, {"Monat": 7, "Region": "Nordrhein-Westfalen", "Jahr": 1952.5, "Precipation": 86.60833333333333}, {"Monat": 7, "Region": "Rheinland-Pfalz", "Jahr": 1952.5, "Precipation": 74.87847222222223}, {"Monat": 7, "Region": "Saarland", "Jahr": 1952.5, "Precipation": 77.23888888888888}, {"Monat": 7, "Region": "Sachsen", "Jahr": 1952.5, "Precipation": 90.10694444444444}, {"Monat": 7, "Region": "Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 67.57777777777778}, {"Monat": 7, "Region": "Schleswig-Holstein", "Jahr": 1952.5, "Precipation": 82.99652777777777}, {"Monat": 7, "Region": "Thueringen", "Jahr": 1952.5, "Precipation": 79.03472222222223}, {"Monat": 7, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 72.64375000000001}, {"Monat": 8, "Region": "Baden-Wuerttemberg", "Jahr": 1952.5, "Precipation": 92.25625}, {"Monat": 8, "Region": "Bayern", "Jahr": 1952.5, "Precipation": 99.32708333333333}, {"Monat": 8, "Region": "Brandenburg", "Jahr": 1952.5, "Precipation": 60.94722222222222}, {"Monat": 8, "Region": "Brandenburg/Berlin", "Jahr": 1952.5, "Precipation": 60.90069444444445}, {"Monat": 8, "Region": "Deutschland", "Jahr": 1952.5, "Precipation": 79.79305555555555}, {"Monat": 8, "Region": "Hessen", "Jahr": 1952.5, "Precipation": 72.16111111111111}, {"Monat": 8, "Region": "Mecklenburg-Vorpommern", "Jahr": 1952.5, "Precipation": 66.17638888888888}, {"Monat": 8, "Region": "Niedersachsen", "Jahr": 1952.5, "Precipation": 76.25}, {"Monat": 8, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1952.5, "Precipation": 76.28541666666666}, {"Monat": 8, "Region": "Nordrhein-Westfalen", "Jahr": 1952.5, "Precipation": 81.14583333333333}, {"Monat": 8, "Region": "Rheinland-Pfalz", "Jahr": 1952.5, "Precipation": 70.92500000000001}, {"Monat": 8, "Region": "Saarland", "Jahr": 1952.5, "Precipation": 75.23680555555556}, {"Monat": 8, "Region": "Sachsen", "Jahr": 1952.5, "Precipation": 78.82569444444444}, {"Monat": 8, "Region": "Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 60.19444444444444}, {"Monat": 8, "Region": "Schleswig-Holstein", "Jahr": 1952.5, "Precipation": 84.38333333333334}, {"Monat": 8, "Region": "Thueringen", "Jahr": 1952.5, "Precipation": 70.34861111111111}, {"Monat": 8, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 64.68472222222222}, {"Monat": 9, "Region": "Baden-Wuerttemberg", "Jahr": 1952.5, "Precipation": 76.48333333333333}, {"Monat": 9, "Region": "Bayern", "Jahr": 1952.5, "Precipation": 76.25347222222223}, {"Monat": 9, "Region": "Brandenburg", "Jahr": 1952.5, "Precipation": 45.175}, {"Monat": 9, "Region": "Brandenburg/Berlin", "Jahr": 1952.5, "Precipation": 45.170833333333334}, {"Monat": 9, "Region": "Deutschland", "Jahr": 1952.5, "Precipation": 63.045833333333334}, {"Monat": 9, "Region": "Hessen", "Jahr": 1952.5, "Precipation": 58.77847222222223}, {"Monat": 9, "Region": "Mecklenburg-Vorpommern", "Jahr": 1952.5, "Precipation": 50.50972222222222}, {"Monat": 9, "Region": "Niedersachsen", "Jahr": 1952.5, "Precipation": 59.80069444444444}, {"Monat": 9, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1952.5, "Precipation": 59.83819444444445}, {"Monat": 9, "Region": "Nordrhein-Westfalen", "Jahr": 1952.5, "Precipation": 67.35138888888889}, {"Monat": 9, "Region": "Rheinland-Pfalz", "Jahr": 1952.5, "Precipation": 61.05694444444445}, {"Monat": 9, "Region": "Saarland", "Jahr": 1952.5, "Precipation": 69.48194444444444}, {"Monat": 9, "Region": "Sachsen", "Jahr": 1952.5, "Precipation": 58.020833333333336}, {"Monat": 9, "Region": "Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 44.418055555555554}, {"Monat": 9, "Region": "Schleswig-Holstein", "Jahr": 1952.5, "Precipation": 70.47986111111112}, {"Monat": 9, "Region": "Thueringen", "Jahr": 1952.5, "Precipation": 54.99305555555556}, {"Monat": 9, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 49.09375}, {"Monat": 10, "Region": "Baden-Wuerttemberg", "Jahr": 1952.5, "Precipation": 72.16944444444444}, {"Monat": 10, "Region": "Bayern", "Jahr": 1952.5, "Precipation": 64.8423611111111}, {"Monat": 10, "Region": "Brandenburg", "Jahr": 1952.5, "Precipation": 43.71597222222223}, {"Monat": 10, "Region": "Brandenburg/Berlin", "Jahr": 1952.5, "Precipation": 43.68333333333333}, {"Monat": 10, "Region": "Deutschland", "Jahr": 1952.5, "Precipation": 61.24305555555556}, {"Monat": 10, "Region": "Hessen", "Jahr": 1952.5, "Precipation": 62.86666666666666}, {"Monat": 10, "Region": "Mecklenburg-Vorpommern", "Jahr": 1952.5, "Precipation": 49.856944444444444}, {"Monat": 10, "Region": "Niedersachsen", "Jahr": 1952.5, "Precipation": 62.137499999999996}, {"Monat": 10, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1952.5, "Precipation": 62.15069444444445}, {"Monat": 10, "Region": "Nordrhein-Westfalen", "Jahr": 1952.5, "Precipation": 69.69375}, {"Monat": 10, "Region": "Rheinland-Pfalz", "Jahr": 1952.5, "Precipation": 64.9048611111111}, {"Monat": 10, "Region": "Saarland", "Jahr": 1952.5, "Precipation": 77.15694444444445}, {"Monat": 10, "Region": "Sachsen", "Jahr": 1952.5, "Precipation": 55.2}, {"Monat": 10, "Region": "Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 44.22222222222222}, {"Monat": 10, "Region": "Schleswig-Holstein", "Jahr": 1952.5, "Precipation": 74.7513888888889}, {"Monat": 10, "Region": "Thueringen", "Jahr": 1952.5, "Precipation": 55.17916666666667}, {"Monat": 10, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 49.06944444444444}, {"Monat": 11, "Region": "Baden-Wuerttemberg", "Jahr": 1952.5, "Precipation": 72.99444444444445}, {"Monat": 11, "Region": "Bayern", "Jahr": 1952.5, "Precipation": 62.80763888888888}, {"Monat": 11, "Region": "Brandenburg", "Jahr": 1952.5, "Precipation": 42.267361111111114}, {"Monat": 11, "Region": "Brandenburg/Berlin", "Jahr": 1952.5, "Precipation": 42.300694444444446}, {"Monat": 11, "Region": "Deutschland", "Jahr": 1952.5, "Precipation": 59.82222222222222}, {"Monat": 11, "Region": "Hessen", "Jahr": 1952.5, "Precipation": 62.77430555555556}, {"Monat": 11, "Region": "Mecklenburg-Vorpommern", "Jahr": 1952.5, "Precipation": 46.11736111111111}, {"Monat": 11, "Region": "Niedersachsen", "Jahr": 1952.5, "Precipation": 60.079166666666666}, {"Monat": 11, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1952.5, "Precipation": 60.03541666666667}, {"Monat": 11, "Region": "Nordrhein-Westfalen", "Jahr": 1952.5, "Precipation": 72.08611111111111}, {"Monat": 11, "Region": "Rheinland-Pfalz", "Jahr": 1952.5, "Precipation": 65.90069444444445}, {"Monat": 11, "Region": "Saarland", "Jahr": 1952.5, "Precipation": 83.20208333333333}, {"Monat": 11, "Region": "Sachsen", "Jahr": 1952.5, "Precipation": 51.050694444444446}, {"Monat": 11, "Region": "Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 41.56388888888889}, {"Monat": 11, "Region": "Schleswig-Holstein", "Jahr": 1952.5, "Precipation": 67.21041666666666}, {"Monat": 11, "Region": "Thueringen", "Jahr": 1952.5, "Precipation": 53.419444444444444}, {"Monat": 11, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 46.80694444444444}, {"Monat": 12, "Region": "Baden-Wuerttemberg", "Jahr": 1952.5, "Precipation": 76.98055555555555}, {"Monat": 12, "Region": "Bayern", "Jahr": 1952.5, "Precipation": 69.27777777777777}, {"Monat": 12, "Region": "Brandenburg", "Jahr": 1952.5, "Precipation": 44.486111111111114}, {"Monat": 12, "Region": "Brandenburg/Berlin", "Jahr": 1952.5, "Precipation": 44.53333333333333}, {"Monat": 12, "Region": "Deutschland", "Jahr": 1952.5, "Precipation": 64.47222222222223}, {"Monat": 12, "Region": "Hessen", "Jahr": 1952.5, "Precipation": 68.62708333333333}, {"Monat": 12, "Region": "Mecklenburg-Vorpommern", "Jahr": 1952.5, "Precipation": 48.985416666666666}, {"Monat": 12, "Region": "Niedersachsen", "Jahr": 1952.5, "Precipation": 64.29027777777777}, {"Monat": 12, "Region": "Niedersachsen/Hamburg/Bremen", "Jahr": 1952.5, "Precipation": 64.24930555555555}, {"Monat": 12, "Region": "Nordrhein-Westfalen", "Jahr": 1952.5, "Precipation": 80.33194444444445}, {"Monat": 12, "Region": "Rheinland-Pfalz", "Jahr": 1952.5, "Precipation": 71.94097222222223}, {"Monat": 12, "Region": "Saarland", "Jahr": 1952.5, "Precipation": 93.79236111111112}, {"Monat": 12, "Region": "Sachsen", "Jahr": 1952.5, "Precipation": 54.34930555555556}, {"Monat": 12, "Region": "Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 42.89722222222222}, {"Monat": 12, "Region": "Schleswig-Holstein", "Jahr": 1952.5, "Precipation": 67.77430555555556}, {"Monat": 12, "Region": "Thueringen", "Jahr": 1952.5, "Precipation": 57.637499999999996}, {"Monat": 12, "Region": "Thueringen/Sachsen-Anhalt", "Jahr": 1952.5, "Precipation": 49.41527777777778}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+</div>
+<!--end block outputs-->
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h3 id="Inductive-Statistics">Inductive Statistics<a class="anchor-link" href="#Inductive-Statistics">¶</a></h3></div>
+<div class="flex">
+<div><!--block markdowncell scoped--><ul>
+<li class="fragment">Probabilistic analysis 🎲</li>
+<li class="fragment">Hypothesis testing 🧪</li>
+<li class="fragment">Prediction and forecasting 📈</li>
+<li class="fragment">Classification 🗄️</li>
+<li class="fragment">Generative AI 🤖</li>
+<li class="fragment">…</li>
+</ul>
+</div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block execute_result !!-->
+<!--block data_html scoped-->
+<style>
+  #altair-viz-03cd88031a2d4a9cb96b6a0a3b953c32.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-03cd88031a2d4a9cb96b6a0a3b953c32.vega-embed details,
+  #altair-viz-03cd88031a2d4a9cb96b6a0a3b953c32.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-03cd88031a2d4a9cb96b6a0a3b953c32"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-03cd88031a2d4a9cb96b6a0a3b953c32") {
+      outputDiv = document.getElementById("altair-viz-03cd88031a2d4a9cb96b6a0a3b953c32");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.20.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.20.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 20.0, "font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontWeight": "normal"}, "axisX": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontSize": 14.4}}, "layer": [{"data": {"sequence": {"start": -3, "stop": 3, "step": 0.1}}, "mark": {"type": "bar", "color": "lightblue"}, "encoding": {"x": {"field": "x", "type": "quantitative"}, "y": {"field": "probability", "type": "quantitative"}}, "transform": [{"calculate": "0", "as": "mean"}, {"calculate": "1", "as": "std"}, {"calculate": "round(2*sampleNormal(+datum.mean,+datum.std))/2", "as": "x"}, {"aggregate": [{"op": "count", "as": "count"}], "groupby": ["x"]}, {"joinaggregate": [{"op": "sum", "field": "count", "as": "total"}]}, {"calculate": "datum.count / datum.total", "as": "probability"}]}, {"data": {"sequence": {"start": -3, "stop": 3, "step": 0.1, "as": "x"}}, "mark": {"type": "line", "color": "darkblue"}, "encoding": {"x": {"field": "x", "type": "quantitative"}, "y": {"field": "pdf", "title": "Probability of x", "type": "quantitative"}}, "transform": [{"calculate": "0", "as": "mean"}, {"calculate": "1", "as": "std"}, {"calculate": "0.5*densityNormal(datum.x, \"0\", \"1\")", "as": "pdf"}]}, {"data": {"name": "data-f83f62757c7ed2b51ba5ba5346b2fcd9"}, "mark": {"type": "point", "color": "red", "size": 100}, "encoding": {"x": {"field": "x", "type": "quantitative"}, "y": {"field": "y", "type": "quantitative"}}}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-f83f62757c7ed2b51ba5ba5346b2fcd9": [{"x": 0, "y": 0.2}]}}, {"actions": false, "mode": "vega-lite"});
+</script>
+<!--end block execute result !!-->
+</div>
+<!--end block outputs-->
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h3 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">¶</a></h3><ul>
+<li>Data Quality<ul>
+<li>Bugs 🐛</li>
+<li>Biases ⚖️</li>
+<li>Changes over time 🏗️</li>
+</ul>
+</li>
+<li>Quantity<ul>
+<li>Not enough for a given task 🔎</li>
+<li>Too much for resources / budget 🤯</li>
+</ul>
+</li>
+<li>Privacy (GDPR &amp; Co) 🫆</li>
+</ul>
+</div></section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Stay-tuned">Stay tuned<a class="anchor-link" href="#Stay-tuned">¶</a></h2><p>Next section: <a href="3_tools.slides.html">Tools 🛠️</a></p>
+</div>
+<!--block codecell-->
+</section></section>
+</div>
+</div>
+</body>
+<script src="reveal.js/dist/reveal.js"></script>
+<script src="reveal.js/dist/plugin/math/math.js"></script>
+<script>
+Reveal.initialize({
+  width: 1120,
+  height: 700,
+  margin: 0.05,
+  hash: true,
+  math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      "HTML-CSS" : {
+        mtextFontInherit: true,
+      }
+      // pass other options into `MathJax.Hub.Config()`
+      // e.g.
+      //TeX: { Macros: { RR: "{\\bf R}" } }
+      // see also: http://docs.mathjax.org/en/latest/web/configuration.html
+    },
+    plugins: [ RevealMath ]
+});
+</script>
+</html>

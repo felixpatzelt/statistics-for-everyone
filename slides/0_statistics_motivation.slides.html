@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta charset="utf-8"/>
+<title>0_statistics_motivation slides</title>
+<!-- General and theme style sheets -->
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/statistics-for-everyone-slides.css" id="theme" rel="stylesheet"/>
+<!--<link rel="stylesheet" href="custom.css" id="custom">--></head>
+<body>
+<div id="watermark">
+<div id="logo">
+<a href="index.html">
+<img alt="No description has been provided for this image" src="images/logo_tiny.svg" width="100%"/>
+</a>
+</div>
+<div id="logo-label">Statistics for Everyone - back to overview</div>
+</div>
+<div class="reveal">
+<div class="slides"><section><section>
+<div><!--block markdowncell scoped--><h1 id="Data-%E2%9D%A4%EF%B8%8E-Statistics-%E2%9D%A4%EF%B8%8E-AI">Data ❤︎ Statistics ❤︎ AI<a class="anchor-link" href="#Data-%E2%9D%A4%EF%B8%8E-Statistics-%E2%9D%A4%EF%B8%8E-AI">¶</a></h1><ul>
+<li>You want to make better decisions?</li>
+<li>You want to understand what generative AI does?</li>
+<li>You want to work with data?</li>
+</ul>
+<p>A bit of theory will help you - even if you didn't like math in the past!</p>
+<p><strong>Let's find out why!</strong></p>
+</div></section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Intuitive-decision-making-can-lead-you-astray">Intuitive decision making can lead you astray<a class="anchor-link" href="#Intuitive-decision-making-can-lead-you-astray">¶</a></h2></div>
+<div class="flex">
+<div><!--block markdowncell scoped--><ul>
+<li class="fragment">B. F. Skinner <a href="https://www.youtube.com/watch?v=TtfQlkGwE2U">showed</a> that rewards reinforce behaviours.</li>
+<li class="fragment">Hence, animals can be <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1473025/">trained</a> to do
+<a href="https://www.theatlantic.com/technology/archive/2013/06/skinner-marketing-were-the-rats-and-facebook-likes-are-the-reward/276613/">many tasks</a></li>
+<li class="fragment">Randomly rewarding <a href="https://www.all-about-psychology.com/support-files/superstition-in-the-pigeon.pdf">pigeons</a>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2615824/">reinforced</a><br/> apparently random behaviours
+("<a href="https://www.psychologicalscience.org/observer/the-many-lives-of-superstition">superstitions</a>").</li>
+</ul>
+</div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block execute_result !!-->
+<!--block data_html scoped-->
+<object data="images/pigeon.svg" style="width: 100%; height: 100%;" type="image/svg+xml">
+<img alt="No description has been provided for this image" height="100%" src="images/pigeon.svg" width="100%"/>
+</object>
+<!--end block execute result !!-->
+</div>
+<!--end block outputs-->
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Reasoning-and-discussing-isn't-always-enough">Reasoning and discussing isn't always enough<a class="anchor-link" href="#Reasoning-and-discussing-isn't-always-enough">¶</a></h2><ul>
+<li>Participants in the TV show <a href="https://en.wikipedia.org/wiki/Trick_or_Treat_%28TV_series%29">Trick or Treat (S2/E6)</a> had to find out how to score points.</li>
+<li>They developed complex ideas on how using various available objects scored points</li>
+</ul>
+</div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block execute_result !!-->
+<!--block data_html scoped-->
+<object data="images/experiment.svg" style="width: 50%; height: 100%;" type="image/svg+xml">
+<img alt="No description has been provided for this image" height="100%" src="images/experiment.svg" width="50%"/>
+</object>
+<!--end block execute result !!-->
+</div>
+<!--end block outputs-->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Humans-detect-patterns-where-there-are-none">Humans detect patterns where there are none<a class="anchor-link" href="#Humans-detect-patterns-where-there-are-none">¶</a></h2><p>In the show, points increased every time a fish swam across an aquarium</p>
+</div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block execute_result !!-->
+<!--block data_html scoped-->
+<object data="images/fish.svg" style="width: 45%; height: 100%;" type="image/svg+xml">
+<img alt="No description has been provided for this image" height="100%" src="images/fish.svg" width="45%"/>
+</object>
+<!--end block execute result !!-->
+</div>
+<!--end block outputs-->
+<div><!--block markdowncell scoped--><p>"We got to a hundred points, so we obviously did it right." - A participant.</p>
+</div></section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Focusing-on-spurious-signals-can-be-costly">Focusing on spurious signals can be costly<a class="anchor-link" href="#Focusing-on-spurious-signals-can-be-costly">¶</a></h2><ul>
+<li>Participants missed actual hints that would have allowed them<br/> to win more money more easily</li>
+<li>See <a href="https://www.youtube.com/watch?v=IDi2NlsA4nI">part 1</a> and <a href="https://www.youtube.com/watch?v=yzXSSPp4Epg">part 2</a></li>
+</ul>
+</div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block execute_result !!-->
+<!--block data_html scoped-->
+<object data="images/sign.svg" style="width: 70%; height: 100%;" type="image/svg+xml">
+<img alt="No description has been provided for this image" height="100%" src="images/sign.svg" width="70%"/>
+</object>
+<!--end block execute result !!-->
+</div>
+<!--end block outputs-->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Even-quantitative-data-can-mislead-without-proper-analysis">Even quantitative data can mislead without proper analysis<a class="anchor-link" href="#Even-quantitative-data-can-mislead-without-proper-analysis">¶</a></h2></div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block execute_result !!-->
+<!--block data_html scoped-->
+<object data="images/spurious_correlations.svg" style="width: 90%; height: 100%;" type="image/svg+xml">
+<img alt="No description has been provided for this image" height="100%" src="images/spurious_correlations.svg" width="90%"/>
+</object>
+<!--end block execute result !!-->
+</div>
+<!--end block outputs-->
+<div><!--block markdowncell scoped--><p>See also: <a href="http://www.tylervigen.com/spurious-correlations">Spurious correlations</a>, <a href="https://blog.datawrapper.de/dualaxis">Why not to use two axes</a></p>
+</div></section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Algorithms-can-make-similar-mistakes">Algorithms can make similar mistakes<a class="anchor-link" href="#Algorithms-can-make-similar-mistakes">¶</a></h2><ul>
+<li>One common problem in machine learning is <a href="https://en.wikipedia.org/wiki/Overfitting">over- or underfitting</a> variations in training data.</li>
+<li>The resulting models don't generalise well to future observations.</li>
+</ul>
+</div>
+<!--block codecell-->
+<!--block output_group-->
+<div class="jp-OutputArea jp-Cell-outputArea">
+<!--block output-->
+<!--block data_html scoped-->
+<style>
+.vega-embed svg {
+  margin: auto;
+</style>
+<!--block output-->
+<!--block data_html scoped-->
+<style>
+  #altair-viz-db8d4e3c743c42e5a3f71abc46aa8694.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-db8d4e3c743c42e5a3f71abc46aa8694.vega-embed details,
+  #altair-viz-db8d4e3c743c42e5a3f71abc46aa8694.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-db8d4e3c743c42e5a3f71abc46aa8694"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-db8d4e3c743c42e5a3f71abc46aa8694") {
+      outputDiv = document.getElementById("altair-viz-db8d4e3c743c42e5a3f71abc46aa8694");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.20.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.20.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"title": {"fontSize": 20.0, "font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontWeight": "normal", "orient": "bottom"}, "axisX": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "axisY": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal", "titlePadding": 10}, "legend": {"labelFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "labelFontSize": 16, "titleFont": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "titleFontSize": 16, "titleFontWeight": "normal"}, "text": {"font": ["Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], "fontSize": 14.4}, "view": {"strokeWidth": 0}}, "hconcat": [{"layer": [{"mark": {"type": "circle", "color": "black"}, "encoding": {"x": {"axis": null, "field": "x", "scale": {"padding": 1}, "type": "quantitative"}, "y": {"axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}, "type": "quantitative"}}}, {"mark": {"type": "line"}, "encoding": {"x": {"axis": null, "field": "x", "scale": {"padding": 1}, "type": "quantitative"}, "y": {"axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}, "type": "quantitative"}}, "title": "Underfit", "transform": [{"on": "x", "regression": "y", "method": "poly", "order": 1}]}], "height": 100, "width": 150}, {"layer": [{"mark": {"type": "circle", "color": "black"}, "encoding": {"x": {"axis": null, "field": "x", "scale": {"padding": 1}, "type": "quantitative"}, "y": {"axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}, "type": "quantitative"}}}, {"mark": {"type": "line"}, "encoding": {"x": {"axis": null, "field": "x", "scale": {"padding": 1}, "type": "quantitative"}, "y": {"axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}, "type": "quantitative"}}, "title": "Good Fit", "transform": [{"on": "x", "regression": "y", "method": "poly", "order": 2}]}], "height": 100, "width": 150}, {"layer": [{"mark": {"type": "circle", "color": "black"}, "encoding": {"x": {"axis": null, "field": "x", "scale": {"padding": 1}, "type": "quantitative"}, "y": {"axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}, "type": "quantitative"}}}, {"mark": {"type": "line"}, "encoding": {"x": {"axis": null, "field": "x", "scale": {"padding": 1}, "type": "quantitative"}, "y": {"axis": null, "field": "y", "scale": {"domain": [-3.587565463633676, 1.3467033986438701]}, "type": "quantitative"}}, "title": "Overfit", "transform": [{"on": "x", "regression": "y", "method": "poly", "order": 9}]}], "height": 100, "width": 150}], "data": {"name": "data-0e5a530718128b251d9349702882f819"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-0e5a530718128b251d9349702882f819": [{"x": -1.5, "y": -2.087565463633676}, {"x": -1.2222222222222223, "y": -1.5550028018588349}, {"x": -0.9444444444444444, "y": -0.9447924838683208}, {"x": -0.6666666666666666, "y": -0.5517413066600615}, {"x": -0.38888888888888884, "y": -0.06469380496876666}, {"x": -0.11111111111111116, "y": -0.24249954870037396}, {"x": 0.16666666666666674, "y": 0.14670339864387022}, {"x": 0.44444444444444464, "y": -0.27365155428704135}, {"x": 0.7222222222222223, "y": -0.48970102866589516}, {"x": 1.0, "y": -1.024937037547741}]}}, {"actions": false, "renderer": "svg", "mode": "vega-lite"});
+</script>
+</div>
+<!--end block outputs-->
+</section></section><section><section>
+<div class="flex">
+<div><!--block markdowncell scoped--><h2 id="Modern-AI-models-inherit-human-biases">Modern AI models inherit human biases<a class="anchor-link" href="#Modern-AI-models-inherit-human-biases">¶</a></h2><ul>
+<li>They (e.g. ChatGPT) learn to extract statistical patterns from vast amounts of text</li>
+<li><a href="https://arxiv.org/abs/2403.02726">Reproduce</a> and even <a href="https://www.nature.com/articles/s41562-024-02077-2">overemphasize</a> <a href="https://media.ccc.de/v/37c3-12125-self-cannibalizing_ai">biases</a> in their training data</li>
+<li>In 2025 <a href="https://arxiv.org/abs/2507.07313">still</a> become <a href="https://arxiv.org/abs/2506.06941">unreliable</a> where they had little training data</li>
+</ul>
+</div>
+<div><!--block markdowncell scoped--><p><a href="https://commons.wikimedia.org/wiki/File:HAL_9000_Original_requisite_from_2001_A_Space_Odyssey_-_retouche.jpg" title="Possibly a reproduction created by collector/prop restorer Dennis Gilliam [1]
+File:Stanley Kubrick The Exhibition - TIFF - 2001 A Space Odyssey (15781843143).jpg: Carlos Pacheco from Toronto, Canada
+derivative work: Pittigrilli, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons"><img alt="HAL 9000 Original requisite from 2001 A Space Odyssey" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HAL_9000_Original_requisite_from_2001_A_Space_Odyssey_-_retouche.jpg/256px-HAL_9000_Original_requisite_from_2001_A_Space_Odyssey_-_retouche.jpg?20220505123946" width="256"/></a></p>
+</div>
+</div><!-- end flex by section -->
+</section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="Statistical-uncertainty-can-help-to-tell-the-signal-from-the-noise">Statistical uncertainty can help to tell the signal from the noise<a class="anchor-link" href="#Statistical-uncertainty-can-help-to-tell-the-signal-from-the-noise">¶</a></h2></div>
+<div><!--block markdowncell scoped--><h3><br/>For example:</h3>
+<ul>
+<li>In 2016, many were certain that Clinton would win the US election.</li>
+<li>On Nov. 4, four days before the election, <a href="https://fivethirtyeight.com/features/trump-is-just-a-normal-polling-error-behind-clinton">a statistics website reported</a>:<br/> "Trump Is Just A Normal Polling Error Behind Clinton"</li>
+</ul>
+</div></section></section><section><section>
+<div><!--block markdowncell scoped--><h2 id="In-the-data-camp-we-will-pair!">In the data camp we will pair!<a class="anchor-link" href="#In-the-data-camp-we-will-pair!">¶</a></h2><ul>
+<li>Hands-on sessions</li>
+<li>Relvant theory</li>
+<li>Keep it suitable for general audiences</li>
+</ul>
+<p>Next section: <a href="1_what_is_data.slides.html">Data - What, Why, How?</a></p>
+</div>
+<!--block codecell-->
+</section></section>
+</div>
+</div>
+</body>
+<script src="reveal.js/dist/reveal.js"></script>
+<script src="reveal.js/dist/plugin/math/math.js"></script>
+<script>
+Reveal.initialize({
+  width: 1120,
+  height: 700,
+  margin: 0.05,
+  hash: true,
+  math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      "HTML-CSS" : {
+        mtextFontInherit: true,
+      }
+      // pass other options into `MathJax.Hub.Config()`
+      // e.g.
+      //TeX: { Macros: { RR: "{\\bf R}" } }
+      // see also: http://docs.mathjax.org/en/latest/web/configuration.html
+    },
+    plugins: [ RevealMath ]
+});
+</script>
+</html>
